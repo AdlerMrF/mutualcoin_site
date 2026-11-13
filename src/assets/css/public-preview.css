@@ -1,0 +1,34 @@
+/* Mesma identidade Mutual; apresentação institucional sem dependências externas. */
+html { scroll-behavior: smooth; }
+body.mutucoin-site { overflow-x: clip; }
+#splash-screen { display: none; }
+.reveal, .reveal-left, .reveal-right, .hero-line, .hero-sub, .hero-ctas { opacity: 1 !important; transform: none !important; visibility: visible !important; }
+.hero-title .hero-line { display: block; }
+.mutucoin-site .site-hero .hero-title { max-width: 20ch; line-height: 1.08; letter-spacing: -.035em; font-weight: 500; }
+.site-hero .hero-line:last-child { color: var(--b-accent); }
+.mutucoin-site .hero-layout { align-items: center; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: clamp(32px, 5vw, 64px); }
+.release-network { width: 100%; max-width: 580px; }
+.release-network .mutual-core { font-size: 13px; min-width: 112px; }
+.release-network .circuit-chip { font-size: 13px; text-align: center; }
+.preview-story-image { width: 100%; height: auto; display: block; border-radius: 12px; }
+.hero-copy .hero-sub { max-width: 46ch; }
+.hero-chips { flex-wrap: wrap; }
+.site-hero .hero-auth { max-width: 64ch; margin-top: 24px; }
+.hero-layer { letter-spacing: .14em; }
+.language-control select { min-width: 100px; }
+.site-footer .footer-layout { align-items: start; }
+.b-section { scroll-margin-top: 100px; }
+#navbar-header[data-compact="true"] .navbar-actions .language-control select { max-width: 128px; }
+.market-widget, .network-movement, .markets-section { content-visibility: auto; }
+@media (max-width: 767px) {
+  .mutucoin-site .hero-layout { grid-template-columns: 1fr; gap: 32px; }
+  .hero-title { font-size: clamp(36px, 9vw, 52px); }
+  .hero-chips { gap: 8px; }
+  .hero-ctas { align-items: stretch; }
+  .hero-ctas > a { justify-content: center; min-height: 48px; }
+  .site-container { overflow-wrap: anywhere; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

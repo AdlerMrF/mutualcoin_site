@@ -1,0 +1,176 @@
+/* Movimento autoral da LP: o pulso de bloco da MutualChain (um bloco a cada 2 s).
+   Tudo aqui anima só transform/opacity/offset em elementos pequenos; loops infinitos
+   são pausados fora da tela pelo observador do motion-kit ([data-8b-off]). */
+
+/* Pulso de bloco no hero: um ponto dourado percorre cada arco orbital a cada 2 s. */
+#hero .hero__block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFF3C4 0 9%, #FCB71B 16%, rgb(252 183 27 / 35%) 30%, rgb(252 183 27 / 0%) 70%);
+  /* Sem scale/translate aqui: no CSS a escala multiplica também o deslocamento do offset-path. */
+  offset-rotate: 0deg;
+  offset-anchor: 50% 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+#hero .hero__block--a { offset-path: ellipse(40% 64% at 78% 136%); }
+#hero .hero__block--b { offset-path: ellipse(78% 96% at 52% 176%); }
+
+/* Batida no selo "blocos de 2 s": um anel sai do selo no ritmo do pulso. */
+#hero .hero__chip--3 .m-caption-2 { position: relative; }
+#hero .hero__chip--3 .m-caption-2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid #FCB71B;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Bloco a bloco no registro: anterior, atual e próximo acendem em sequência (2 s cada). */
+[data-lp-polish] #listen .listen__record-mark { position: relative; }
+[data-lp-polish] #listen .listen__record-mark::after {
+  content: '';
+  position: absolute;
+  inset: -0.3125rem;
+  border-radius: 50%;
+  border: 1px solid #FCB71B;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* 99999 em vez de infinite: o observador do motion-kit pausaria o ponto enquanto ele está fora do arco visível.
+     Fora da tela o hero já pausa tudo via .is-paused. */
+  #hero .hero__block { animation: lp-block-run 2s cubic-bezier(0.45, 0, 0.25, 1) 1.4s 99999; }
+  #hero .hero__block--a { --block-from: 62%; --block-to: 88%; }
+  #hero .hero__block--b { --block-from: 64%; --block-to: 86%; animation-delay: 2.4s; }
+  @keyframes lp-block-run {
+    0% { offset-distance: var(--block-from); opacity: 0; }
+    15% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { offset-distance: var(--block-to); opacity: 0; }
+  }
+
+  #hero .hero__chip--3 .m-caption-2::after { animation: lp-block-ping 2s cubic-bezier(0.16, 1, 0.3, 1) 1.4s 99999; }
+  @keyframes lp-block-ping {
+    0% { opacity: 0.9; transform: scale(1); }
+    70%, 100% { opacity: 0; transform: scale(1.18, 1.5); }
+  }
+  #hero.is-paused .hero__block, #hero.is-paused .hero__chip--3 .m-caption-2::after { animation-play-state: paused; }
+
+  /* Os três itens de prova do hero se desenham depois do título. */
+  #hero .hero__tick { stroke-dasharray: 14; animation: lp-tick-draw 520ms cubic-bezier(0.16, 1, 0.3, 1) calc(0.75s + var(--i, 0) * 0.14s) backwards; }
+  @keyframes lp-tick-draw { from { stroke-dashoffset: 14; } }
+
+  /* Brilho ocioso no CTA principal: um reflexo a cada 7 s convida ao clique sem piscar. */
+  [data-lp-polish] #hero .hero__actions .m-btn:not(:hover, :focus-visible)::after { animation: lp-cta-idle 7s cubic-bezier(0.45, 0, 0.2, 1) 2.6s infinite; }
+  @keyframes lp-cta-idle {
+    0% { transform: translateX(-110%); }
+    11%, 100% { transform: translateX(110%); }
+  }
+
+  [data-lp-polish] #listen .listen__record-mark::after { animation: lp-ledger-beat 6s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+  [data-lp-polish] #listen .listen__record:nth-child(3) .listen__record-mark::after { animation-delay: 2s; }
+  [data-lp-polish] #listen .listen__record:nth-child(5) .listen__record-mark::after { animation-delay: 4s; }
+  @keyframes lp-ledger-beat {
+    0% { opacity: 1; transform: scale(0.6); }
+    22%, 100% { opacity: 0; transform: scale(2.2); }
+  }
+  [data-lp-polish] #listen .listen__record svg { animation: lp-ledger-glint 6s ease-out infinite; }
+  [data-lp-polish] #listen .listen__record:nth-child(3) svg { animation-delay: 2s; }
+  [data-lp-polish] #listen .listen__record:nth-child(5) svg { animation-delay: 4s; }
+  @keyframes lp-ledger-glint {
+    0% { transform: translateY(-2px) scale(1.08); }
+    18%, 100% { transform: none; }
+  }
+}
+
+@media (max-width: 47.99rem) {
+  #hero .hero__block--a { offset-path: ellipse(80% 22% at 50% 108%); --block-from: 66%; --block-to: 84%; }
+  #hero .hero__block--b { offset-path: ellipse(110% 30% at 50% 122%); --block-from: 68%; --block-to: 82%; }
+}
+
+/* Contato: a moeda Mutual ocupa o centro dos anéis do cartão (anéis em 975,315 · r 175/225 no 1200×630).
+   Só na versão refinada, onde o cartão usa object-fit: contain e a geometria do SVG bate 1:1. */
+#contact .contact__photo { position: relative; }
+#contact .contact__photo .contact__coin { display: none; }
+[data-lp-polish] #contact .contact__photo .contact__coin {
+  display: block;
+  position: absolute;
+  left: 81.25%;
+  top: 50%;
+  width: 26%;
+  height: auto;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  object-fit: contain;
+  background: none;
+  filter: drop-shadow(0 12px 24px rgb(0 0 0 / 45%));
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-lp-polish] #contact .contact__photo .contact__coin { animation: lp-coin-hover 6s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate; }
+  @keyframes lp-coin-hover { from { transform: translateY(-4px) rotate(-3deg); } to { transform: translateY(4px) rotate(3deg); } }
+}
+
+/* Moedas USDC, USDT e Pix: mesma linguagem do logo Mutucoin (a moeda gira e um brilho a atravessa),
+   cada uma no seu tempo. O giro usa a propriedade `rotate` e soma com o transform da rolagem/flutuação;
+   o brilho é um ::after recortado no formato da moeda. */
+[data-lp-polish] #rooms .rooms__token:has(img[src*="/token-"])::after,
+[data-lp-polish] #voices .voices__usdt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 40%, rgb(255 255 255 / 80%) 50%, transparent 60%) no-repeat;
+  background-size: 300% 100%;
+  background-position: 150% 0;
+  -webkit-mask: var(--coin-mask) center / contain no-repeat;
+  mask: var(--coin-mask) center / contain no-repeat;
+  opacity: 0;
+}
+[data-lp-polish] #rooms .rooms__token:has(img[src*="token-usdc"]) { --coin-mask: url('/img/token-usdc.webp'); --shine-cycle: 16s; }
+[data-lp-polish] #rooms .rooms__token:has(img[src*="token-pix"]) { --coin-mask: url('/img/token-pix-silver.webp'); --shine-cycle: 14s; }
+[data-lp-polish] #rooms .rooms__token--usdt,
+[data-lp-polish] #voices .voices__usdt { --coin-mask: radial-gradient(circle closest-side, #000 97%, transparent 100%); --shine-cycle: 19s; }
+[data-lp-polish] #voices .voices__usdt { --shine-delay: 3s; }
+[data-lp-polish] #rooms .rooms__token:nth-child(1) { --shine-delay: 1s; }
+[data-lp-polish] #rooms .rooms__token:nth-child(2) { --shine-delay: 5.5s; }
+[data-lp-polish] #rooms .rooms__token:nth-child(3) { --shine-delay: 9.5s; }
+[data-lp-polish] #rooms .rooms__token:nth-child(4) { --shine-delay: 3.2s; }
+[data-lp-polish] #rooms .rooms__token:nth-child(5) { --shine-delay: 12s; }
+[data-lp-polish] #rooms .rooms__token:nth-child(6) { --shine-delay: 7.5s; }
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-lp-polish] #rooms .rooms__token:has(img[src*="/token-"]) img,
+  [data-lp-polish] #voices .voices__usdt img {
+    animation-name: lp-token-float, lp-coin-spin;
+    animation-duration: calc(var(--token-duration, 4s) * 1.5), var(--shine-cycle, 7s);
+    animation-timing-function: cubic-bezier(.45, 0, .55, 1), cubic-bezier(.16, 1, .3, 1);
+    animation-delay: var(--token-delay, 0s), var(--shine-delay, 0s);
+    animation-iteration-count: infinite;
+  }
+  /* Tesouraria e mascote não flutuam a imagem: só o giro. */
+  [data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token img,
+  [data-lp-polish] #voices .voices__usdt img {
+    animation-name: none, lp-coin-spin;
+  }
+  [data-lp-polish] #rooms .rooms__token:has(img[src*="/token-"])::after,
+  [data-lp-polish] #voices .voices__usdt::before {
+    animation: lp-coin-shine var(--shine-cycle, 7s) cubic-bezier(.45, 0, .2, 1) var(--shine-delay, 0s) infinite;
+  }
+  @keyframes lp-coin-spin {
+    0% { rotate: y 0deg; }
+    5.5%, 100% { rotate: y 360deg; }
+  }
+  @keyframes lp-coin-shine {
+    0%, 4% { background-position: 150% 0; opacity: 0; }
+    5% { opacity: 1; }
+    10% { background-position: -50% 0; opacity: 1; }
+    11%, 100% { background-position: -50% 0; opacity: 0; }
+  }
+}

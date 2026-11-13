@@ -1,0 +1,53 @@
+/* Liquid glass: material aplicado por src/liquid-glass.js (classe .liquid-glass).
+   --lg-refraction recebe url(#filtro) só em Chromium; sem ela, resta o vidro fosco.
+   Sem JavaScript nada aqui se aplica e o cabeçalho segue o material anterior. */
+.liquid-glass-defs { position:absolute; width:0; height:0; overflow:hidden; pointer-events:none; }
+
+.liquid-glass {
+  --lg-rim:inset 0 1px 0 rgb(255 255 255 / .34), inset 0 -1px 0 rgb(255 255 255 / .08), inset 0 0 0 1px rgb(255 255 255 / .07);
+  --lg-sheen:radial-gradient(circle 240px at var(--lg-x,50%) var(--lg-y,-60%), rgb(255 255 255 / .16), transparent 70%);
+  -webkit-backdrop-filter:blur(var(--lg-blur,10px)) saturate(var(--lg-saturation,1.5));
+  backdrop-filter:blur(var(--lg-blur,10px)) var(--lg-refraction,) saturate(var(--lg-saturation,1.5));
+  background-image:var(--lg-sheen);
+  box-shadow:var(--lg-rim);
+}
+:root:not([data-theme='dark']) .liquid-glass {
+  --lg-rim:inset 0 1px 0 rgb(255 255 255 / .9), inset 0 -1px 0 rgb(22 29 51 / .08), inset 0 0 0 1px rgb(255 255 255 / .38);
+  --lg-sheen:radial-gradient(circle 240px at var(--lg-x,50%) var(--lg-y,-60%), rgb(255 255 255 / .55), transparent 70%);
+}
+
+/* Cabeçalho: a tinta continua densa o bastante para o texto sobre qualquer seção. */
+.mutucoin-site #navbar-header #navbar-center.liquid-glass {
+  --lg-blur:14px;
+  --lg-saturation:1.7;
+  background:var(--lg-sheen), color-mix(in srgb,var(--b-bg) 60%,transparent) !important;
+  -webkit-backdrop-filter:blur(var(--lg-blur)) saturate(var(--lg-saturation)) !important;
+  backdrop-filter:blur(var(--lg-blur)) var(--lg-refraction,) saturate(var(--lg-saturation)) !important;
+  border-color:color-mix(in srgb,var(--b-line) 55%,transparent) !important;
+  box-shadow:var(--lg-rim), 0 18px 52px #030b1e24 !important;
+}
+.mutucoin-site #navbar-header[data-scrolled='true'] #navbar-center.liquid-glass {
+  background:var(--lg-sheen), color-mix(in srgb,var(--b-surface) 70%,transparent) !important;
+}
+
+/* CTA secundário: mantém a cor de fundo de cada contexto; ganha refração, aro e elasticidade. */
+.mutucoin-site .ghost-cta.liquid-glass { --lg-blur:6px; box-shadow:var(--lg-rim); }
+.mutucoin-site .ghost-cta.liquid-glass:is(:hover,:focus-visible) { box-shadow:var(--lg-rim), 0 10px 28px #030b1e2e; }
+@media(prefers-reduced-motion:no-preference) {
+  .mutucoin-site .ghost-cta.liquid-glass-elastic {
+    translate:var(--lg-tx,0) var(--lg-ty,0);
+    transition:translate 420ms cubic-bezier(.16,1,.3,1), scale 100ms ease-out, background-color 100ms ease-out, border-color 100ms ease-out, box-shadow 200ms ease-out;
+  }
+}
+
+.enterprise-proof-rail.liquid-glass { --lg-blur:18px; --lg-saturation:1.4; }
+
+/* Alternativas de material: sem transparência, com mais contraste, cores forçadas ou impressão. */
+@media(prefers-reduced-transparency:reduce), (prefers-contrast:more), (forced-colors:active), print {
+  .liquid-glass { -webkit-backdrop-filter:none !important; backdrop-filter:none !important; background-image:none; box-shadow:none; }
+  .mutucoin-site #navbar-header #navbar-center.liquid-glass,
+  .mutucoin-site #navbar-header[data-scrolled='true'] #navbar-center.liquid-glass {
+    -webkit-backdrop-filter:none !important; backdrop-filter:none !important;
+    background:var(--b-surface) !important; border-color:var(--b-line) !important; box-shadow:none !important;
+  }
+}

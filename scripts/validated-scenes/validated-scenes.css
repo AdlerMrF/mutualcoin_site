@@ -1,0 +1,77 @@
+/* Composicoes aprovadas na main; cada LP preserva seu proprio layout e conteudo. */
+@property --validated-progress { syntax:'<number>'; inherits:true; initial-value:1; }
+.validated-art { position:relative; isolation:isolate; width:100%; max-width:30rem; aspect-ratio:1; margin-inline:auto; container-type:size; pointer-events:none; }
+.validated-art img { display:block; width:100%; height:100%; object-fit:contain; }
+.validated-base,.validated-tokens { position:absolute; inset:5%; }
+.validated-base { z-index:2; }
+.validated-tokens { z-index:1; container-type:size; }
+.validated-token {
+ --launch:clamp(0,(var(--validated-progress) - var(--delay,0)) * 1.8,1);
+ --p:calc(1 - (1 - var(--launch)) * (1 - var(--launch)) * (1 - var(--launch)));
+ --depth:drop-shadow(0 2px 2px rgb(0 0 0 / 20%)) drop-shadow(0 7px 9px rgb(3 8 18 / 35%));
+ position:absolute; width:13%; aspect-ratio:1; translate:-50% -50%;
+ left:50%; top:50%;
+ transform:translate(calc(var(--x) * var(--p)),calc(var(--y) * var(--p) - sin(var(--p) * pi) * var(--arc,12cqh))) rotate(calc((var(--p) - 1) * 28deg)) scale(calc(.35 + var(--p) * .65));
+ opacity:clamp(0,var(--p) * 5,1); filter:var(--depth); transition:filter 80ms ease-out;
+}
+.validated-token--1 { --x:-40cqw; --y:-38cqh; --delay:0; }
+.validated-token--2 { --x:11cqw; --y:-42cqh; --delay:.06; }
+.validated-token--3 { --x:38cqw; --y:-30cqh; --delay:.12; }
+.validated-token--4 { --x:41cqw; --y:17cqh; --delay:.18; }
+.validated-token--5 { --x:-36cqw; --y:32cqh; --delay:.24; }
+.validated-token--6 { --x:3cqw; --y:41cqh; --delay:.3; }
+.validated-token--usdt img,.validated-robot-coin img { object-fit:cover; clip-path:circle(44% at 50% 50%); scale:1.14; }
+.validated-token--pix img { filter:url('#validated-pix-alpha'); }
+.validated-art--trade .validated-token--2 { --x:-5cqw; width:9%; }
+.validated-art--trade .validated-token--4 { --x:-38cqw; --y:34cqh; }
+.validated-art--trade .validated-token--5 { --x:26cqw; --y:39cqh; width:10%; }
+.validated-art--treasury .validated-tokens { z-index:3; }
+.validated-art--treasury .validated-token { --arc:20cqh; }
+.validated-art--treasury .validated-token--1 { --x:-24cqw; --y:-25cqh; }
+.validated-art--treasury .validated-token--2 { --x:-10cqw; --y:-40cqh; }
+.validated-art--treasury .validated-token--3 { --x:12cqw; --y:-35cqh; }
+.validated-art--treasury .validated-token--4 { --x:35cqw; --y:-28cqh; }
+.validated-art--treasury .validated-token--5 { --x:42cqw; --y:-7cqh; }
+.validated-art--treasury .validated-token--6 { --x:-35cqw; --y:-6cqh; }
+.validated-art--commerce .validated-token--1 { --x:-38cqw; --y:-33cqh; width:21%; }
+.validated-art--commerce .validated-token--2 { --x:38cqw; --y:-21cqh; width:19%; }
+.validated-art--commerce .validated-token { --depth:drop-shadow(0 5px 6px rgb(3 8 18 / 25%)); }
+.validated-robot-rig { position:absolute; inset:0; transform-origin:50% 70%; }
+.validated-robot-coin { position:absolute; left:85%; top:44%; width:14%; aspect-ratio:1; translate:-50% -50%; filter:drop-shadow(0 2px 2px rgb(0 0 0 / 25%)) drop-shadow(0 9px 10px rgb(3 8 18 / 40%)); }
+.validated-robot-coin::after { content:''; position:absolute; inset:1%; border:1px solid rgb(255 255 255 / 25%); border-radius:50%; }
+.validated-robot-shadow { position:absolute; left:85%; top:61%; width:12%; height:1.5%; translate:-50% -50%; background:rgb(6 20 34 / 55%); border-radius:50%; filter:blur(2px); }
+.validated-trust-layout { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:32px; align-items:center; }
+.validated-trust-layout .home-trust-grid { grid-template-columns:1fr!important; }
+.validated-trust-layout .compliance-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.validated-hero-layout { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:32px; align-items:center; }
+.usecase-card>.validated-art,.content-card>.validated-art,.home-sector-card>.validated-art { max-width:20rem; margin-bottom:20px; }
+.enterprise-mascot-figure:has(.validated-art) { background:transparent!important; border:0!important; box-shadow:none!important; }
+.validated-filter-defs { position:absolute; pointer-events:none; }
+@media(max-width:767px){
+ .validated-trust-layout,.validated-hero-layout { grid-template-columns:1fr; gap:24px; }
+ .validated-trust-layout .compliance-grid { grid-template-columns:1fr; }
+ .validated-art--robot { max-width:24rem; }
+}
+@media(prefers-reduced-motion:no-preference){
+ .is-validated-scrolling .validated-token { filter:blur(.65px) var(--depth); }
+ .validated-token img { animation:validated-token-float 7s cubic-bezier(.45,0,.55,1) infinite paused; }
+ .validated-token--2 img,.validated-token--5 img { animation-duration:8.4s; animation-delay:-2s; }
+ .validated-token--3 img,.validated-token--6 img { animation-duration:6.8s; animation-delay:-1s; }
+ .validated-art.is-visible .validated-token img { animation-play-state:running; }
+ @keyframes validated-token-float {0%,100%{transform:translateY(3px) rotate(-3deg)}50%{transform:translateY(-3px) rotate(3deg)}}
+ .validated-robot-coin { animation:validated-usdt-float 3.6s cubic-bezier(.45,0,.55,1) infinite paused; }
+ .validated-robot-shadow { animation:validated-usdt-shadow 3.6s cubic-bezier(.45,0,.55,1) infinite paused; }
+ .validated-art.is-visible :is(.validated-robot-coin,.validated-robot-shadow){animation-play-state:running;}
+ @keyframes validated-usdt-float {0%,100%{transform:translateY(4px) rotate(-8deg)}50%{transform:translateY(-9px) rotate(7deg)}}
+ @keyframes validated-usdt-shadow {0%,100%{transform:scaleX(1);opacity:.6}50%{transform:scaleX(.7);opacity:.25}}
+ @supports(animation-timeline:view()){
+  .validated-art { animation:validated-entry linear both; animation-timeline:view(block); animation-range:entry 5% cover 50%; view-timeline:--validated-scene block; }
+  .validated-robot-rig { animation:validated-robot-scroll linear both; animation-timeline:--validated-scene; animation-range:entry 0% exit 100%; }
+  @keyframes validated-entry {from{--validated-progress:0}to{--validated-progress:1}}
+  @keyframes validated-robot-scroll {from{transform:translateY(22px) rotate(-3deg) scale(.97)}50%{transform:translateY(0) rotate(0) scale(1)}to{transform:translateY(-22px) rotate(3deg) scale(1.02)}}
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .validated-art,.validated-art * { animation:none!important; transition:none!important; }
+ .validated-art { --validated-progress:1; }
+}

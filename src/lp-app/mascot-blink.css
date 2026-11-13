@@ -1,0 +1,50 @@
+/* Mascote: o rosto muda de expressão em um ciclo de 16 s — neutro (o da imagem), piscadas, feliz,
+   piscadela com o olho direito e surpreso. Um SVG sobre o visor cobre olhos e boca originais com a cor
+   do visor (máscaras) e desenha os traços âmbar de cada expressão. Coordenadas da imagem de 1000 × 1000. */
+.voices__faces { display: none; }
+[data-lp-polish] #voices .voices__faces { display: block; position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+[data-lp-polish] #voices .voices__mask { fill: #0f1012; stroke: #0f1012; stroke-width: 6; opacity: 0; }
+[data-lp-polish] #voices .voices__glow { fill: none; stroke: #ffc94a; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; opacity: 0; filter: drop-shadow(0 0 4px #fcb71b); }
+[data-lp-polish] #voices .voices__glow-fill { fill: #ffc94a; }
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-lp-polish] #voices :is(.voices__mask, .voices__glow) { animation: 16s linear infinite paused; }
+  [data-lp-polish] #voices .voices__robot.is-motion-visible :is(.voices__mask, .voices__glow) { animation-play-state: running; }
+  [data-lp-polish] #voices .voices__mask--left { animation-name: lp-face-mask-left; }
+  [data-lp-polish] #voices .voices__mask--right { animation-name: lp-face-mask-right; }
+  [data-lp-polish] #voices .voices__mask--mouth { animation-name: lp-face-mask-mouth; }
+  [data-lp-polish] #voices .voices__glow--shut-left { animation-name: lp-face-blink; }
+  [data-lp-polish] #voices .voices__glow--shut-right { animation-name: lp-face-blink-wink; }
+  [data-lp-polish] #voices .voices__glow--happy { animation-name: lp-face-happy; }
+  [data-lp-polish] #voices .voices__glow--wow { animation-name: lp-face-wow; }
+
+  /* Piscadas em 2 s, 8 s e 11,4 s. */
+  @keyframes lp-face-blink {
+    0%, 11.9% { opacity: 0; } 12.5%, 13.5% { opacity: 1; } 14.1%, 49.4% { opacity: 0; }
+    50%, 51% { opacity: 1; } 51.6%, 70.4% { opacity: 0; } 71%, 72% { opacity: 1; } 72.6%, 100% { opacity: 0; }
+  }
+  /* Olho direito: as mesmas piscadas mais a piscadela (9 s a 10,2 s). */
+  @keyframes lp-face-blink-wink {
+    0%, 11.9% { opacity: 0; } 12.5%, 13.5% { opacity: 1; } 14.1%, 49.4% { opacity: 0; }
+    50%, 51% { opacity: 1; } 51.6%, 55.6% { opacity: 0; } 56.25%, 63.75% { opacity: 1; } 64.4%, 70.4% { opacity: 0; }
+    71%, 72% { opacity: 1; } 72.6%, 100% { opacity: 0; }
+  }
+  /* Feliz: 4 s a 7 s. */
+  @keyframes lp-face-happy { 0%, 24.4% { opacity: 0; } 25%, 43.75% { opacity: 1; } 44.4%, 100% { opacity: 0; } }
+  /* Surpreso: 12,5 s a 15 s. */
+  @keyframes lp-face-wow { 0%, 77.4% { opacity: 0; } 78%, 93.75% { opacity: 1; } 94.4%, 100% { opacity: 0; } }
+  @keyframes lp-face-mask-left {
+    0%, 11.9% { opacity: 0; } 12.5%, 13.5% { opacity: 1; } 14.1%, 24.4% { opacity: 0; }
+    25%, 43.75% { opacity: 1; } 44.4%, 49.4% { opacity: 0; } 50%, 51% { opacity: 1; } 51.6%, 70.4% { opacity: 0; }
+    71%, 72% { opacity: 1; } 72.6%, 100% { opacity: 0; }
+  }
+  @keyframes lp-face-mask-right {
+    0%, 11.9% { opacity: 0; } 12.5%, 13.5% { opacity: 1; } 14.1%, 24.4% { opacity: 0; }
+    25%, 43.75% { opacity: 1; } 44.4%, 49.4% { opacity: 0; } 50%, 51% { opacity: 1; } 51.6%, 55.6% { opacity: 0; }
+    56.25%, 63.75% { opacity: 1; } 64.4%, 70.4% { opacity: 0; } 71%, 72% { opacity: 1; } 72.6%, 100% { opacity: 0; }
+  }
+  @keyframes lp-face-mask-mouth {
+    0%, 24.4% { opacity: 0; } 25%, 43.75% { opacity: 1; } 44.4%, 77.4% { opacity: 0; }
+    78%, 93.75% { opacity: 1; } 94.4%, 100% { opacity: 0; }
+  }
+}

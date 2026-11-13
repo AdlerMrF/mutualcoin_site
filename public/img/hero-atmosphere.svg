@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 984" width="1440" height="984">
+  <!-- Atmosfera vetorial sobre hero-earth.webp: mesma geometria do limbo (centro 720,2334 · raio 1800),
+       nítida em qualquer densidade de tela. O grão quebra o banding do brilho comprimido da foto. -->
+  <defs>
+    <linearGradient id="rim" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0.06" stop-color="#1E5BFF" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#2F8BFF" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#E9FBFF" stop-opacity="1"/>
+      <stop offset="0.7" stop-color="#2F8BFF" stop-opacity="0.55"/>
+      <stop offset="0.94" stop-color="#1E5BFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="dawn" cx="720" cy="560" r="560" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 560) scale(1 .42) translate(0 -560)">
+      <stop offset="0" stop-color="#7FE4FF" stop-opacity=".42"/>
+      <stop offset=".35" stop-color="#1F7BFF" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#0B2D9A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="night" cx="720" cy="2334" r="1800" gradientUnits="userSpaceOnUse">
+      <stop offset=".955" stop-color="#020817" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0A2A8A" stop-opacity=".35"/>
+    </radialGradient>
+    <filter id="haze" x="-10%" y="-60%" width="120%" height="220%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="soft" x="-10%" y="-60%" width="120%" height="220%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 .55  0 0 0 0 .7  0 0 0 0 1  0 0 0 .07 0"/>
+    </filter>
+    <clipPath id="sky"><rect width="1440" height="984"/></clipPath>
+  </defs>
+  <!-- Estática de propósito: animar dentro do SVG obriga o navegador a refazer blur e grão a cada quadro.
+       O movimento (amanhecer e respiração) fica no CSS da página, em opacity/transform. -->
+  <g clip-path="url(#sky)">
+    <ellipse cx="720" cy="560" rx="760" ry="250" fill="url(#dawn)" style="mix-blend-mode:screen"/>
+    <circle cx="720" cy="2334" r="1800" fill="url(#night)"/>
+    <!-- Arco do limbo desenhado do centro para as bordas (dois semiarcos espelhados). -->
+    <g fill="none" stroke-linecap="round" style="mix-blend-mode:screen">
+      <path class="halo" pathLength="1" d="M720 534 A1800 1800 0 0 0 40 667" stroke="url(#rim)" stroke-width="22" filter="url(#haze)" opacity=".75"/>
+      <path class="halo" pathLength="1" d="M720 534 A1800 1800 0 0 1 1400 667" stroke="url(#rim)" stroke-width="22" filter="url(#haze)" opacity=".75"/>
+      <path class="rim" pathLength="1" d="M720 534 A1800 1800 0 0 0 40 667" stroke="url(#rim)" stroke-width="3.2" filter="url(#soft)"/>
+      <path class="rim" pathLength="1" d="M720 534 A1800 1800 0 0 1 1400 667" stroke="url(#rim)" stroke-width="3.2" filter="url(#soft)"/>
+      <path class="rim" pathLength="1" d="M720 534 A1800 1800 0 0 0 40 667" stroke="url(#rim)" stroke-width="1"/>
+      <path class="rim" pathLength="1" d="M720 534 A1800 1800 0 0 1 1400 667" stroke="url(#rim)" stroke-width="1"/>
+    </g>
+    <rect width="1440" height="984" filter="url(#grain)"/>
+  </g>
+</svg>

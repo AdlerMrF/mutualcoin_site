@@ -1,0 +1,45 @@
+{
+  "name": "mutucoin-site-b",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check:publication-target": "node scripts/check-publication-target.mjs",
+    "prebuild:public-preview": "npm run check:publication-target",
+    "release:check": "node scripts/check-publication-target.mjs --release && npm run build:public-preview && npm run check:public-preview",
+    "build:public-preview": "MUTUCOIN_PUBLIC_PREVIEW=1 VITE_SITE_URL=https://mutucoin.xyz vite build --outDir dist-public",
+    "check:public-preview": "node scripts/check-public-preview.mjs",
+    "preview:public-preview": "MUTUCOIN_PUBLIC_PREVIEW=1 VITE_SITE_URL=https://mutucoin.xyz vite preview --outDir dist-public --host 127.0.0.1 --port 4179 --strictPort",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "check": "npm run check:i18n && node scripts/check-site.mjs && npm run check:governance && npm run check:cobertura && npm run check:leitura && npm run check:home && npm run check:blindagem && npm run check:catalogue && npm run check:enterprise",
+    "check:catalogue": "node --test tests/catalogue.test.mjs",
+    "check:enterprise": "node --test tests/enterprise.test.mjs",
+    "check:governance": "node scripts/check-governance.mjs",
+    "check:browser": "node scripts/check-blindagem-browser.mjs",
+    "assets:prepare": "node scripts/prepare-assets.mjs",
+    "check:cobertura": "node scripts/check-cobertura.mjs",
+    "check:leitura": "node --test tests/leitura.test.mjs",
+    "check:home": "node --test tests/home-dados.test.mjs",
+    "check:blindagem": "node --test tests/blindagem.test.mjs tests/qa-guards.test.mjs && node scripts/check-contrast.mjs",
+    "check:browser:legacy": "node scripts/check-browser.mjs",
+    "check:lighthouse": "node scripts/check-lighthouse.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.21",
+    "three": "^0.134.0",
+    "vanta": "^0.5.24"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "autoprefixer": "^10.4.23",
+    "lighthouse": "^13.6.0",
+    "playwright": "^1.64.1",
+    "postcss": "^8.5.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.19",
+    "vite": "^7.3.1"
+  }
+}

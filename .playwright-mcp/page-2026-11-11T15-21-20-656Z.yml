@@ -1,0 +1,369 @@
+- generic [ref=f12e1]:
+  - link "Pular para o conteúdo" [ref=f12e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner:
+    - navigation "Principal" [ref=f12e3]:
+      - link "Mutucoin, voltar ao topo" [ref=f12e4] [cursor=pointer]:
+        - /url: "#hero"
+        - generic [ref=f12e5]: Mutucoin
+      - button "Abrir menu" [ref=f12e6] [cursor=pointer]
+  - main [ref=f12e9]:
+    - region "Uma rede própria. Um ecossistema. Mutucoin." [ref=f12e10]:
+      - generic [aria-hidden]:
+        - generic:
+          - generic:
+            - paragraph:
+              - generic: MTC · token do ecossistema
+          - generic:
+            - paragraph:
+              - generic: MutualChain · blocos de 2 s
+      - generic [ref=f12e13]:
+        - generic [ref=f12e14]:
+          - paragraph [ref=f12e15]: MutualChain · Grupo Mutual
+          - heading "Uma rede própria. Um ecossistema. Mutucoin." [level=1] [ref=f12e16]
+        - generic [ref=f12e17]:
+          - paragraph [ref=f12e18]: MTC, MutualChain e tecnologia para conectar ativos digitais, identidade e aplicações empresariais.
+          - list [ref=f12e19]:
+            - listitem [ref=f12e20]: Compatível com EVM
+            - listitem [ref=f12e23]: Consenso Clique PoA
+            - listitem [ref=f12e26]: MTC · MTCR-20
+          - generic [ref=f12e29]:
+            - link "Contato institucional" [ref=f12e30] [cursor=pointer]:
+              - /url: "#start"
+            - link "Conhecer a MutualChain" [ref=f12e33] [cursor=pointer]:
+              - /url: "#listen"
+    - region "Para que serve a MutualChain" [ref=f12e34]:
+      - generic [ref=f12e35]:
+        - heading "Para que serve a MutualChain" [level=2] [ref=f12e36]
+        - paragraph [ref=f12e37]: Um registro privado para mostrar quando algo foi registrado e se mudou. Entenda como ele pode trabalhar ao lado dos sistemas da sua empresa.
+      - generic [ref=f12e40]:
+        - generic [ref=f12e41]:
+          - paragraph [ref=f12e42]: A rede registra
+          - generic [aria-hidden] [ref=f12e43]:
+            - generic [ref=f12e44]: Bloco anterior
+            - generic [ref=f12e50]: Bloco atual
+            - generic [ref=f12e56]: Próximo bloco
+        - generic [ref=f12e61]:
+          - paragraph [ref=f12e62]: Você confere
+          - generic [ref=f12e63]:
+            - paragraph [ref=f12e65]:
+              - generic [ref=f12e68]: Cada bloco leva uma impressão digital do anterior.
+            - paragraph [ref=f12e70]:
+              - generic [ref=f12e73]: Se alguém muda um registro antigo, a ligação se rompe.
+            - paragraph [ref=f12e75]:
+              - generic [ref=f12e79]: E a alteração fica evidente.
+    - region "Uma base para cada etapa." [ref=f12e80]:
+      - generic [ref=f12e81]:
+        - generic [ref=f12e82]:
+          - heading "Uma base para cada etapa." [level=2] [ref=f12e83]
+          - generic [ref=f12e84]:
+            - paragraph [ref=f12e85]: "Carteiras, rede, integrações e registro digital: conheça os módulos da Mutucoin e o escopo de cada um."
+            - link "Conhecer os serviços" [ref=f12e86] [cursor=pointer]:
+              - /url: /servicos/
+        - generic [ref=f12e89]:
+          - list [ref=f12e90]:
+            - listitem [ref=f12e91]:
+              - heading "MutualChain e MTC" [level=3] [ref=f12e92]
+              - paragraph [ref=f12e93]: Rede de registro digital e seu token MTC, com ambientes separados para uso e testes.
+            - listitem [ref=f12e94]:
+              - heading "MTC e OHR" [level=3] [ref=f12e95]
+              - paragraph [ref=f12e96]: MTC é o token do ecossistema, no padrão MTCR-20. OHR é o ativo nativo usado para taxas. Rede principal e rede de testes têm identificações distintas.
+            - listitem [ref=f12e97]:
+              - heading "Identidade e titularidade" [level=3] [ref=f12e98]
+              - paragraph [ref=f12e99]: O fluxo documentado exige identidade e análise de conformidade aprovadas, assinatura de mensagem pela carteira e revisão administrativa.
+            - listitem [ref=f12e100]:
+              - heading "Identidade e conformidade" [level=3] [ref=f12e101]
+              - paragraph [ref=f12e102]: Verificação de pessoas e empresas, permissões e registro de ações fazem parte do desenho.
+            - listitem [ref=f12e103]:
+              - heading "Evidência por movimento" [level=3] [ref=f12e104]
+              - paragraph [ref=f12e105]: A identificação da transação conecta endereço, bloco e confirmações. Dados pessoais ficam fora da apresentação pública.
+          - figure "Ilustração do painel Mutucoin" [ref=f12e107]:
+            - generic [ref=f12e108]:
+              - generic [ref=f12e109]:
+                - paragraph [ref=f12e110]: Painel Mutucoin
+                - paragraph [ref=f12e111]: Ilustração · em implantação
+              - paragraph [ref=f12e116]: MutualChain Testnet · 28002
+              - list [ref=f12e117]:
+                - listitem [ref=f12e118]:
+                  - paragraph [ref=f12e119]:
+                    - generic [ref=f12e120]: MutualChain · EVM · Clique PoA · MTC · MTCR-20
+                - listitem [ref=f12e121]:
+                  - paragraph [ref=f12e122]:
+                    - generic [ref=f12e123]: Comprovar a titularidade da carteira.
+                - listitem [ref=f12e124]: Verificação de identidade e conformidade
+                - listitem [ref=f12e125]:
+                  - paragraph [ref=f12e126]:
+                    - generic [ref=f12e127]: KYB/AML e confirmação de acesso em duas etapas.
+                - listitem [ref=f12e128]:
+                  - paragraph [ref=f12e129]:
+                    - generic [ref=f12e130]: Endereço, bloco e confirmações.
+              - paragraph [ref=f12e131]: Tokens de teste, sem valor financeiro
+    - region "Uma plataforma, diferentes serviços." [ref=f12e135]:
+      - generic [ref=f12e137]:
+        - generic [ref=f12e138]:
+          - heading "Uma plataforma, diferentes serviços." [level=2] [ref=f12e139]
+          - paragraph [ref=f12e140]: Conheça o escopo da plataforma por módulo e as integrações em implantação nesta versão. Operações financeiras via parceiro licenciado.
+        - list [ref=f12e141]:
+          - listitem [ref=f12e142]:
+            - heading "Contas Globais" [level=3] [ref=f12e143]
+            - paragraph [ref=f12e144]: Uma visão multimoeda para recebimentos e pagamentos via parceiros licenciados.
+          - listitem [ref=f12e148]:
+            - heading "Liquidez" [level=3] [ref=f12e149]
+            - paragraph [ref=f12e150]: Execução em cripto, câmbio e stablecoins via parceiros licenciados.
+          - listitem [ref=f12e153]:
+            - heading "On-ramp / Off-ramp" [level=3] [ref=f12e154]
+            - paragraph [ref=f12e155]: Conversão entre stablecoin e moeda local via parceiros licenciados.
+            - generic [aria-hidden] [ref=f12e156]:
+              - generic [ref=f12e158]: Pix
+              - generic [ref=f12e159]: USDT
+          - listitem [ref=f12e160]:
+            - heading "Pagamentos Globais" [level=3] [ref=f12e161]
+            - paragraph [ref=f12e162]: Roteamento entre moedas e redes para pagar e receber via parceiros licenciados.
+            - generic [aria-hidden] [ref=f12e163]: Em implantação
+          - listitem [ref=f12e164]:
+            - heading "Guarda segregada de ativos" [level=3] [ref=f12e165]
+            - paragraph [ref=f12e166]: Recursos de clientes segregados pelos parceiros licenciados, conforme contrato.
+          - listitem [ref=f12e168]:
+            - heading "API única, webhooks e sandbox" [level=3] [ref=f12e169]
+            - paragraph [ref=f12e170]: Uma integração REST para conectar serviços, receber notificações e preparar testes.
+            - generic [aria-hidden] [ref=f12e171]: REST
+          - listitem [ref=f12e172]:
+            - heading "Tesouraria Global" [level=3] [ref=f12e173]
+            - paragraph [ref=f12e174]: Stablecoins como base do caixa e conversão para moedas locais via parceiros licenciados.
+          - listitem [ref=f12e176]:
+            - heading "Produtos para instituições" [level=3] [ref=f12e177]
+            - paragraph [ref=f12e178]: Estruture produtos financeiros, cripto e ativos do mundo real sobre nossa infraestrutura.
+    - region "Para a sua empresa, em cada setor." [ref=f12e180]:
+      - generic [ref=f12e181]:
+        - heading "Para a sua empresa, em cada setor." [level=2] [ref=f12e182]
+        - paragraph [ref=f12e183]: MutualChain e MTC conectados a um desenho multirrede global. Disponibilidade e condições dependem de contratação e são executadas por parceiros licenciados.
+      - generic [ref=f12e185]:
+        - paragraph [ref=f12e186]: Casos de uso · ilustração
+        - generic [ref=f12e188]:
+          - figure "Importação e Exportação" [ref=f12e189]:
+            - img "Moeda Mutual com seta em direção a um contêiner de exportação" [ref=f12e192]
+            - generic [ref=f12e194]:
+              - paragraph [ref=f12e195]:
+                - generic [ref=f12e196]: Do Pix em reais ao fornecedor no exterior.
+              - paragraph [ref=f12e197]:
+                - generic [ref=f12e198]: Com documentação do fluxo.
+          - figure "Fintechs e PSPs" [ref=f12e199]:
+            - img "Monograma Mutual em 3D com integração de API e pilha de moedas" [ref=f12e202]
+            - generic [ref=f12e204]:
+              - paragraph [ref=f12e205]:
+                - generic [ref=f12e206]: Moeda local e USDC/USDT via API REST.
+              - paragraph [ref=f12e207]:
+                - generic [ref=f12e208]: Sandbox, webhooks e KYB/AML.
+          - figure "Tesouraria em stablecoin" [ref=f12e209]:
+            - img "Caixa de tesouraria Mutual com gaveta aberta e moedas organizadas" [ref=f12e212]
+            - generic [ref=f12e214]:
+              - paragraph [ref=f12e215]:
+                - generic [ref=f12e216]: Caixa organizado em USDT/USDC.
+              - paragraph [ref=f12e217]:
+                - generic [ref=f12e218]: Aprovação por várias pessoas.
+          - figure "E-commerce internacional" [ref=f12e219]:
+            - img "Mapa tridimensional dourado das Américas" [ref=f12e222]
+            - generic [ref=f12e224]:
+              - paragraph [ref=f12e225]:
+                - generic [ref=f12e226]: Repasses de marketplace na América Latina.
+              - paragraph [ref=f12e227]:
+                - generic [ref=f12e228]: Converta ou mantenha em stablecoin.
+          - figure "Agro e commodities" [ref=f12e229]:
+            - img "Monograma Mutual dourado com seta de repasse, silo e espiga de trigo" [ref=f12e231]
+            - generic [ref=f12e233]:
+              - paragraph [ref=f12e234]:
+                - generic [ref=f12e235]: Receba exportações em dólar.
+              - paragraph [ref=f12e236]:
+                - generic [ref=f12e237]: Converta por Pix ou mantenha em USDT.
+    - region "Segurança com transparência." [ref=f12e238]:
+      - generic [ref=f12e239]:
+        - heading "Segurança com transparência." [level=2] [ref=f12e240]
+        - generic [ref=f12e241]:
+          - figure "Em uma frase MutualChain" [ref=f12e242]:
+            - img "Mascote 3D da Mutucoin com uma moeda USDT flutuando sobre a mão aberta" [ref=f12e245]
+            - blockquote [ref=f12e247]:
+              - paragraph [ref=f12e248]: “Blockchain privada é um registro que só quem você autoriza acessa, e em que qualquer alteração fica evidente.”
+            - paragraph [ref=f12e254]: Em uma fraseMutualChain
+          - generic [ref=f12e255]:
+            - list [ref=f12e256]:
+              - listitem [ref=f12e257]:
+                - paragraph [ref=f12e258]: Controles atuais
+                - paragraph [ref=f12e259]: Chaves em HSM (KMS).
+              - listitem [ref=f12e260]:
+                - paragraph [ref=f12e261]: KYB/AML
+                - paragraph [ref=f12e262]: Verificação de empresas e prevenção à lavagem de dinheiro.
+              - listitem [ref=f12e263]:
+                - paragraph [ref=f12e264]: 2FA
+                - paragraph [ref=f12e265]: Confirmação de acesso em duas etapas.
+              - listitem [ref=f12e266]:
+                - paragraph [ref=f12e267]: Em implantação
+                - paragraph [ref=f12e268]: Travel Rule e chave dividida/recuperação.
+            - list [ref=f12e269]:
+              - listitem [ref=f12e270]:
+                - paragraph [ref=f12e271]: MutualChain
+                - paragraph [ref=f12e272]: PoA · blocos de 2 s · mainnet 28001.
+              - listitem [ref=f12e273]:
+                - paragraph [ref=f12e274]: Estado ao vivo
+                - paragraph [ref=f12e275]: Mostrado apenas quando há leitura pública válida.
+              - listitem [ref=f12e276]:
+                - paragraph [ref=f12e277]: Carteiras
+                - paragraph [ref=f12e278]: A Mutual e a Mutucoin não guardam ativos de terceiros.
+              - listitem [ref=f12e279]:
+                - paragraph [ref=f12e280]: Não substitui o seu sistema
+                - paragraph [ref=f12e281]: Funciona ao lado dos sistemas que sua empresa já usa.
+    - region "Três passos para integrar." [ref=f12e282]:
+      - generic [ref=f12e283]:
+        - generic [ref=f12e284]:
+          - heading "Três passos para integrar." [level=2] [ref=f12e285]
+          - paragraph [ref=f12e286]: Software, infraestrutura e integração sob a marca do parceiro, sujeitos a contrato e validação técnica.
+        - list [ref=f12e287]:
+          - listitem [ref=f12e288]:
+            - paragraph [aria-hidden] [ref=f12e289]: "1"
+            - generic [ref=f12e290]:
+              - heading "Converse com a Mutual" [level=3] [ref=f12e291]
+              - paragraph [ref=f12e292]: Um ponto de encontro para instituições, empresas e integradores. Entendemos o seu caso e o escopo de cada módulo.
+            - generic [aria-hidden] [ref=f12e293]:
+              - paragraph [ref=f12e294]: Contato institucional
+              - paragraph [ref=f12e298]: Escopo por módulo
+              - paragraph [ref=f12e302]: Identidade e conformidade
+          - listitem [ref=f12e306]:
+            - paragraph [aria-hidden] [ref=f12e307]: "2"
+            - generic [ref=f12e308]:
+              - heading "Teste em ambiente separado" [level=3] [ref=f12e309]
+              - paragraph [ref=f12e310]: Rede principal e rede de testes têm identificações distintas. Os tokens da rede de testes não têm valor financeiro.
+            - generic [aria-hidden] [ref=f12e311]:
+              - paragraph [ref=f12e312]:
+                - text: MutualChain Testnet · 28002
+                - generic [ref=f12e313]: Testes
+              - paragraph [ref=f12e314]:
+                - text: Rede principal · 28001
+                - generic [ref=f12e315]: Após validação
+          - listitem [ref=f12e316]:
+            - paragraph [aria-hidden] [ref=f12e317]: "3"
+            - generic [ref=f12e318]:
+              - heading "Opere com parceiros licenciados" [level=3] [ref=f12e319]
+              - paragraph [ref=f12e320]: Operações financeiras são executadas por parceiros licenciados, sob responsabilidade deles. Disponibilidade e condições dependem de contratação.
+            - generic [aria-hidden] [ref=f12e321]:
+              - paragraph [ref=f12e322]:
+                - generic [ref=f12e323]: Solicitação ilustrativa
+              - paragraph [ref=f12e324]:
+                - generic [ref=f12e325]: Em análise · ilustração
+    - region "Perguntas, respondidas com clareza." [ref=f12e326]:
+      - generic [ref=f12e327]:
+        - generic [ref=f12e328]:
+          - heading "Perguntas, respondidas com clareza." [level=2] [ref=f12e329]
+          - paragraph [ref=f12e330]:
+            - text: Quer saber se faz sentido para a sua empresa?
+            - link "Fale com a Mutual" [ref=f12e331] [cursor=pointer]:
+              - /url: "#contact"
+            - text: .
+        - generic [ref=f12e332]:
+          - group [ref=f12e333]:
+            - generic "O que é blockchain?" [ref=f12e334] [cursor=pointer]
+          - group [ref=f12e336]:
+            - generic "O que torna a MutualChain privada?" [ref=f12e337] [cursor=pointer]
+          - group [ref=f12e339]:
+            - generic "Para que serve numa empresa?" [ref=f12e340] [cursor=pointer]
+          - group [ref=f12e342]:
+            - generic "Substitui o sistema que já uso?" [ref=f12e343] [cursor=pointer]
+          - group [ref=f12e345]:
+            - generic "Qual a diferença entre MTC e OHR?" [ref=f12e346] [cursor=pointer]
+          - group [ref=f12e348]:
+            - generic "A Mutucoin guarda meus ativos?" [ref=f12e349] [cursor=pointer]
+          - group [ref=f12e351]:
+            - generic "Como funcionam depósitos, saques e a troca MTC/USDT?" [ref=f12e352] [cursor=pointer]
+          - group [ref=f12e354]:
+            - generic "A Mutucoin é um VASP licenciado?" [ref=f12e355] [cursor=pointer]
+    - region "Quer saber se faz sentido para a sua empresa?" [ref=f12e357]:
+      - generic [ref=f12e360]:
+        - heading "Quer saber se faz sentido para a sua empresa?" [level=2] [ref=f12e361]
+        - paragraph [ref=f12e362]: Um ponto de encontro para instituições, empresas e integradores.
+        - generic [ref=f12e363]:
+          - link "Fale com a Mutual" [ref=f12e364] [cursor=pointer]:
+            - /url: /contato/
+          - link "Voltar ao topo" [ref=f12e367] [cursor=pointer]:
+            - /url: "#hero"
+    - region "Vamos conversar sobre a Mutucoin." [ref=f12e368]:
+      - generic [ref=f12e369]:
+        - generic [ref=f12e370]:
+          - heading "Vamos conversar sobre a Mutucoin." [level=2] [ref=f12e371]
+          - paragraph [ref=f12e372]: Um ponto de encontro para instituições, empresas e integradores.
+          - figure [ref=f12e373]
+          - list [ref=f12e374]:
+            - listitem [ref=f12e375]:
+              - paragraph [ref=f12e376]: Contato
+              - link "Contato institucional" [ref=f12e377] [cursor=pointer]:
+                - /url: /contato/
+            - listitem [ref=f12e378]:
+              - paragraph [ref=f12e379]: Governança
+              - link "Governança e Conformidade" [ref=f12e380] [cursor=pointer]:
+                - /url: /governanca-e-conformidade/
+            - listitem [ref=f12e381]:
+              - paragraph [ref=f12e382]: Serviços
+              - link "Serviços da Mutucoin" [ref=f12e383] [cursor=pointer]:
+                - /url: /servicos/
+        - generic [ref=f12e384]:
+          - heading "Documentos do ecossistema" [level=3] [ref=f12e385]
+          - paragraph [ref=f12e386]: "Os documentos públicos serão disponibilizados após aprovação: Whitepaper Mutucoin, Documento da MutualChain, Termos de uso e Política de privacidade."
+          - paragraph [ref=f12e387]: "Acesso à plataforma: endereço de entrada pendente de aprovação."
+          - link "Ir para o site Mutucoin" [ref=f12e388] [cursor=pointer]:
+            - /url: /
+  - contentinfo "Mutucoin · MTC · MutualChain." [ref=f12e391]:
+    - generic [ref=f12e392]:
+      - generic [ref=f12e393]:
+        - generic [ref=f12e394]:
+          - heading "Mutucoin · MTC · MutualChain." [level=2] [ref=f12e395]
+          - paragraph [ref=f12e396]: Tecnologia e infraestrutura para o ecossistema de ativos digitais.
+          - link "Voltar ao topo" [ref=f12e397] [cursor=pointer]:
+            - /url: "#hero"
+        - generic [ref=f12e398]:
+          - generic [ref=f12e399]:
+            - heading "Ecossistema" [level=2] [ref=f12e400]
+            - list [ref=f12e401]:
+              - listitem [ref=f12e402]:
+                - link "MutualChain" [ref=f12e403] [cursor=pointer]:
+                  - /url: "#listen"
+              - listitem [ref=f12e404]:
+                - link "Plataforma" [ref=f12e405] [cursor=pointer]:
+                  - /url: "#calls"
+              - listitem [ref=f12e406]:
+                - link "Serviços" [ref=f12e407] [cursor=pointer]:
+                  - /url: "#tune"
+              - listitem [ref=f12e408]:
+                - link "Casos de uso" [ref=f12e409] [cursor=pointer]:
+                  - /url: "#rooms"
+          - generic [ref=f12e410]:
+            - heading "Institucional" [level=2] [ref=f12e411]
+            - list [ref=f12e412]:
+              - listitem [ref=f12e413]:
+                - link "Contato" [ref=f12e414] [cursor=pointer]:
+                  - /url: /contato/
+              - listitem [ref=f12e415]:
+                - link "Governança e Conformidade" [ref=f12e416] [cursor=pointer]:
+                  - /url: /governanca-e-conformidade/
+              - listitem [ref=f12e417]:
+                - link "Perguntas" [ref=f12e418] [cursor=pointer]:
+                  - /url: "#faq"
+          - generic [ref=f12e419]:
+            - heading "Site" [level=2] [ref=f12e420]
+            - list [ref=f12e421]:
+              - listitem [ref=f12e422]:
+                - link "Início" [ref=f12e423] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=f12e424]:
+                - link "Serviços" [ref=f12e425] [cursor=pointer]:
+                  - /url: /servicos/
+              - listitem [ref=f12e426]:
+                - link "Empresas e Governo" [ref=f12e427] [cursor=pointer]:
+                  - /url: /infraestrutura-empresarial/
+      - paragraph [ref=f12e429]: Mutucoin
+      - generic [ref=f12e430]:
+        - paragraph [ref=f12e431]:
+          - text: "© 2026 Mutual Capital Tecnologia Financeira e Participações Ltda. Todos os direitos reservados. · Design:"
+          - link "8B" [ref=f12e432] [cursor=pointer]:
+            - /url: https://8b.com/
+        - list [ref=f12e433]:
+          - listitem [ref=f12e434]:
+            - link "Termos e privacidade · documentos em elaboração" [ref=f12e435] [cursor=pointer]:
+              - /url: /governanca-e-conformidade/
+      - paragraph [ref=f12e436]: Apresentação institucional de software e APIs. Operações financeiras são executadas por parceiros licenciados, sob responsabilidade deles. Disponibilidade e condições dependem de contratação.

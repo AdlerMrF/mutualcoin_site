@@ -1,0 +1,12 @@
+// Mesmo conteúdo e marcação do Site A; contato na própria home do Site B.
+export const needsSection = `<section id="needs" class="b-section needs-section" aria-labelledby="needs-heading"><div class="site-container needs-layout">
+<div class="needs-intro"><div class="section-heading"><span class="sec-eyebrow" data-i18n="needs.ey"></span><h2 id="needs-heading" data-i18n="needs.title"></h2><p id="needs-subtitle" data-i18n="needs.subtitle"></p></div></div>
+<div data-needs-checklist><fieldset aria-describedby="needs-privacy"><legend class="sr-only" data-i18n="needs.subtitle"></legend><ol class="needs-list">
+<li class="needs-item"><input type="checkbox" autocomplete="off" id="needs-1" aria-labelledby="needs-1-title" aria-describedby="needs-1-desc"><div class="needs-copy"><label for="needs-1" id="needs-1-title" data-i18n="needs.1.title"></label><p id="needs-1-desc" data-i18n="needs.1.desc"></p></div></li>
+<li class="needs-item"><input type="checkbox" autocomplete="off" id="needs-2" aria-labelledby="needs-2-title" aria-describedby="needs-2-desc"><div class="needs-copy"><label for="needs-2" id="needs-2-title" data-i18n="needs.2.title"></label><p id="needs-2-desc" data-i18n="needs.2.desc"></p></div></li>
+<li class="needs-item"><input type="checkbox" autocomplete="off" id="needs-3" aria-labelledby="needs-3-title" aria-describedby="needs-3-desc"><div class="needs-copy"><label for="needs-3" id="needs-3-title" data-i18n="needs.3.title"></label><p id="needs-3-desc" data-i18n="needs.3.desc"></p></div></li>
+<li class="needs-item"><input type="checkbox" autocomplete="off" id="needs-4" aria-labelledby="needs-4-title" aria-describedby="needs-4-desc"><div class="needs-copy"><label for="needs-4" id="needs-4-title" data-i18n="needs.4.title"></label><p id="needs-4-desc" data-i18n="needs.4.desc"></p></div></li>
+<li class="needs-item"><input type="checkbox" autocomplete="off" id="needs-5" aria-labelledby="needs-5-title" aria-describedby="needs-5-desc"><div class="needs-copy"><label for="needs-5" id="needs-5-title" data-i18n="needs.5.title"></label><p id="needs-5-desc" data-i18n="needs.5.desc"></p></div></li>
+</ol></fieldset><div class="needs-feedback"><output aria-live="polite" aria-atomic="true"><bdi data-needs-count>0</bdi> <span data-i18n="needs.count"></span></output><p id="needs-privacy" class="supporting-note" data-i18n="needs.privacy"></p></div></div>
+<div class="needs-close"><p data-i18n="needs.close"></p><a class="needs-cta" href="#contato" data-i18n="needs.cta"></a></div>
+</div></section>`;

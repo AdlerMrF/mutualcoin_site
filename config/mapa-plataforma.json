@@ -1,0 +1,370 @@
+{
+  "fonte": "../mutucoin-api-mapa.md",
+  "data": "2026-10-28",
+  "abas": [
+    {
+      "id": "dashboard",
+      "nome": "Dashboard",
+      "move_valor": false
+    },
+    {
+      "id": "cotacao",
+      "nome": "Cotação",
+      "move_valor": true
+    },
+    {
+      "id": "mtcswap",
+      "nome": "MtcSwap",
+      "move_valor": true
+    },
+    {
+      "id": "wallet",
+      "nome": "Carteira",
+      "move_valor": true
+    },
+    {
+      "id": "multinet",
+      "nome": "Multi-rede",
+      "move_valor": false
+    },
+    {
+      "id": "explorer",
+      "nome": "Explorer",
+      "move_valor": false
+    },
+    {
+      "id": "faucet",
+      "nome": "Faucet",
+      "move_valor": true
+    },
+    {
+      "id": "controle",
+      "nome": "Controle",
+      "move_valor": true
+    },
+    {
+      "id": "hub",
+      "nome": "Hub",
+      "move_valor": true
+    },
+    {
+      "id": "notary",
+      "nome": "Cartório",
+      "move_valor": false
+    },
+    {
+      "id": "assets",
+      "nome": "Tokenizar",
+      "move_valor": true
+    },
+    {
+      "id": "person",
+      "nome": "Pessoa",
+      "move_valor": true
+    },
+    {
+      "id": "compliance",
+      "nome": "Compliance",
+      "move_valor": false
+    },
+    {
+      "id": "contracts",
+      "nome": "Contratos",
+      "move_valor": true
+    },
+    {
+      "id": "miles",
+      "nome": "Milhas",
+      "move_valor": true
+    }
+  ],
+  "rotas": [
+    "/",
+    "/docs",
+    "/docs.html",
+    "/api-reference.html",
+    "/guides.html",
+    "/llms.txt"
+  ],
+  "modulos": [
+    {
+      "nome": "Dashboard",
+      "abas": [
+        "dashboard"
+      ]
+    },
+    {
+      "nome": "Cotação",
+      "abas": [
+        "cotacao"
+      ]
+    },
+    {
+      "nome": "MtcSwap",
+      "abas": [
+        "mtcswap"
+      ]
+    },
+    {
+      "nome": "Carteira Multi-rede",
+      "abas": [
+        "wallet",
+        "multinet"
+      ]
+    },
+    {
+      "nome": "Explorer",
+      "abas": [
+        "explorer"
+      ]
+    },
+    {
+      "nome": "Faucet",
+      "abas": [
+        "faucet"
+      ]
+    },
+    {
+      "nome": "Controle",
+      "abas": [
+        "controle"
+      ]
+    },
+    {
+      "nome": "Hub",
+      "abas": [
+        "hub"
+      ]
+    },
+    {
+      "nome": "Cartório",
+      "abas": [
+        "notary"
+      ]
+    },
+    {
+      "nome": "Tokenizar",
+      "abas": [
+        "assets"
+      ]
+    },
+    {
+      "nome": "Pessoa",
+      "abas": [
+        "person"
+      ]
+    },
+    {
+      "nome": "Compliance",
+      "abas": [
+        "compliance"
+      ]
+    },
+    {
+      "nome": "Contratos",
+      "abas": [
+        "contracts"
+      ]
+    },
+    {
+      "nome": "Milhas",
+      "abas": [
+        "miles"
+      ]
+    }
+  ],
+  "extras": [
+    {
+      "id": 1,
+      "nome": "Checkout MTC ↔ USDT"
+    },
+    {
+      "id": 2,
+      "nome": "API pública `/api/v1`"
+    },
+    {
+      "id": 3,
+      "nome": "Tenants white-label"
+    },
+    {
+      "id": 4,
+      "nome": "BFF do administrador"
+    },
+    {
+      "id": 5,
+      "nome": "Webhooks e API Keys da pessoa"
+    },
+    {
+      "id": 6,
+      "nome": "Gestão de administradores (root)"
+    },
+    {
+      "id": 7,
+      "nome": "Auditoria · saúde"
+    },
+    {
+      "id": 8,
+      "nome": "Explorer \"cru\""
+    },
+    {
+      "id": 9,
+      "nome": "Rotas legadas ou de rede padrão"
+    },
+    {
+      "id": 10,
+      "nome": "Hashing do cartório"
+    },
+    {
+      "id": 11,
+      "nome": "Páginas de documentação"
+    },
+    {
+      "id": 12,
+      "nome": "Faixa de status das redes"
+    }
+  ],
+  "endpoints": [
+    "GET /api/networks",
+    "GET /api/networks/:id",
+    "GET /api/networks/:id/gas",
+    "GET /api/networks/:id/price",
+    "GET /api/networks/:id/price/history",
+    "GET /api/networks/:id/spread",
+    "GET /api/network",
+    "GET /api/mtc",
+    "PUT /api/networks/:id/gas",
+    "PUT /api/networks/:id/spread",
+    "PUT /api/networks/:id/price",
+    "POST /api/networks/:id/node/gasprice",
+    "POST /api/networks/:id/send",
+    "GET /api/wallets",
+    "GET /api/db/health",
+    "GET /api/audit",
+    "GET /api/blocks/recent?n=",
+    "GET /api/block/:id",
+    "GET /api/tx/:hash",
+    "GET /api/account/:address",
+    "POST /api/tx/broadcast",
+    "POST /api/rpc?net=",
+    "GET /api/faucet",
+    "GET /api/networks/:id/faucet",
+    "POST /api/faucet/dispense",
+    "POST /api/networks/:id/faucet/dispense",
+    "GET /api/networks/:id/dex/",
+    "GET /api/networks/:id/dex/pairs",
+    "GET /api/networks/:id/dex/quote?tokenIn=&tokenOut=&amount=",
+    "POST /api/networks/:id/dex/swap/build",
+    "GET /api/mtcswap/networks",
+    "GET /api/mtcswap/networks/:id",
+    "GET /api/networks/:id/mtcswap/",
+    "GET /api/networks/:id/mtcswap/pools",
+    "GET /api/networks/:id/mtcswap/quote?tokenIn=&tokenOut=&amount=",
+    "POST /api/networks/:id/mtcswap/swap/build",
+    "POST /api/networks/:id/mtcswap/liquidity",
+    "GET /api/multinet/networks",
+    "POST /api/multinet/generate",
+    "POST /api/multinet/derive",
+    "GET /api/notary/status",
+    "POST /api/notary/hash",
+    "POST /api/notary/verify",
+    "GET /api/notary/list?network=&limit=",
+    "POST /api/notary/sign",
+    "POST /api/notary/notarize",
+    "GET /api/assets/status",
+    "GET /api/assets/list?network=&limit=",
+    "POST /api/assets/register",
+    "POST /api/assets/transfer",
+    "POST /api/assets/logo",
+    "GET /api/hub/status",
+    "GET /api/hub/prices",
+    "GET /api/hub/users",
+    "POST /api/hub/users",
+    "GET /api/hub/users/:id",
+    "GET /api/hub/users/:id/kyc",
+    "POST /api/hub/users/:id/kyc",
+    "GET /api/hub/users/:id/deposits",
+    "GET /api/hub/users/:id/withdrawals",
+    "GET /api/hub/users/:id/orders",
+    "POST /api/hub/users/:id/withdraw",
+    "POST /api/hub/users/:id/trade",
+    "GET /api/hub/kyc?status=",
+    "POST /api/hub/kyc/:id/review",
+    "POST /api/checkout/login",
+    "POST /api/checkout/logout",
+    "POST /api/checkout",
+    "GET /api/checkout",
+    "GET /api/checkout/:id",
+    "POST /api/checkout/:id/cancel",
+    "GET /api/checkout/admin?status=",
+    "POST /api/checkout/:id/fulfill",
+    "POST /api/person/register",
+    "POST /api/person/login",
+    "POST /api/person/logout",
+    "POST /api/person/forgot-password",
+    "POST /api/person/reset-password",
+    "POST /api/admin/login",
+    "POST /api/admin/logout",
+    "GET /api/admin/me",
+    "POST /api/admin/password",
+    "GET /api/admin/users",
+    "POST /api/admin/users/:id/role",
+    "GET /api/person/me",
+    "POST /api/person/documents",
+    "POST /api/person/resubmit",
+    "POST /api/person/wallet-request",
+    "POST /api/person/tokenize",
+    "GET /api/person/assets",
+    "POST /api/person/contracts",
+    "GET /api/person/contracts",
+    "GET /api/person/miles/market",
+    "POST /api/person/miles/buy",
+    "GET /api/person/miles/:tradeId/check-payment",
+    "GET /api/person/miles/my",
+    "POST /api/admin/miles/programs",
+    "GET /api/admin/miles/programs",
+    "POST /api/admin/miles/orders",
+    "GET /api/admin/miles/orders",
+    "POST /api/admin/miles/orders/:id/cancel",
+    "POST /api/person/webhooks",
+    "GET /api/person/webhooks",
+    "POST /api/person/webhooks/:id/test",
+    "POST /api/person/webhooks/:id/reactivate",
+    "DELETE /api/person/webhooks/:id",
+    "POST /api/person/api-keys",
+    "GET /api/person/api-keys",
+    "DELETE /api/person/api-keys/:id",
+    "GET /api/admin/kyc?status=",
+    "GET /api/admin/kyc/:id",
+    "POST /api/admin/kyc/:id/review",
+    "POST /api/admin/kyc/:id/aml",
+    "GET /api/admin/persons?search=",
+    "GET /api/admin/persons/:id",
+    "GET /api/admin/aml/checks",
+    "GET /api/admin/aml/watchlist",
+    "POST /api/admin/aml/watchlist",
+    "DELETE /api/admin/aml/watchlist/:id",
+    "GET /api/admin/wallet-requests",
+    "POST /api/admin/wallet-requests/:id/review",
+    "GET /api/admin/contracts/artifacts",
+    "GET /api/admin/contracts",
+    "GET /api/admin/contracts/:id",
+    "POST /api/admin/contracts/generate",
+    "GET /api/v1/networks",
+    "GET /api/v1/artifacts",
+    "GET /api/v1/me",
+    "GET /api/v1/contracts",
+    "GET /api/v1/miles/market",
+    "GET /api/v1/tenant/me",
+    "GET /api/v1/tenant/networks",
+    "GET /api/v1/bff/:slug/me",
+    "GET /api/v1/bff/:slug/networks",
+    "(vários) /api/admin/tenants*",
+    "POST /api/admin/tenants/cors-refresh",
+    "GET /bff",
+    "POST /bff/login",
+    "POST /bff/logout",
+    "GET /bff/me",
+    "GET /bff/dashboard",
+    "ANY /bff/api/*"
+  ]
+}

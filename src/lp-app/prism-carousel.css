@@ -1,0 +1,115 @@
+/* Casos de uso em carrossel coverflow 3D contínuo: cartões quadrados em perspectiva, os do centro vêm à frente,
+   os das pontas giram e desfocam. Ativado por prism-carousel.js (atributo data-prism em #rooms), só no modo
+   refinado. Sem o script, a seção segue como antes. */
+@property --rooms-q { syntax: '<number>'; inherits: true; initial-value: 0; }
+
+[data-lp-polish] #rooms[data-prism] { --prism-w: clamp(17rem, 26vw, 22.5rem); }
+
+/* Desliga a cena presa à rolagem. */
+[data-lp-polish] #rooms[data-prism] .rooms__hold { height: auto; padding-bottom: var(--space-2); animation: none; }
+[data-lp-polish] #rooms[data-prism] .rooms__stage { position: relative; top: auto; display: block; height: auto; padding-top: 0; overflow: visible; overflow-x: clip; outline-offset: 6px; }
+[data-lp-polish] #rooms[data-prism] .rooms__stage:focus-visible { outline: 2px solid var(--color-4); border-radius: var(--radius-2); }
+[data-lp-polish] #rooms[data-prism] .rooms__lines { display: none; }
+/* Luz azul radial atrás dos cartões. */
+[data-lp-polish] #rooms[data-prism] .rooms__stage::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -22% 0 -10%;
+  pointer-events: none;
+  background: radial-gradient(ellipse 68% 62% at 50% 46%, rgb(53 86 205 / 62%) 0%, rgb(30 52 144 / 34%) 40%, transparent 74%);
+}
+[data-lp-polish] #rooms[data-prism] .rooms__stage > * { position: relative; z-index: 1; }
+
+[data-lp-polish] #rooms[data-prism] .rooms__track {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: calc(var(--prism-w) * 1.22);
+  margin: 0;
+  padding: 0;
+  translate: none;
+  perspective: 1200px;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+[data-lp-polish] #rooms[data-prism] .rooms__track.is-dragging { cursor: grabbing; }
+
+[data-lp-polish] #rooms[data-prism] .rooms__place {
+  --rooms-q: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--prism-w);
+  height: var(--prism-w);
+  min-width: 0;
+  min-height: 0;
+  margin: calc(var(--prism-w) / -2) 0 0 calc(var(--prism-w) / -2);
+  aspect-ratio: auto;
+  backface-visibility: hidden;
+  will-change: transform;
+  border: 1px solid rgb(255 255 255 / 10%);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 50%);
+  cursor: pointer;
+  transition: --rooms-q .5s linear;
+}
+[data-lp-polish] #rooms[data-prism].is-prism-ready .rooms__place.is-active { --rooms-q: 1; cursor: inherit; transition: --rooms-q 1.4s linear; }
+[data-lp-polish] #rooms[data-prism] .rooms__place img { -webkit-user-drag: none; user-select: none; }
+
+/* Rótulo e frases originais dão lugar ao título e à descrição no canto inferior esquerdo do cartão. */
+[data-lp-polish] #rooms[data-prism] .rooms__place :is(.rooms__label, .rooms__talk) { display: none; }
+[data-lp-polish] #rooms[data-prism] .rooms__place :is(.rooms__artwork > img, .rooms__base, .rooms__tokens) { top: 21%; height: 46%; }
+[data-lp-polish] #rooms[data-prism] .rooms__place .rooms__artwork--treasury :is(.rooms__base, .rooms__tokens) { width: min(94cqw, 46cqh); }
+/* Moedas, Pix e lojas: menores e mais perto da arte. */
+[data-lp-polish] #rooms[data-prism] .rooms__place :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__tokens { left: 14%; width: 72%; }
+[data-lp-polish] #rooms[data-prism] .rooms__place :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__token { scale: .62; }
+[data-lp-polish] #rooms[data-prism] .rooms__place .rooms__artwork--treasury .rooms__token { scale: .8; }
+[data-lp-polish] #rooms[data-prism] .prism__text { position: absolute; z-index: 3; left: 1.5rem; right: 1.5rem; bottom: 1.5rem; display: grid; gap: .375rem; justify-items: start; text-align: left; }
+[data-lp-polish] #rooms[data-prism] .prism__text .prism__title { font-size: 1rem; line-height: 1.25; letter-spacing: -.01em; }
+[data-lp-polish] #rooms[data-prism] .prism__text .prism__sub { max-width: 32ch; text-wrap: pretty; }
+
+/* As artes deixam de seguir a rolagem: as moedas saem quando o cartão chega ao centro. */
+[data-lp-polish] #rooms[data-prism] .rooms__place .rooms__artwork { animation: none; --coin-entry: var(--rooms-q); }
+[data-lp-polish] #rooms[data-prism] .rooms__place :is(.rooms__artwork > img, .rooms__base img) { animation: none; }
+[data-lp-polish] #rooms[data-prism] .rooms__place [data-artwork-float] :is(.rooms__base, .rooms__token img) { animation-play-state: paused; }
+[data-lp-polish] #rooms[data-prism].is-prism-visible .rooms__place [data-artwork-float] :is(.rooms__base, .rooms__token img) { animation-play-state: running; }
+
+/* Legenda, contador e setas. */
+[data-lp-polish] #rooms[data-prism] .prism__foot { display: flex; flex-direction: column; align-items: center; gap: .875rem; margin-top: 1rem; padding-inline: var(--space-1); }
+/* A legenda fora dos cartões fica só para leitores de tela (anuncia o caso em destaque). */
+[data-lp-polish] #rooms[data-prism] .prism__caption { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+[data-lp-polish] #rooms[data-prism] .prism__title { font-size: .9375rem; font-weight: 600; line-height: 1.35; color: var(--color-2); }
+[data-lp-polish] #rooms[data-prism] .prism__sub { max-width: 34rem; font-size: .8125rem; line-height: 1.45; color: var(--color-9); }
+[data-lp-polish] #rooms[data-prism] .prism__controls { display: flex; align-items: center; gap: .875rem; font-size: .75rem; font-variant-numeric: tabular-nums; color: var(--color-9); }
+[data-lp-polish] #rooms[data-prism] .prism__count { min-width: 3.25rem; text-align: center; }
+[data-lp-polish] #rooms[data-prism] .prism__btn {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 62.5rem;
+  background: color-mix(in srgb, var(--color-2) 10%, transparent);
+  color: var(--color-2);
+  cursor: pointer;
+  transition: background-color 160ms;
+}
+[data-lp-polish] #rooms[data-prism] .prism__btn:hover { background: color-mix(in srgb, var(--color-2) 18%, transparent); }
+[data-lp-polish] #rooms[data-prism] .prism__btn:focus-visible { outline: 2px solid var(--color-4); outline-offset: 2px; }
+[data-lp-polish] #rooms[data-prism] .prism__btn svg { width: .875rem; height: .875rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Cartões menores no celular: a arte sobe um pouco para dar espaço ao texto. */
+@media (max-width: 47.99rem) {
+  [data-lp-polish] #rooms[data-prism] .rooms__place :is(.rooms__artwork > img, .rooms__base, .rooms__tokens) { top: 12%; height: 44%; }
+  [data-lp-polish] #rooms[data-prism] .rooms__place .rooms__artwork--treasury :is(.rooms__base, .rooms__tokens) { width: min(94cqw, 44cqh); }
+  [data-lp-polish] #rooms[data-prism] .prism__text { left: 1.125rem; right: 1.125rem; bottom: 1.125rem; gap: .25rem; }
+  [data-lp-polish] #rooms[data-prism] .prism__text .prism__title { font-size: .9375rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-lp-polish] #rooms[data-prism] .rooms__place { transition: none; }
+}

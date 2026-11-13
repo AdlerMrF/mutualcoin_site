@@ -1,0 +1,224 @@
+/* Valores da referência mutualcapital-v2; navy existente preservado. */
+:root { color-scheme: light; --focus-color:#2949b9; }
+:root[data-theme='dark'] { color-scheme:dark; --focus-color:#FCB71B; }
+.mutucoin-site { --b-link:#FCB71B; --b-hover:#24314b; --footer-surface:#080e1a; --footer-ink:#eef1f9; --footer-muted:#b8c5df; --footer-border:#526483; font-optical-sizing:auto; text-rendering:optimizeLegibility; }
+:root:not([data-theme='dark']) .mutucoin-site {
+  --b-bg:#f5f7fb; --b-surface:#fff; --b-line:#74829a; --b-text:#161D33;
+  --b-muted:#475570; --b-link:#815600; --b-hover:#e9efff;
+  --footer-surface:#080e1a; --footer-ink:#eef1f9; --footer-muted:#b8c5df; --footer-border:#526483;
+}
+:root:not([data-theme='dark']) { --dark-bg:#f5f7fb; --text-heading:#161D33; --text-muted:#475570; }
+.mutucoin-site .site-container { width:min(1200px,100%); margin-inline:auto; padding-inline:clamp(20px,4vw,64px); }
+.mutucoin-site :is(h1,h2,h3,h4,h5) { color:var(--b-text); }
+.mutucoin-site :is(h1,h2) { text-wrap:balance; }
+.mutucoin-site :is(p,li,dd,figcaption) { text-wrap:pretty; }
+.mutucoin-site .hero-copy h1 { font-size:clamp(36px,4.1vw,56px); line-height:1.08; font-weight:500; letter-spacing:-.03em; }
+.mutucoin-site .section-heading h2 { font-size:clamp(28px,3vw,44px); font-weight:500; line-height:1.08; letter-spacing:-.03em; }
+.mutucoin-site .content-card h3 { font-weight:600; }
+.mutucoin-site .hero-copy .hero-line:last-child { color:var(--b-link); -webkit-text-fill-color:currentColor; }
+.mutucoin-site :is(.market-link,.asset-monogram) { color:var(--b-link); }
+.mutucoin-site :is(a,button,select,summary,input,[tabindex]):focus-visible { outline:3px solid var(--focus-color); outline-offset:4px; }
+.mutucoin-site :is(a,button,summary,[role='tab']) { touch-action:manipulation; }
+@media(prefers-reduced-motion:no-preference) {
+  .mutucoin-site :is(a,button,summary,[role='tab']):not([aria-disabled='true'],:disabled) { transition-property:scale,background-color,border-color,color,opacity; transition-duration:100ms; transition-timing-function:ease-out; }
+  .mutucoin-site :is(a,button,summary,[role='tab']):not([aria-disabled='true'],:disabled):active { scale:.97; }
+}
+.mutucoin-site .shiny-cta, .mutucoin-site .shiny-cta span { color:#161d33; -webkit-text-fill-color:currentColor; }
+.mutucoin-site :is(.network-node,.app-menu-link,.ghost-cta,.nav-link,.platform-navigation summary,.mobile-menu-link):hover { background:var(--b-hover); }
+:root:not([data-theme='dark']) :is(.story-frame,.mascote-figure) { --focus-color:#FCB71B; }
+:root:not([data-theme='dark']) .mutucoin-site .story-frame { background:#161d33; }
+:root:not([data-theme='dark']) .mutucoin-site .story-video { background:#161d33; }
+:root:not([data-theme='dark']) .mutucoin-site .hero-squares { background:radial-gradient(ellipse at 75% 42%,#fcb71b18,transparent 58%); }
+:root:not([data-theme='dark']) .mutucoin-site .market-widget a { color:#2949b9; }
+:root:not([data-theme='dark']) .mutucoin-site .market-widget :is(.widget-load,.widget-pause),
+:root:not([data-theme='dark']) .mutucoin-site .widget-slot > p { color:var(--b-text); }
+:root:not([data-theme='dark']) .mutucoin-site :is(.public-hash-query input,.public-reading button) { color:#161d33; background:#fff; border-color:#74829a; }
+.mutucoin-site .app-menu-link[aria-current='page'] { background:var(--b-hover); }
+
+/* Cabeçalho da referência: 1200px, logo 36px, altura 88 -> 64px. */
+.mutucoin-site .authority-bar { display:none; }
+.mutucoin-site #navbar-center { max-width:min(1200px,calc(100% - 24px)) !important; background:color-mix(in srgb,var(--b-bg) 92%,transparent) !important; border-color:var(--b-line) !important; border-radius:18px !important; backdrop-filter:blur(22px) saturate(1.25) !important; box-shadow:0 18px 52px #030b1e18 !important; }
+.mutucoin-site #navbar-inner { height:88px !important; padding-inline:28px !important; gap:12px; flex-wrap:nowrap; }
+.mutucoin-site #navbar-header[data-scrolled='true'] #navbar-inner { height:64px !important; padding-inline:16px !important; }
+.mutucoin-site #navbar-header[data-scrolled='true'] #navbar-center { background:var(--b-surface) !important; border-color:var(--b-line) !important; }
+.mutucoin-site #navbar-logo { gap:10px; }
+.mutucoin-site #navbar-logo > img { height:36px; width:36px; }
+.mutucoin-site #navbar-logo .brand-wordmark { color:var(--b-text); font-size:20px; font-weight:600; letter-spacing:-.02em; }
+.mutucoin-site #navbar-inner :is(.nav-link,.platform-navigation summary) { font-size:13.5px; font-weight:500; padding:12px 10px; line-height:1.5; border-radius:99px; }
+.mutucoin-site #navbar-inner > .desktop-navigation { margin-inline:0; }
+.mutucoin-site .navbar-actions { flex-shrink:0; gap:6px; }
+.mutucoin-site .header-account-actions { display:flex; align-items:center; gap:6px; }
+.mutucoin-site .header-account-actions a { padding:10px; min-height:44px; font-size:12px; line-height:1.5; white-space:nowrap; border:1px solid var(--b-line); border-radius:10px; }
+.mutucoin-site .header-account-actions .account-signup { background:#FCB71B; color:#161d33; border-color:#8b6100; }
+.mutucoin-site #mobile-menu > div { background:var(--b-surface); border-color:var(--b-line); }
+.mutucoin-site #mobile-menu-button { color:var(--b-text); }
+.mutucoin-site .language-control select { color:var(--b-text); background:var(--b-surface); border-color:var(--b-line); }
+.theme-toggle { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-width:44px; min-height:44px; flex-shrink:0; padding:10px; border:1px solid var(--b-line); border-radius:10px; background:var(--b-surface); color:var(--b-text); }
+.theme-toggle > [aria-hidden] { font-size:20px; line-height:1; }
+.theme-toggle:hover { border-color:var(--b-link); }
+.mobile-theme-control { padding:8px; }
+.mobile-theme-control .theme-toggle { width:100%; justify-content:flex-start; }
+.mobile-theme-control .sr-only { position:static; width:auto; height:auto; margin:0; clip:auto; }
+.mutucoin-site .authority-bar { color:var(--b-muted); background:var(--b-surface); border-color:var(--b-line); }
+.mutucoin-site .authority-local { color:var(--b-muted); }
+/* O conteúdo do hero fica disponível desde a primeira pintura, sem tela de espera. */
+.mutucoin-site .splash-screen { display:none; }
+@media(max-width:1279px) { .header-account-actions,.mutucoin-site .navbar-actions > a { display:none !important; } }
+@media(max-width:767px) {
+  .mutucoin-site #navbar-inner { padding-inline:16px !important; gap:8px; }
+  .mutucoin-site #navbar-logo .brand-wordmark { font-size:18px; }
+  .mutucoin-site .navbar-actions > .language-control { display:none; }
+}
+.mobile-language-control { padding:8px 16px 16px; display:grid; gap:8px; }
+.mobile-language-control select { max-width:100%; padding:12px; border:1px solid var(--b-line); border-radius:8px; background:var(--b-surface); color:var(--b-text); }
+
+/* Mesma estrutura, grade e espaços do rodapé do Site A (themes.css). */
+.mutucoin-site .site-footer { background:var(--footer-surface); border-top:1px solid var(--footer-border); color:var(--footer-ink); }
+.site-footer > .footer-brand { padding-block:36px 8px; }
+.site-footer .footer-logo { width:fit-content; color:var(--footer-ink); margin-bottom:16px; }
+.site-footer .footer-brand p { color:var(--footer-muted); font-size:13px; line-height:1.9; max-width:64ch; }
+.mutucoin-site .site-footer .footer-layout { display:grid; grid-template-columns:1fr 1.25fr .7fr 1.4fr .7fr; gap:24px; align-items:start; padding-block:24px 32px; }
+.footer-column { min-width:0; }
+.footer-column summary { min-height:44px; padding-block:12px; font-size:14px; font-weight:600; line-height:1.6; list-style:none; color:var(--footer-ink); }
+.footer-column summary::-webkit-details-marker { display:none; }
+.footer-column-body { display:flex; flex-direction:column; align-items:flex-start; padding-top:12px; gap:4px; }
+.site-footer .footer-column-body :is(a,p,label) { color:var(--footer-muted); font-size:12px; line-height:1.8; overflow-wrap:anywhere; max-width:100%; }
+.site-footer .footer-column-body a { display:inline-flex; align-items:center; min-height:44px; margin:0; padding-block:6px; }
+.site-footer .footer-column-body a:hover { color:var(--footer-ink); text-decoration:underline; text-underline-offset:4px; }
+.footer-column select { max-width:100%; min-height:44px; border:1px solid var(--footer-border); border-radius:8px; padding:10px 6px; background:var(--footer-surface); color:var(--footer-ink); font-size:12px; }
+.mutucoin-site .site-footer .footer-bottom { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px 28px; border-color:var(--footer-border); color:var(--footer-muted); padding-block:24px; font-size:11px; line-height:1.7; }
+.site-footer .footer-bottom p + p { margin-top:0; }
+.site-footer .footer-bottom .legal-identity { display:contents; margin-top:0; }
+.site-footer .footer-bottom .legal-identity p { color:var(--footer-muted); font-size:11px; line-height:1.85; }
+.footer-site-map { width:100%; }
+.footer-site-map summary { font-size:12px; }
+.footer-site-map nav { display:flex; flex-direction:column; }
+@media(max-width:1100px) and (min-width:768px) { .mutucoin-site .site-footer .footer-layout { grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; } }
+@media(min-width:901px) {
+  .site-footer > .footer-brand { display:grid; grid-template-columns:minmax(180px,.7fr) repeat(3,minmax(0,1fr)); gap:24px; align-items:start; }
+  .site-footer .footer-logo,.site-footer .footer-brand p { margin:0 !important; }
+}
+@media(max-width:900px) { .mutucoin-site .site-footer .footer-bottom { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:767px) {
+  .mutucoin-site .site-footer .footer-layout { grid-template-columns:minmax(0,1fr); gap:0; padding-block:24px; }
+  .mutucoin-site .site-footer .footer-bottom { grid-template-columns:minmax(0,1fr); }
+  .footer-column { border-bottom:1px solid var(--footer-border); }
+  .footer-column summary { display:flex; justify-content:space-between; align-items:center; cursor:pointer; min-height:56px; }
+  .footer-column summary::after { content:'+'; margin-inline-start:16px; font-size:20px; }
+  .footer-column[open] summary::after { content:'−'; }
+  .footer-column-body { padding-block:0 20px; }
+}
+
+/* Contadores sem dados; os desenhos são conceituais, nunca gráficos de mercado. */
+.mutucoin-site .network-counter { padding:24px; border:1px solid var(--b-line); border-radius:24px; background:var(--b-surface); }
+.counter-art { height:104px; width:100%; display:grid; place-items:center; margin-top:24px; overflow:hidden; color:var(--b-link); }
+.counter-art svg { width:100%; height:80px; }
+.counter-globe { position:relative; width:84px; height:84px; border:1px solid var(--b-line); border-radius:50%; background:radial-gradient(circle,var(--b-link) 1px,transparent 2px) 0 0 / 10px 10px; box-shadow:inset -20px -4px 20px var(--b-surface); }
+.counter-globe::after { content:''; position:absolute; inset:8px 24px; border:1px solid var(--b-line); border-radius:50%; }
+.counter-assets { display:flex; gap:10px; }
+.counter-assets span { display:grid; place-items:center; width:44px; height:44px; border:1px solid var(--b-line); border-radius:50%; font-size:12px; }
+.token-stage { position:relative; height:230px; display:grid; place-items:center; perspective:700px; }
+.mtc-token { position:relative; display:grid; place-items:center; width:130px; height:130px; border-radius:50%; border:8px double #ad7900; background:linear-gradient(135deg,#ffdc83,#FCB71B 50%,#d59510); box-shadow:12px 12px 0 #8c620e,20px 30px 30px #0003,inset 0 0 18px #fff9; color:#161d33; font-size:28px; font-weight:600; transform:rotateY(-24deg) rotateX(12deg); }
+.token-pedestal { position:absolute; bottom:12px; width:190px; height:44px; border-radius:50%; background:linear-gradient(var(--b-surface),var(--b-line)); border:1px solid var(--b-line); z-index:-1; }
+.market-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-block:32px; }
+.market-tabs button { min-height:44px; padding:12px 18px; border:1px solid var(--b-line); border-radius:99px; background:var(--b-surface); color:var(--b-text); }
+.market-tabs button[aria-selected='true'] { color:#161d33; background:#FCB71B; border-color:#8b6100; }
+.market-tabs ~ [role='tabpanel'][hidden] { display:none; }
+[role='tabpanel']:focus-visible { outline-offset:-4px; }
+.trust-arch { height:190px; display:grid; place-items:center; perspective:700px; overflow:clip; margin-bottom:32px; }
+.trust-arch > div { width:200px; height:150px; border:22px solid #91a1b8; border-bottom-color:transparent; border-radius:160px 160px 20px 20px; transform:rotateY(-24deg) rotateX(15deg); background:linear-gradient(120deg,#fcb71b22,transparent); box-shadow:inset 8px 4px 12px #fff9,12px -4px 0 #41516a; }
+.trust-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; }
+.faq-layout,.access-layout { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); gap:64px; align-items:center; }
+.faq-layout > *,.access-layout > * { min-width:0; }
+.faq-item { border-bottom:1px solid var(--b-line); }
+.faq-item summary { padding-block:24px; min-height:56px; font-size:18px; line-height:1.6; font-weight:500; cursor:pointer; }
+.faq-item p { color:var(--b-muted); line-height:1.85; padding-bottom:24px; }
+.mascote-figure { width:100%; margin:0; padding:8px; border-radius:18px; background:#161d33; border:1px solid #8693aa; }
+.mascote-figure canvas { display:block; width:100%; height:auto; aspect-ratio:480/420; }
+.mascote-controls { padding:8px; }
+.mascote-figure figcaption { color:#d3dff5; font-size:12px; line-height:1.85; padding:8px; }
+.access-layout .section-heading { text-align:start; margin:0; }
+.access-layout .section-heading p { margin-inline:0; }
+.access-device { max-width:100%; margin:0; padding:16px; transform:perspective(900px) rotateY(-12deg) rotateX(5deg); }
+.device-screen { min-height:340px; padding:32px; border:8px solid #34415c; border-radius:28px; background:var(--b-surface); box-shadow:16px 16px 0 var(--b-line); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:24px; text-align:center; }
+.device-screen p { color:var(--b-text); }
+.device-screen span { color:var(--b-muted); font-size:12px; }
+.access-device figcaption { font-size:12px; line-height:1.8; color:var(--b-muted); margin-top:32px; }
+.legal-draft { padding-block:28px; border-block:1px solid var(--b-line); }
+.legal-draft h2 { font-size:24px; margin-bottom:16px; }
+.legal-draft p { color:var(--b-muted); line-height:1.85; margin-block:12px; }
+[id] { scroll-margin-top:120px; }
+@media(max-width:1023px) { .trust-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:767px) {
+  .faq-layout,.access-layout { grid-template-columns:minmax(0,1fr); gap:40px; }
+  .trust-grid { grid-template-columns:minmax(0,1fr); }
+  .access-device { width:min(100%,340px); margin-inline:auto; transform:none; }
+  .device-screen { min-height:280px; box-shadow:6px 6px 0 var(--b-line); }
+}
+/* Movimento só no campo visível, com pausa e preferência respeitadas. */
+@keyframes shield-float { 50% { translate:0 -10px; } }
+@keyframes shield-globe { to { background-position:84px 0; } }
+@media(prefers-reduced-motion:no-preference) {
+  .trust-arch > div,.mtc-token { animation:shield-float 6s ease-in-out infinite paused; }
+  .counter-globe { animation:shield-globe 12s linear infinite paused; }
+  .shield-visible :is(.trust-arch > div,.mtc-token,.counter-globe) { animation-play-state:running; }
+  .shield-paused :is(.trust-arch > div,.mtc-token,.counter-globe) { animation-play-state:paused; }
+  .access-device { transition:transform .6s ease; }
+  .shield-visible .access-device { transform:perspective(900px) rotateY(0) rotateX(0); }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*::before,*::after { animation:none !important; transition:none !important; }
+}
+.mutucoin-site #navbar-header[data-compact='true'] #navbar-inner > .desktop-navigation,
+.mutucoin-site #navbar-header[data-compact='true'] .header-account-actions,
+.mutucoin-site #navbar-header[data-compact='true'] .navbar-actions > a { display:none; }
+.mutucoin-site #navbar-header[data-compact='true'] #mobile-menu-button { display:inline-flex; }
+.mutucoin-site .market-bento { grid-template-columns:minmax(0,1fr); }
+.mutucoin-site .market-bento [role='tabpanel'] .market-card { display:grid; grid-template-columns:minmax(0,.7fr) minmax(0,1fr); align-items:center; }
+@media(max-width:767px) { .mutucoin-site .market-bento [role='tabpanel'] .market-card { grid-template-columns:minmax(0,1fr); } }
+.contact-channels { margin-block:24px; color:var(--b-text); }
+.contact-channels > div { display:flex; flex-wrap:wrap; justify-content:center; gap:8px 24px; margin-top:16px; }
+.contact-channels a { display:inline-flex; align-items:center; min-height:44px; text-decoration:underline; text-underline-offset:4px; font-size:14px; }
+.contact-history { margin-top:16px; color:var(--b-muted); font-size:12px; line-height:1.8; }
+.contact-history summary { cursor:pointer; min-height:44px; padding-block:12px; }
+/* Escala exata do hero de mutualcapital-v2: 36/44/52; títulos de seção 28/36/44. */
+.mutucoin-site :is(.hero-copy,.module-screen,.app-overview) h1 { font-size:36px; font-weight:500; line-height:1.1; letter-spacing:-.025em; }
+.mutucoin-site .section-heading h2 { font-size:28px; }
+.mutucoin-site .hero-copy .hero-sub { font-size:17px; line-height:1.7; }
+.mutucoin-site :is(.section-heading p,.content-card p,.deployment-note,.module-description,.chain-purpose p) { font-size:15px; line-height:1.7; }
+@media(min-width:640px) {
+  .mutucoin-site :is(.hero-copy,.module-screen,.app-overview) h1 { font-size:44px; }
+  .mutucoin-site .section-heading h2 { font-size:36px; }
+  .mutucoin-site .hero-copy .hero-sub { font-size:19px; }
+}
+@media(min-width:1024px) {
+  .mutucoin-site :is(.hero-copy,.module-screen,.app-overview) h1 { font-size:52px; }
+  .mutucoin-site .section-heading h2 { font-size:44px; }
+}
+/* Ritmo global compartilhado com o Site A, sobre a mesma referência. */
+.mutucoin-site { --b-space-section:clamp(80px,8vw,128px); }
+@media(max-width:639px) { .mutucoin-site .site-hero { padding-top:144px; } }
+@media(min-width:640px) and (max-width:1023px) { .mutucoin-site .site-hero { padding-top:160px; } }
+@media(min-width:1024px) { .mutucoin-site .site-hero { padding-top:192px; } }
+/* Controles sobre a mídia navy conservam seu próprio contraste no tema claro. */
+.mutucoin-site :is(.story-frame,.mascote-figure) .story-toggle { color:#eef1f9; background:#161d33; border-color:#8693aa; }
+.mutucoin-site :is(.story-frame,.mascote-figure) .story-toggle:is(:hover,:focus-visible) { color:#FCB71B; border-color:#FCB71B; }
+.mutucoin-site .needs-item input:focus-visible { outline-color:var(--focus-color); }
+
+/* Alternativas de material e contraste: a hierarquia permanece sem depender de vidro. */
+@media(prefers-reduced-transparency:reduce) {
+  .mutucoin-site #navbar-center,
+  .mutucoin-site :is(.enterprise-vault,.circuit-chip,.mega-panel,.platform-topbar) {
+    backdrop-filter:none !important;
+    background:var(--b-surface) !important;
+  }
+  .mutucoin-site .enterprise-vault :is(h2,h3,p,li,figcaption),
+  .mutucoin-site .circuit-chip { color:var(--b-text) !important; }
+}
+@media(prefers-contrast:more) {
+  .mutucoin-site :is(p,li,dd,dt,figcaption,.supporting-note,.deployment-note) { color:var(--b-text); }
+  .mutucoin-site .site-footer :is(p,a,label,summary) { color:var(--footer-ink); }
+  .mutucoin-site :is(.content-card,.enterprise-vault,.network-counter,.market-card,.mega-panel,.platform-panel) { border-width:2px; border-color:currentColor; }
+  .mutucoin-site :is(a,button,select,summary,input,[tabindex]):focus-visible { outline-width:4px; outline-offset:5px; }
+}

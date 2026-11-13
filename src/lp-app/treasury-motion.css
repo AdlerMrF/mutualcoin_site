@@ -1,0 +1,98 @@
+/* Tesouraria: moedas saem da gaveta e retornam pela posição da rolagem.
+   Pix e API surgem em sequência por trás da arte, com percurso reversível. */
+@property --coin-entry { syntax: '<number>'; inherits: true; initial-value: 0; }
+[data-lp-polish] #rooms .rooms__token { filter: var(--token-depth, none); }
+[data-lp-polish] #rooms .rooms__token:has(img[src*="/token-"]) {
+  --token-depth: drop-shadow(0 2px 2px rgb(0 0 0 / 20%)) drop-shadow(0 7px 9px rgb(3 8 18 / 35%));
+}
+[data-lp-polish] #rooms .rooms__artwork--americas { --coin-entry: var(--rooms-q, 0); }
+[data-lp-polish] #rooms .rooms__artwork--americas .rooms__token:nth-child(1) { --token-x: 12%; --token-y: 17%; --token-size: 21%; --tx: .12; --ty: .17; }
+[data-lp-polish] #rooms .rooms__artwork--americas .rooms__token:nth-child(2) { --token-x: 88%; --token-y: 29%; --token-size: 19%; --tx: .88; --ty: .29; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) { isolation: isolate; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__base { z-index: 2; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__tokens { z-index: 1; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__token {
+  --coin-progress: 1;
+  --coin-delay: 0;
+  /* Posição final fixa em left/top; o percurso do centro até ela vai em transform (composição, sem layout por quadro).
+     --tx/--ty são as mesmas coordenadas de --token-x/--token-y, sem unidade, para calcular em cqw/cqh. */
+  animation: none;
+  opacity: clamp(0, var(--coin-progress) * 5, 1);
+  transform:
+    translate(calc((.5 - var(--tx)) * 100cqw * (1 - var(--coin-progress))), calc((.5 - var(--ty)) * 100cqh * (1 - var(--coin-progress)) - sin(var(--coin-progress) * pi) * 12cqh))
+    rotate(calc((var(--coin-progress) - 1) * 28deg)) scale(calc(.35 + var(--coin-progress) * .65));
+}
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__tokens { container-type: size; }
+[data-lp-polish] #rooms .rooms__token:nth-child(1) { --tx: .10; --ty: .12; }
+[data-lp-polish] #rooms .rooms__token:nth-child(2) { --tx: .61; --ty: .08; }
+[data-lp-polish] #rooms .rooms__token:nth-child(3) { --tx: .88; --ty: .20; }
+[data-lp-polish] #rooms .rooms__token:nth-child(4) { --tx: .91; --ty: .67; }
+[data-lp-polish] #rooms .rooms__token:nth-child(5) { --tx: .14; --ty: .82; }
+[data-lp-polish] #rooms .rooms__token:nth-child(6) { --tx: .53; --ty: .91; }
+[data-lp-polish] #rooms .rooms__artwork--trade .rooms__token:nth-child(2) { --tx: .45; }
+[data-lp-polish] #rooms .rooms__artwork--trade .rooms__token:nth-child(4) { --tx: .12; --ty: .84; }
+[data-lp-polish] #rooms .rooms__artwork--trade .rooms__token:nth-child(5) { --tx: .76; --ty: .89; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__token:nth-child(2) { --coin-delay: .06; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__token:nth-child(3) { --coin-delay: .12; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__token:nth-child(4) { --coin-delay: .18; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__token:nth-child(5) { --coin-delay: .24; }
+[data-lp-polish] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__token:nth-child(6) { --coin-delay: .3; }
+[data-lp-polish] #rooms .rooms__artwork--treasury { --coin-force: 1; container-type: size; }
+[data-lp-polish] #rooms .rooms__artwork--treasury :is(.rooms__base, .rooms__tokens) {
+  left: 50%;
+  width: min(94cqw, 70cqh, 26rem);
+  translate: -50% 0;
+}
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__tokens { container-type: inline-size; }
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__base img { animation: none; transform: none; }
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token {
+  --coin-progress: 1;
+  position: absolute;
+  left: 54%;
+  top: 46%;
+  width: 14%;
+  animation: none;
+  opacity: clamp(0, var(--coin-progress) * 5, 1);
+  transform: translate(
+    calc(var(--coin-progress) * var(--coin-x) * var(--coin-force) + sin(var(--coin-progress) * 4 * pi) * 1.25px),
+    calc(var(--coin-progress) * var(--coin-y) * var(--coin-force) - sin(var(--coin-progress) * pi) * 14cqw * var(--coin-force) + sin(var(--coin-progress) * 3 * pi) * 1.25px)
+  ) rotate(calc(var(--coin-progress) * var(--coin-spin))) scale(calc(.35 + var(--coin-progress) * .65));
+}
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token img { animation: none; transform: none; }
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token:nth-child(1) { --coin-x: -28cqw; --coin-y: -28cqw; --coin-spin: -30deg; --coin-delay: 0; }
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token:nth-child(2) { --coin-x: -14cqw; --coin-y: -38cqw; --coin-spin: 24deg; --coin-delay: .06; }
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token:nth-child(3) { --coin-x: 3cqw; --coin-y: -33cqw; --coin-spin: -22deg; --coin-delay: .12; }
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token:nth-child(4) { --coin-x: 22cqw; --coin-y: -37cqw; --coin-spin: 32deg; --coin-delay: .18; }
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token:nth-child(5) { --coin-x: 31cqw; --coin-y: -24cqw; --coin-spin: -26deg; --coin-delay: .24; }
+[data-lp-polish] #rooms .rooms__artwork--treasury .rooms__token:nth-child(6) { --coin-x: -35cqw; --coin-y: -16cqw; --coin-spin: 24deg; --coin-delay: .3; }
+@media (prefers-reduced-motion: no-preference) {
+  [data-lp-polish][data-8b-live] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--americas) .rooms__token {
+    --coin-launch: clamp(0, (var(--coin-entry) - .12 - var(--coin-delay)) * 2.2, 1);
+    --coin-progress: calc(1 - (1 - var(--coin-launch)) * (1 - var(--coin-launch)) * (1 - var(--coin-launch)));
+  }
+  [data-lp-polish][data-8b-live] #rooms .rooms__artwork--treasury .rooms__token {
+    --coin-launch: clamp(0, (min(var(--rooms-q, 0), var(--coin-entry)) - .12 - var(--coin-delay)) * 2.2, 1);
+    --coin-progress: calc(1 - (1 - var(--coin-launch)) * (1 - var(--coin-launch)) * (1 - var(--coin-launch)));
+  }
+}
+@media (max-width: 47.99rem) {
+  [data-lp-polish] #rooms .rooms__place--treasury { min-height: 28rem; }
+  [data-lp-polish]:not([data-8b-live]) #rooms .rooms__place--treasury { aspect-ratio: auto; min-width: 0; width: auto; }
+  [data-lp-polish] #rooms .rooms__artwork--treasury { --coin-force: .85; }
+  [data-lp-polish] #rooms .rooms__artwork--treasury :is(.rooms__base, .rooms__tokens) { width: min(94cqw, 100cqh - 11rem, 26rem); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-lp-polish][data-8b-live] #rooms :is(.rooms__artwork--trade, .rooms__artwork--api, .rooms__artwork--treasury) {
+    animation: lp-coin-entry linear both;
+    animation-timeline: --rooms-hold;
+    animation-range: cover 0vh cover 120vh;
+  }
+  [data-lp-polish][data-8b-live] #rooms .rooms__artwork--api { animation-range: cover 25vh cover 150vh; }
+  @keyframes lp-coin-entry { from { --coin-entry: 0; } to { --coin-entry: 1; } }
+}
+
+/* Cada moeda vira uma camada própria: a sombra é rasterizada uma vez e a rolagem só move a camada. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-lp-polish][data-8b-live] #rooms .rooms__token { will-change: transform; }
+}

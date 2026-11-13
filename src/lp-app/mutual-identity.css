@@ -1,0 +1,133 @@
+/* Integração da LP com o DS Mutual, variante .org e Site A atual.
+   Tokens canônicos: mutual-tokens.css (cópia fiel do adaptador Adler/front).
+   Medidas: Site A/depois/src/assets/css/identity.css e mutual-company.css.
+   Somente a versão refinada recebe esta camada. */
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('/fonts/montserrat-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('/fonts/montserrat-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02FF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root[data-lp-polish] {
+  color-scheme: dark;
+  --font-1: var(--mutual-font-sans);
+  --font-2: var(--mutual-font-sans);
+  --color-4: var(--mutual-gold);
+  --color-6: var(--hero-bg);
+  --color-7: var(--on-dark-muted);
+  --color-8: var(--card-bg);
+  --color-9: var(--on-dark-muted);
+  --radius-2: var(--surface-radius);
+  --radius-4: 12px;
+  --space-1: var(--container-gutter);
+  --space-2: clamp(64px, 7vw, 96px);
+  --lp-shadow-surface: 0 24px 48px -24px rgb(0 0 0 / 50%);
+}
+[data-lp-polish] body { background: var(--dark-bg); color: var(--text-heading); font-size: var(--type-body); line-height: 1.7; }
+[data-lp-polish] .l-wrap { max-width: var(--container-max); padding-inline: var(--container-gutter); }
+[data-lp-polish] :is(.m-text-2, .m-text-3) { font-weight: var(--weight-heading); letter-spacing: -.025em; }
+[data-lp-polish] .m-text-3 { font-size: var(--type-h2); line-height: 1.2; }
+[data-lp-polish] .m-text-4 { font-size: var(--type-hero-copy); line-height: 1.7; letter-spacing: 0; }
+[data-lp-polish] .m-text-5 { font-size: var(--type-h3); font-weight: var(--weight-strong); line-height: 1.5; letter-spacing: -.015em; }
+[data-lp-polish] .m-text-6 { font-size: 13px; font-weight: var(--weight-strong); line-height: 1.5; }
+[data-lp-polish] .m-text-7 { font-size: var(--type-caption); line-height: 1.8; }
+[data-lp-polish] .m-text-8 { font-size: var(--type-body); line-height: 1.7; }
+
+[data-lp-polish] #nav { top: 16px; }
+[data-lp-polish] #nav .nav__bar {
+  max-width: var(--container-max);
+  min-height: 72px;
+  padding: 10px 14px 10px 24px;
+  gap: 24px;
+  border-radius: 16px;
+  border-color: var(--border);
+  background: var(--nav-top-surface);
+}
+[data-lp-polish] #nav .nav__word { font-size: 20px; }
+[data-lp-polish] #nav .nav__links { gap: 20px; }
+[data-lp-polish] #nav .nav__links a { font-size: 12px; font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; }
+[data-lp-polish] #nav .menu { background: var(--hero-bg); }
+[data-lp-polish] #nav .menu__links a { font-size: clamp(24px, 7vw, 38px); font-weight: 500; }
+
+[data-lp-polish] :is(.m-btn, .m-btn-2, .m-btn-3) {
+  min-height: 52px;
+  padding: 10px 12px 10px 20px;
+  gap: 16px;
+  border-radius: var(--mutual-button-radius);
+  color: var(--dark-bg);
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(180deg, #FFD56F, var(--mutual-gold) 48%, var(--mutual-gold-hover));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 28%), inset 0 -1px 0 rgb(71 20 0 / 34%), 0 10px 34px rgb(252 183 27 / 22%);
+}
+[data-lp-polish] :is(.m-btn, .m-btn-2, .m-btn-3) .m-btn__wave {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #151B2A;
+  color: var(--mutual-gold);
+}
+[data-lp-polish] .m-btn-3 { min-height: 44px; padding: 6px 8px 6px 16px; font-size: 13px; }
+[data-lp-polish] .m-btn-2 {
+  background: var(--control-surface);
+  color: var(--control-ink);
+  box-shadow: inset 0 0 0 1px var(--control-border);
+}
+[data-lp-polish] :is(.m-btn, .m-btn-2, .m-btn-3):focus-visible { outline-color: var(--on-dark-link); }
+[data-lp-polish] .m-icon-btn { border-radius: 10px; border-color: var(--control-border); }
+@media (hover: hover) and (pointer: fine) {
+  [data-lp-polish] :is(.m-btn, .m-btn-3):hover { box-shadow: inset 0 1px 0 rgb(255 255 255 / 36%), 0 14px 34px rgb(252 183 27 / 30%); }
+  [data-lp-polish] .m-btn-2:hover { background: var(--control-hover); box-shadow: inset 0 0 0 1px var(--on-dark-link); }
+}
+
+[data-lp-polish] #hero .hero__copy { padding-block: var(--hero-start) var(--hero-end); }
+[data-lp-polish] #hero .hero__intro { justify-content: flex-start; gap: 32px; }
+[data-lp-polish] #hero .hero__title { max-width: 17ch; font-size: var(--type-h1); font-weight: 500; line-height: 1.1; }
+[data-lp-polish] #hero .hero__top { gap: 24px; }
+[data-lp-polish] #hero .hero__lower { max-width: 34rem; gap: 24px; }
+[data-lp-polish] #hero .hero__lead { max-width: 42ch; }
+[data-lp-polish] #hero .hero__proof { gap: 8px 20px; color: var(--on-dark-muted); }
+[data-lp-polish] .m-caption, [data-lp-polish] .m-caption-2 { border-radius: 10px; font-size: 13px; line-height: 1.5; }
+[data-lp-polish] :is(#listen, #tune, #voices, #setup, #faq, #contact) {
+  --color-1: var(--section-ink);
+  --color-2: var(--section-surface);
+  --color-3: var(--card-bg);
+  --color-5: var(--section-muted);
+}
+[data-lp-polish] #calls { --color-6: var(--hero-bg); }
+[data-lp-polish] :is(#listen .listen__lead, #voices .voices__lead, #setup .setup__head .m-text-4) { color: var(--section-muted); }
+[data-lp-polish] #listen .listen__panel--voice { background: var(--section-surface); }
+[data-lp-polish] #listen .listen__panel--read { background: var(--card-bg); border-color: var(--border); }
+[data-lp-polish] #listen .listen__record { font-size: 14px; border-radius: 12px; }
+[data-lp-polish] #listen .listen__row .m-caption { font-size: 15px; line-height: 1.7; }
+[data-lp-polish] #listen .listen__verification-icon { border-radius: 12px; }
+[data-lp-polish] .m-card { background: var(--card-bg); border: 1px solid var(--border); box-shadow: none; }
+[data-lp-polish] #setup .setup__card { border-radius: var(--surface-radius); }
+[data-lp-polish] #faq .faq__item { border-color: #30415d; }
+[data-lp-polish] #faq .faq__item p { color: var(--section-muted); font-size: 15px; line-height: 1.7; }
+[data-lp-polish] #rooms .rooms__label { border-radius: 10px; font-size: 12px; }
+[data-lp-polish] #footer, [data-lp-polish] #footer .footer__inner, [data-lp-polish] #footer .footer__sheet { background: var(--footer-surface); }
+[data-lp-polish] #footer .footer__pitch .m-text-4 { color: var(--footer-muted); }
+[data-lp-polish] #footer .footer__col h2 { color: var(--footer-ink); font-size: 14px; }
+[data-lp-polish] #footer .footer__col a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; }
+[data-lp-polish] #footer .footer__legal { border-color: var(--footer-border); color: var(--footer-muted); }
+[data-lp-polish] #footer .footer__note { color: var(--footer-muted); }
+[data-lp-polish] #footer .footer__brand { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+[data-lp-polish] #footer .footer__word { min-width: 0; font-size: clamp(36px, 10vw, 128px); white-space: nowrap; letter-spacing: -.04em; }
+
+@media (max-width: 47.99rem) {
+  [data-lp-polish] #nav .nav__bar { min-height: 64px; padding: 8px 12px 8px 16px; }
+  [data-lp-polish] #hero .hero__copy { padding-top: var(--hero-start); }
+  [data-lp-polish] #hero .hero__intro { gap: 32px; }
+  [data-lp-polish] #hero .hero__lower { gap: 20px; }
+}

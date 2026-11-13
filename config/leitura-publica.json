@@ -1,0 +1,15 @@
+{
+  "base": "https://api.mutucoin.net",
+  "tempoLimiteMs": 4000,
+  "maxRespostaBytes": 524288,
+  "caminhos": [
+    { "caminho": "/api/networks", "forma": "redes", "mapa": "GET /api/networks" },
+    { "caminho": "/api/networks/mutucoin/price", "forma": "preco", "mapa": "GET /api/networks/:id/price" },
+    { "caminho": "/api/blocks/recent?n=12&net=mutucoin", "forma": "blocos", "mapa": "GET /api/blocks/recent?n=" },
+    { "caminho": "/api/networks/mutucoin-testnet", "forma": "redeTeste", "mapa": "GET /api/networks/:id" },
+    { "caminho": "/api/networks/mutucoin-testnet/faucet", "forma": "faucet", "mapa": "GET /api/networks/:id/faucet" },
+    { "caminho": "/api/notary/list?network=mutucoin&limit=50", "forma": "registros", "mapa": "GET /api/notary/list?network=&limit=" },
+    { "caminho": "/api/assets/list?network=mutucoin&limit=50", "forma": "ativos", "mapa": "GET /api/assets/list?network=&limit=" },
+    { "caminho": "/api/v1/artifacts", "forma": "contratos", "mapa": "GET /api/v1/artifacts" }
+  ]
+}

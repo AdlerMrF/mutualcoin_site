@@ -1,0 +1,1353 @@
+[
+  {
+    "id": "dashboard",
+    "nome": {
+      "pt-BR": "Dashboard",
+      "en": "Dashboard",
+      "es": "Dashboard",
+      "de": "Dashboard",
+      "it": "Dashboard",
+      "ja": "Dashboard",
+      "ar": "Dashboard"
+    },
+    "descricao": {
+      "pt-BR": "Visão das redes, blocos, parâmetros do MTC e carteiras da plataforma no painel atual.",
+      "en": "Overview of networks, blocks, MTC parameters and platform wallets in the current panel.",
+      "es": "Vista de redes, bloques, parámetros de MTC y carteras de la plataforma en el panel actual.",
+      "de": "Übersicht über Netzwerke, Blöcke, MTC-Parameter und Plattform-Wallets im bisherigen Panel.",
+      "it": "Panoramica di reti, blocchi, parametri MTC e portafogli della piattaforma nel pannello attuale.",
+      "ja": "現行パネルのネットワーク、ブロック、MTCの仕様、プラットフォームのウォレットの概要。",
+      "ar": "نظرة على الشبكات والكتل وخصائص MTC ومحافظ المنصة في اللوحة الحالية."
+    },
+    "rota": "/app/dashboard/",
+    "modulo": "Dashboard",
+    "origem": {
+      "aba": "dashboard",
+      "rotas": [
+        "/"
+      ],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/networks",
+      "GET /api/networks/:id",
+      "GET /api/networks/:id/price",
+      "GET /api/wallets"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao",
+    "leitura_publica": [
+      "redes",
+      "preco"
+    ]
+  },
+  {
+    "id": "cotacao",
+    "nome": {
+      "pt-BR": "Cotação",
+      "en": "Quotes",
+      "es": "Cotizaciones",
+      "de": "Kurse",
+      "it": "Quotazioni",
+      "ja": "価格情報",
+      "ar": "الأسعار"
+    },
+    "descricao": {
+      "pt-BR": "Pares do DEX, consulta e troca de ativos, além do bloco de USDT oficial ligado ao Hub, no painel atual.",
+      "en": "DEX pairs, asset quotes and swaps, plus the official USDT section linked to Hub in the current panel.",
+      "es": "Pares del DEX, consulta e intercambio de activos y bloque de USDT oficial conectado al Hub en el panel actual.",
+      "de": "DEX-Paare, Kursabfragen und Tausch sowie der bisherige offizielle USDT-Bereich mit Hub-Anbindung.",
+      "it": "Coppie DEX, quotazioni e scambi, oltre alla sezione USDT ufficiale collegata a Hub nel pannello attuale.",
+      "ja": "現行パネルのDEX取引ペア、価格照会、交換、Hubに接続する公式USDT欄。",
+      "ar": "أزواج DEX وعرض الأسعار والمبادلات وقسم USDT الرسمي المرتبط بـ Hub في اللوحة الحالية."
+    },
+    "rota": "/app/cotacao/",
+    "modulo": "Cotação",
+    "origem": {
+      "aba": "cotacao",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/networks/:id/dex/",
+      "GET /api/networks/:id/dex/pairs",
+      "GET /api/networks/:id/dex/quote?tokenIn=&tokenOut=&amount=",
+      "POST /api/networks/:id/dex/swap/build",
+      "GET /api/hub/prices",
+      "GET /api/hub/users",
+      "POST /api/hub/users",
+      "POST /api/hub/users/:id/trade",
+      "POST /api/rpc?net="
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao",
+    "leitura_publica": [
+      "preco"
+    ]
+  },
+  {
+    "id": "mtcswap",
+    "nome": {
+      "pt-BR": "MtcSwap",
+      "en": "MtcSwap",
+      "es": "MtcSwap",
+      "de": "MtcSwap",
+      "it": "MtcSwap",
+      "ja": "MtcSwap",
+      "ar": "MtcSwap"
+    },
+    "descricao": {
+      "pt-BR": "Catálogo de redes, pools, troca MTC/OHR e liquidez do fundo com cotas MTCFS no painel atual.",
+      "en": "Network catalogue, pools, MTC/OHR swaps and fund liquidity with MTCFS shares in the current panel.",
+      "es": "Catálogo de redes, pools, intercambio MTC/OHR y liquidez del fondo con participaciones MTCFS en el panel actual.",
+      "de": "Netzwerkkatalog, Pools, MTC/OHR-Tausch und Fondsliquidität mit MTCFS-Anteilen im bisherigen Panel.",
+      "it": "Catalogo delle reti, pool, scambio MTC/OHR e liquidità del fondo con quote MTCFS nel pannello attuale.",
+      "ja": "現行パネルのネットワーク一覧、プール、MTC/OHR交換、MTCFS持分を伴う流動性。",
+      "ar": "دليل الشبكات والمجمعات ومبادلة MTC/OHR وسيولة الصندوق بحصص MTCFS في اللوحة الحالية."
+    },
+    "rota": "/app/mtcswap/",
+    "modulo": "MtcSwap",
+    "origem": {
+      "aba": "mtcswap",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/mtcswap/networks",
+      "GET /api/mtcswap/networks/:id",
+      "GET /api/networks/:id/mtcswap/",
+      "GET /api/networks/:id/mtcswap/pools",
+      "GET /api/networks/:id/mtcswap/quote?tokenIn=&tokenOut=&amount=",
+      "POST /api/networks/:id/mtcswap/swap/build",
+      "POST /api/networks/:id/mtcswap/liquidity",
+      "POST /api/rpc?net="
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "carteira-multi-rede",
+    "nome": {
+      "pt-BR": "Carteira Multi-rede",
+      "en": "Multi-network Wallet",
+      "es": "Cartera Multired",
+      "de": "Multi-Netzwerk-Wallet",
+      "it": "Portafoglio Multirete",
+      "ja": "マルチネットワークウォレット",
+      "ar": "محفظة متعددة الشبكات"
+    },
+    "descricao": {
+      "pt-BR": "Reúne as abas Carteira e Multi-rede: gestão de carteira local, endereços e redes suportadas.",
+      "en": "Brings together the Wallet and Multi-network tabs: local wallet management, addresses and supported networks.",
+      "es": "Reúne las pestañas Cartera y Multired: gestión de cartera local, direcciones y redes compatibles.",
+      "de": "Vereint die Reiter Wallet und Multi-Netzwerk: lokale Wallet-Verwaltung, Adressen und unterstützte Netzwerke.",
+      "it": "Riunisce le schede Portafoglio e Multirete: gestione del portafoglio locale, indirizzi e reti supportate.",
+      "ja": "ウォレットとマルチネットワークのタブをまとめ、ローカルウォレット、アドレス、対応ネットワークを扱います。",
+      "ar": "يجمع تبويبي المحفظة وتعدد الشبكات لإدارة المحفظة المحلية والعناوين والشبكات المدعومة."
+    },
+    "rota": "/app/carteira-multi-rede/",
+    "modulo": "Carteira Multi-rede",
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/account/:address",
+      "POST /api/rpc?net=",
+      "GET /api/multinet/networks",
+      "POST /api/multinet/generate",
+      "POST /api/multinet/derive"
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "carteira",
+    "nome": {
+      "pt-BR": "Carteira",
+      "en": "Wallet",
+      "es": "Cartera",
+      "de": "Wallet",
+      "it": "Portafoglio",
+      "ja": "ウォレット",
+      "ar": "المحفظة"
+    },
+    "descricao": {
+      "pt-BR": "Carteira local do painel atual: criação, importação, bloqueio, exportação, saldos e envio de MTC.",
+      "en": "Current panel local wallet: creation, import, locking, export, balances and sending MTC.",
+      "es": "Cartera local del panel actual: creación, importación, bloqueo, exportación, saldos y envío de MTC.",
+      "de": "Lokale Wallet des bisherigen Panels: Erstellen, Importieren, Sperren, Exportieren, Guthaben und MTC-Versand.",
+      "it": "Portafoglio locale del pannello attuale: creazione, importazione, blocco, esportazione, saldi e invio MTC.",
+      "ja": "現行パネルのローカルウォレット：作成、読み込み、ロック、書き出し、残高、MTC送信。",
+      "ar": "المحفظة المحلية في اللوحة الحالية: إنشاء واستيراد وقفل وتصدير وأرصدة وإرسال MTC."
+    },
+    "rota": "/app/carteira/",
+    "modulo": null,
+    "origem": {
+      "aba": "wallet",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/account/:address",
+      "POST /api/rpc?net="
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "multi-rede",
+    "nome": {
+      "pt-BR": "Multi-rede",
+      "en": "Multi-network",
+      "es": "Multired",
+      "de": "Multi-Netzwerk",
+      "it": "Multirete",
+      "ja": "マルチネットワーク",
+      "ar": "تعدد الشبكات"
+    },
+    "descricao": {
+      "pt-BR": "Catálogo de redes e funções de criar e recuperar endereços por frase no painel atual; geração de chaves indisponível nesta versão.",
+      "en": "Network catalogue and phrase-based address creation and recovery in the current panel; key generation is unavailable in this version.",
+      "es": "Catálogo de redes y creación y recuperación de direcciones mediante frase en el panel actual; generación de claves no disponible en esta versión.",
+      "de": "Netzwerkkatalog und Adresserstellung und -wiederherstellung per Wortfolge im bisherigen Panel; Schlüsselerzeugung in dieser Version nicht verfügbar.",
+      "it": "Catalogo reti e creazione e recupero degli indirizzi tramite frase nel pannello attuale; generazione delle chiavi non disponibile in questa versione.",
+      "ja": "現行パネルのネットワーク一覧とフレーズによるアドレス作成・復元。この版では鍵を生成できません。",
+      "ar": "دليل الشبكات وإنشاء العناوين واستعادتها بعبارة في اللوحة الحالية؛ توليد المفاتيح غير متاح في هذه النسخة."
+    },
+    "rota": "/app/multi-rede/",
+    "modulo": null,
+    "origem": {
+      "aba": "multinet",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/multinet/networks",
+      "POST /api/multinet/generate",
+      "POST /api/multinet/derive"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "explorer",
+    "nome": {
+      "pt-BR": "Explorer",
+      "en": "Explorer",
+      "es": "Explorer",
+      "de": "Explorer",
+      "it": "Explorer",
+      "ja": "Explorer",
+      "ar": "Explorer"
+    },
+    "descricao": {
+      "pt-BR": "Busca de blocos, transações e contas, detalhes e blocos recentes no painel atual.",
+      "en": "Block, transaction and account search, details and recent blocks in the current panel.",
+      "es": "Búsqueda de bloques, transacciones y cuentas, detalles y bloques recientes en el panel actual.",
+      "de": "Suche nach Blöcken, Transaktionen und Konten, Details und aktuelle Blöcke im bisherigen Panel.",
+      "it": "Ricerca di blocchi, transazioni e conti, dettagli e blocchi recenti nel pannello attuale.",
+      "ja": "現行パネルのブロック、取引、アカウント検索と詳細、最新ブロック。",
+      "ar": "البحث عن الكتل والمعاملات والحسابات وتفاصيلها والكتل الأخيرة في اللوحة الحالية."
+    },
+    "rota": "/app/explorer/",
+    "modulo": "Explorer",
+    "origem": {
+      "aba": "explorer",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/blocks/recent?n=",
+      "GET /api/block/:id",
+      "GET /api/tx/:hash",
+      "GET /api/account/:address"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao",
+    "leitura_publica": [
+      "blocos"
+    ]
+  },
+  {
+    "id": "faucet",
+    "nome": {
+      "pt-BR": "Faucet",
+      "en": "Faucet",
+      "es": "Faucet",
+      "de": "Faucet",
+      "it": "Faucet",
+      "ja": "Faucet",
+      "ar": "Faucet"
+    },
+    "descricao": {
+      "pt-BR": "Área de tokens de teste para a MutualChain Testnet; solicitações permanecem desligadas nesta versão.",
+      "en": "Test token area for MutualChain Testnet; requests remain disabled in this version.",
+      "es": "Área de tokens de prueba para MutualChain Testnet; las solicitudes permanecen desactivadas en esta versión.",
+      "de": "Test-Token-Bereich für MutualChain Testnet; Anfragen bleiben in dieser Version abgeschaltet.",
+      "it": "Area token di prova per MutualChain Testnet; richieste disattivate in questa versione.",
+      "ja": "MutualChain Testnetのテスト用トークンのエリア。この版では申請は停止しています。",
+      "ar": "قسم رموز الاختبار لشبكة MutualChain Testnet؛ تبقى الطلبات معطلة في هذه النسخة."
+    },
+    "rota": "/app/faucet/",
+    "modulo": "Faucet",
+    "origem": {
+      "aba": "faucet",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/networks/:id/faucet",
+      "POST /api/networks/:id/faucet/dispense"
+    ],
+    "move_valor": true,
+    "operacao_financeira": false,
+    "estado": "em_implantacao",
+    "redes": [
+      "mutucoin-testnet"
+    ],
+    "leitura_publica": [
+      "faucet"
+    ]
+  },
+  {
+    "id": "controle",
+    "nome": {
+      "pt-BR": "Controle",
+      "en": "Control",
+      "es": "Control",
+      "de": "Steuerung",
+      "it": "Controllo",
+      "ja": "管理",
+      "ar": "التحكم"
+    },
+    "descricao": {
+      "pt-BR": "Acesso administrador, parâmetros de gas, nó, spread, preço oficial e envios da plataforma no painel atual.",
+      "en": "Administrator access, gas, node, spread and official price settings and platform transfers in the current panel.",
+      "es": "Acceso administrador, ajustes de gas, nodo, spread, precio oficial y envíos de la plataforma en el panel actual.",
+      "de": "Administratorzugang, Gas-, Knoten-, Spread- und offizielle Preiseinstellungen sowie Plattformtransfers im bisherigen Panel.",
+      "it": "Accesso amministratore, parametri gas, nodo, spread, prezzo ufficiale e trasferimenti della piattaforma nel pannello attuale.",
+      "ja": "現行パネルの管理者アクセス、ガス、ノード、スプレッド、公式価格設定、プラットフォーム送信。",
+      "ar": "دخول الإدارة وإعدادات الغاز والعقدة وفارق السعر والسعر الرسمي وتحويلات المنصة في اللوحة الحالية."
+    },
+    "rota": "/app/controle/",
+    "modulo": "Controle",
+    "origem": {
+      "aba": "controle",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/networks/:id/gas",
+      "GET /api/networks/:id/price",
+      "GET /api/networks/:id/price/history",
+      "GET /api/networks/:id/spread",
+      "PUT /api/networks/:id/gas",
+      "PUT /api/networks/:id/spread",
+      "PUT /api/networks/:id/price",
+      "POST /api/networks/:id/node/gasprice",
+      "POST /api/networks/:id/send",
+      "POST /api/admin/login",
+      "POST /api/admin/logout",
+      "GET /api/admin/me"
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "hub",
+    "nome": {
+      "pt-BR": "Hub",
+      "en": "Hub",
+      "es": "Hub",
+      "de": "Hub",
+      "it": "Hub",
+      "ja": "Hub",
+      "ar": "Hub"
+    },
+    "descricao": {
+      "pt-BR": "Usuários, identificação, depósitos, saques, ordens, swap MTC/USDT e acompanhamento de redes no painel atual.",
+      "en": "Users, identity checks, deposits, withdrawals, orders, MTC/USDT swaps and network monitoring in the current panel.",
+      "es": "Usuarios, identificación, depósitos, retiros, órdenes, swap MTC/USDT y seguimiento de redes en el panel actual.",
+      "de": "Nutzer, Identitätsprüfung, Einzahlungen, Auszahlungen, Aufträge, MTC/USDT-Tausch und Netzwerküberwachung im bisherigen Panel.",
+      "it": "Utenti, identificazione, depositi, prelievi, ordini, swap MTC/USDT e monitoraggio reti nel pannello attuale.",
+      "ja": "現行パネルの利用者、本人確認、入出金、注文、MTC/USDT交換、ネットワーク監視。",
+      "ar": "المستخدمون والتحقق من الهوية والإيداع والسحب والطلبات ومبادلة MTC/USDT ومتابعة الشبكات في اللوحة الحالية."
+    },
+    "rota": "/app/hub/",
+    "modulo": "Hub",
+    "origem": {
+      "aba": "hub",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/hub/status",
+      "GET /api/hub/prices",
+      "GET /api/hub/users",
+      "POST /api/hub/users",
+      "GET /api/hub/users/:id",
+      "GET /api/hub/users/:id/kyc",
+      "POST /api/hub/users/:id/kyc",
+      "GET /api/hub/users/:id/deposits",
+      "GET /api/hub/users/:id/withdrawals",
+      "GET /api/hub/users/:id/orders",
+      "POST /api/hub/users/:id/withdraw",
+      "POST /api/hub/users/:id/trade",
+      "GET /api/hub/kyc?status=",
+      "POST /api/hub/kyc/:id/review"
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "cartorio",
+    "nome": {
+      "pt-BR": "Cartório",
+      "en": "Notary",
+      "es": "Notaría",
+      "de": "Notariat",
+      "it": "Notaio",
+      "ja": "公証",
+      "ar": "التوثيق"
+    },
+    "descricao": {
+      "pt-BR": "Status, registro e assinatura de documentos, verificação e lista de registros na MutualChain no painel atual.",
+      "en": "Status, document registration and signing, verification and record list on MutualChain in the current panel.",
+      "es": "Estado, registro y firma de documentos, verificación y lista de registros en MutualChain en el panel actual.",
+      "de": "Status, Dokumentenregistrierung und -signatur, Prüfung und Registerliste auf MutualChain im bisherigen Panel.",
+      "it": "Stato, registrazione e firma di documenti, verifica ed elenco registrazioni su MutualChain nel pannello attuale.",
+      "ja": "現行パネルのMutualChain上の状態、文書登録・署名、検証、登録一覧。",
+      "ar": "الحالة وتسجيل المستندات وتوقيعها والتحقق منها وقائمة السجلات على MutualChain في اللوحة الحالية."
+    },
+    "rota": "/app/cartorio/",
+    "modulo": "Cartório",
+    "origem": {
+      "aba": "notary",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/notary/status",
+      "POST /api/notary/hash",
+      "POST /api/notary/verify",
+      "GET /api/notary/list?network=&limit=",
+      "POST /api/notary/sign",
+      "POST /api/notary/notarize"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "tokenizar",
+    "nome": {
+      "pt-BR": "Tokenizar",
+      "en": "Tokenize",
+      "es": "Tokenizar",
+      "de": "Tokenisieren",
+      "it": "Tokenizzare",
+      "ja": "トークン化",
+      "ar": "الترميز"
+    },
+    "descricao": {
+      "pt-BR": "Registro de bens, serviços e direitos como ativos digitais, transferência de unidades, imagem e listagem no painel atual.",
+      "en": "Registration of goods, services and rights as digital assets, unit transfers, images and listings in the current panel.",
+      "es": "Registro de bienes, servicios y derechos como activos digitales, transferencia de unidades, imagen y listado en el panel actual.",
+      "de": "Registrierung von Gütern, Diensten und Rechten als digitale Vermögenswerte, Übertragung von Einheiten, Bilder und Listen im bisherigen Panel.",
+      "it": "Registrazione di beni, servizi e diritti come asset digitali, trasferimento di unità, immagini ed elenco nel pannello attuale.",
+      "ja": "現行パネルの物品・サービス・権利のデジタル資産登録、単位の移転、画像、一覧。",
+      "ar": "تسجيل السلع والخدمات والحقوق كأصول رقمية ونقل الوحدات والصور والقوائم في اللوحة الحالية."
+    },
+    "rota": "/app/tokenizar/",
+    "modulo": "Tokenizar",
+    "origem": {
+      "aba": "assets",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/assets/status",
+      "GET /api/assets/list?network=&limit=",
+      "POST /api/assets/register",
+      "POST /api/assets/transfer",
+      "POST /api/assets/logo"
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "pessoa",
+    "nome": {
+      "pt-BR": "Pessoa",
+      "en": "Person",
+      "es": "Persona",
+      "de": "Person",
+      "it": "Persona",
+      "ja": "個人",
+      "ar": "الشخص"
+    },
+    "descricao": {
+      "pt-BR": "Cadastro, acesso e recuperação, documentos, vínculo de carteira, ativos, contratos, Webhooks e API Keys no painel atual.",
+      "en": "Registration, access and recovery, documents, wallet linking, assets, contracts, Webhooks and API Keys in the current panel.",
+      "es": "Registro, acceso y recuperación, documentos, vinculación de cartera, activos, contratos, Webhooks y API Keys en el panel actual.",
+      "de": "Registrierung, Zugang und Wiederherstellung, Dokumente, Wallet-Verknüpfung, Vermögenswerte, Verträge, Webhooks und API Keys im bisherigen Panel.",
+      "it": "Registrazione, accesso e recupero, documenti, collegamento portafoglio, asset, contratti, Webhooks e API Keys nel pannello attuale.",
+      "ja": "現行パネルの登録、ログインと復旧、書類、ウォレット連携、資産、コントラクト、Webhooks、API Keys。",
+      "ar": "التسجيل والدخول والاستعادة والمستندات وربط المحفظة والأصول والعقود وWebhooks وAPI Keys في اللوحة الحالية."
+    },
+    "rota": "/app/pessoa/",
+    "modulo": "Pessoa",
+    "origem": {
+      "aba": "person",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "POST /api/person/register",
+      "POST /api/person/login",
+      "POST /api/person/logout",
+      "POST /api/person/forgot-password",
+      "POST /api/person/reset-password",
+      "GET /api/person/me",
+      "POST /api/person/documents",
+      "POST /api/person/resubmit",
+      "POST /api/person/wallet-request",
+      "POST /api/person/tokenize",
+      "GET /api/person/assets",
+      "POST /api/person/contracts",
+      "GET /api/person/contracts",
+      "POST /api/person/webhooks",
+      "GET /api/person/webhooks",
+      "POST /api/person/webhooks/:id/test",
+      "POST /api/person/webhooks/:id/reactivate",
+      "DELETE /api/person/webhooks/:id",
+      "POST /api/person/api-keys",
+      "GET /api/person/api-keys",
+      "DELETE /api/person/api-keys/:id"
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "compliance",
+    "nome": {
+      "pt-BR": "Compliance",
+      "en": "Compliance",
+      "es": "Compliance",
+      "de": "Compliance",
+      "it": "Compliance",
+      "ja": "Compliance",
+      "ar": "Compliance"
+    },
+    "descricao": {
+      "pt-BR": "Fila KYC/KYB, pessoas, triagem AML, lista de acompanhamento e revisão de vínculos de carteira no painel atual.",
+      "en": "KYC/KYB queue, people, AML screening, watchlist and wallet-link reviews in the current panel.",
+      "es": "Cola KYC/KYB, personas, controles AML, lista de seguimiento y revisión de vínculos de cartera en el panel actual.",
+      "de": "KYC/KYB-Warteschlange, Personen, AML-Prüfung, Beobachtungsliste und Prüfung von Wallet-Verknüpfungen im bisherigen Panel.",
+      "it": "Coda KYC/KYB, persone, verifiche AML, lista di controllo e revisione dei collegamenti portafoglio nel pannello attuale.",
+      "ja": "現行パネルのKYC/KYB審査待ち、人物、AML審査、監視リスト、ウォレット連携審査。",
+      "ar": "قائمة مراجعة KYC/KYB والأشخاص وفحص AML وقائمة المراقبة ومراجعة ربط المحافظ في اللوحة الحالية."
+    },
+    "rota": "/app/compliance/",
+    "modulo": "Compliance",
+    "origem": {
+      "aba": "compliance",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/admin/kyc?status=",
+      "GET /api/admin/kyc/:id",
+      "POST /api/admin/kyc/:id/review",
+      "POST /api/admin/kyc/:id/aml",
+      "GET /api/admin/persons?search=",
+      "GET /api/admin/persons/:id",
+      "GET /api/admin/aml/checks",
+      "GET /api/admin/aml/watchlist",
+      "POST /api/admin/aml/watchlist",
+      "DELETE /api/admin/aml/watchlist/:id",
+      "GET /api/admin/wallet-requests",
+      "POST /api/admin/wallet-requests/:id/review"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "contratos",
+    "nome": {
+      "pt-BR": "Contratos",
+      "en": "Contracts",
+      "es": "Contratos",
+      "de": "Verträge",
+      "it": "Contratti",
+      "ja": "コントラクト",
+      "ar": "العقود"
+    },
+    "descricao": {
+      "pt-BR": "Catálogo de modelos, geração de contratos e tokens e lista de contratos gerados no painel atual.",
+      "en": "Template catalogue, contract and token generation and list of generated contracts in the current panel.",
+      "es": "Catálogo de modelos, generación de contratos y tokens y lista de contratos generados en el panel actual.",
+      "de": "Vorlagenkatalog, Vertrags- und Token-Erzeugung und Liste erzeugter Verträge im bisherigen Panel.",
+      "it": "Catalogo modelli, generazione di contratti e token ed elenco dei contratti generati nel pannello attuale.",
+      "ja": "現行パネルのテンプレート一覧、コントラクトとトークンの生成、生成済み一覧。",
+      "ar": "دليل القوالب وإنشاء العقود والرموز وقائمة العقود المنشأة في اللوحة الحالية."
+    },
+    "rota": "/app/contratos/",
+    "modulo": "Contratos",
+    "origem": {
+      "aba": "contracts",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/admin/contracts/artifacts",
+      "GET /api/admin/contracts",
+      "GET /api/admin/contracts/:id",
+      "POST /api/admin/contracts/generate"
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "milhas",
+    "nome": {
+      "pt-BR": "Milhas",
+      "en": "Miles",
+      "es": "Millas",
+      "de": "Meilen",
+      "it": "Miglia",
+      "ja": "マイル",
+      "ar": "الأميال"
+    },
+    "descricao": {
+      "pt-BR": "Marketplace, compras com MTC, conferência de pagamento, minhas compras, programas e ordens de milhas no painel atual.",
+      "en": "Marketplace, MTC purchases, payment checks, my purchases, mileage programmes and orders in the current panel.",
+      "es": "Marketplace, compras con MTC, verificación de pago, mis compras, programas y órdenes de millas en el panel actual.",
+      "de": "Marktplatz, Käufe mit MTC, Zahlungsprüfung, eigene Käufe, Meilenprogramme und Aufträge im bisherigen Panel.",
+      "it": "Marketplace, acquisti in MTC, verifica pagamento, i miei acquisti, programmi e ordini di miglia nel pannello attuale.",
+      "ja": "現行パネルのマーケットプレイス、MTCでの購入、支払確認、自分の購入、マイルプログラムと注文。",
+      "ar": "السوق والشراء بـ MTC والتحقق من الدفع ومشترياتي وبرامج الأميال وطلباتها في اللوحة الحالية."
+    },
+    "rota": "/app/milhas/",
+    "modulo": "Milhas",
+    "origem": {
+      "aba": "miles",
+      "rotas": [],
+      "itens_mapa": []
+    },
+    "endpoints": [
+      "GET /api/person/miles/market",
+      "POST /api/person/miles/buy",
+      "GET /api/person/miles/:tradeId/check-payment",
+      "GET /api/person/miles/my",
+      "POST /api/admin/miles/programs",
+      "GET /api/admin/miles/programs",
+      "POST /api/admin/miles/orders",
+      "GET /api/admin/miles/orders",
+      "POST /api/admin/miles/orders/:id/cancel",
+      "POST /api/rpc?net="
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "checkout",
+    "nome": {
+      "pt-BR": "Checkout MTC ↔ USDT",
+      "en": "Checkout MTC ↔ USDT",
+      "es": "Checkout MTC ↔ USDT",
+      "de": "Checkout MTC ↔ USDT",
+      "it": "Checkout MTC ↔ USDT",
+      "ja": "Checkout MTC ↔ USDT",
+      "ar": "Checkout MTC ↔ USDT"
+    },
+    "descricao": {
+      "pt-BR": "Compra e venda MTC/USDT do usuário do Hub, cancelamento e liquidação automática ou administrativa documentados na API.",
+      "en": "Hub user MTC/USDT purchases and sales, cancellation and automatic or administrative settlement documented in the API.",
+      "es": "Compra y venta MTC/USDT del usuario de Hub, cancelación y liquidación automática o administrativa documentadas en la API.",
+      "de": "In der API dokumentierte MTC/USDT-Käufe und -Verkäufe für Hub-Nutzer, Stornierung und automatische oder administrative Abwicklung.",
+      "it": "Acquisto e vendita MTC/USDT per utenti Hub, annullamento e regolamento automatico o amministrativo documentati nella API.",
+      "ja": "APIに記載されたHub利用者のMTC/USDT売買、取消、自動または管理者による決済。",
+      "ar": "شراء وبيع MTC/USDT لمستخدم Hub والإلغاء والتسوية التلقائية أو الإدارية الموثقة في API."
+    },
+    "rota": "/app/checkout/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        1
+      ]
+    },
+    "endpoints": [
+      "POST /api/checkout/login",
+      "POST /api/checkout/logout",
+      "POST /api/checkout",
+      "GET /api/checkout",
+      "GET /api/checkout/:id",
+      "POST /api/checkout/:id/cancel",
+      "GET /api/checkout/admin?status=",
+      "POST /api/checkout/:id/fulfill"
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "api-v1",
+    "nome": {
+      "pt-BR": "API pública v1",
+      "en": "Public API v1",
+      "es": "API pública v1",
+      "de": "Öffentliche API v1",
+      "it": "API pubblica v1",
+      "ja": "公開API v1",
+      "ar": "API العامة v1"
+    },
+    "descricao": {
+      "pt-BR": "Interface documentada para integrar redes, modelos de contrato, perfil, contratos e mercado de milhas.",
+      "en": "Documented interface for networks, contract templates, profile, contracts and mileage marketplace integrations.",
+      "es": "Interfaz documentada para integrar redes, modelos de contrato, perfil, contratos y mercado de millas.",
+      "de": "Dokumentierte Schnittstelle für Netzwerke, Vertragsvorlagen, Profil, Verträge und Meilenmarkt.",
+      "it": "Interfaccia documentata per integrare reti, modelli di contratto, profilo, contratti e mercato delle miglia.",
+      "ja": "ネットワーク、コントラクトのテンプレート、プロフィール、コントラクト、マイル市場を連携するためのAPI。",
+      "ar": "واجهة موثقة لدمج الشبكات وقوالب العقود والملف الشخصي والعقود وسوق الأميال."
+    },
+    "rota": "/app/api-v1/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        2
+      ]
+    },
+    "endpoints": [
+      "GET /api/v1/networks",
+      "GET /api/v1/artifacts",
+      "GET /api/v1/me",
+      "GET /api/v1/contracts",
+      "GET /api/v1/miles/market"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "white-label",
+    "nome": {
+      "pt-BR": "Tenants white-label",
+      "en": "White-label tenants",
+      "es": "Tenants white-label",
+      "de": "White-Label-Tenants",
+      "it": "Tenant white-label",
+      "ja": "ホワイトラベルテナント",
+      "ar": "مستأجرو العلامة الخاصة"
+    },
+    "descricao": {
+      "pt-BR": "Contexto por parceiro, redes autorizadas, acesso por origem, gestão de chaves e avisos de rede documentados no mapa.",
+      "en": "Partner context, authorised networks, origin-based access, key management and network notifications documented in the map.",
+      "es": "Contexto por socio, redes autorizadas, acceso por origen, gestión de claves y avisos de red documentados en el mapa.",
+      "de": "Partnerkontext, freigegebene Netzwerke, herkunftsbasierter Zugang, Schlüsselverwaltung und Netzwerkhinweise laut Bestandsaufnahme.",
+      "it": "Contesto del partner, reti autorizzate, accesso per origine, gestione chiavi e notifiche di rete documentati nella mappa.",
+      "ja": "マップに記載された提携先の設定、許可ネットワーク、オリジンによるアクセス、鍵管理、ネットワーク通知。",
+      "ar": "سياق الشريك والشبكات المصرح بها والوصول حسب المصدر وإدارة المفاتيح وإشعارات الشبكة الموثقة في الخريطة."
+    },
+    "rota": "/app/white-label/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        3
+      ]
+    },
+    "endpoints": [
+      "GET /api/v1/tenant/me",
+      "GET /api/v1/tenant/networks",
+      "GET /api/v1/bff/:slug/me",
+      "GET /api/v1/bff/:slug/networks",
+      "(vários) /api/admin/tenants*",
+      "POST /api/admin/tenants/cors-refresh"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "admin",
+    "nome": {
+      "pt-BR": "BFF do administrador",
+      "en": "Administrator BFF",
+      "es": "BFF del administrador",
+      "de": "Administrator-BFF",
+      "it": "BFF amministratore",
+      "ja": "管理者BFF",
+      "ar": "BFF المسؤول"
+    },
+    "descricao": {
+      "pt-BR": "Painel administrativo separado, com acesso protegido, visão agregada e encaminhamento de chamadas; a interface não foi observada no levantamento.",
+      "en": "Separate administration panel with protected access, aggregate view and request forwarding; its interface was not observed in the survey.",
+      "es": "Panel administrativo separado con acceso protegido, vista agregada y reenvío de llamadas; la interfaz no se observó en el relevamiento.",
+      "de": "Separates Verwaltungspanel mit geschütztem Zugang, Gesamtansicht und Weiterleitung; die Oberfläche wurde bei der Erhebung nicht eingesehen.",
+      "it": "Pannello amministrativo separato con accesso protetto, vista aggregata e inoltro chiamate; interfaccia non osservata nel rilevamento.",
+      "ja": "保護されたアクセス、集約表示、リクエスト中継を持つ別の管理画面。調査では画面自体は未確認です。",
+      "ar": "لوحة إدارة منفصلة بدخول محمي وعرض مجمع وتمرير الطلبات؛ لم تتم معاينة واجهتها أثناء الحصر."
+    },
+    "rota": "/app/admin/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        4
+      ]
+    },
+    "endpoints": [
+      "GET /bff",
+      "POST /bff/login",
+      "POST /bff/logout",
+      "GET /bff/me",
+      "GET /bff/dashboard",
+      "ANY /bff/api/*"
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "webhooks",
+    "nome": {
+      "pt-BR": "Webhooks",
+      "en": "Webhooks",
+      "es": "Webhooks",
+      "de": "Webhooks",
+      "it": "Webhooks",
+      "ja": "Webhooks",
+      "ar": "Webhooks"
+    },
+    "descricao": {
+      "pt-BR": "Avisos de eventos da pessoa, com assinatura de integridade, teste, novas tentativas, reativação e remoção.",
+      "en": "Person event notifications with integrity signatures, testing, retries, reactivation and removal.",
+      "es": "Avisos de eventos de la persona con firma de integridad, pruebas, reintentos, reactivación y eliminación.",
+      "de": "Ereignisbenachrichtigungen einer Person mit Integritätssignatur, Test, Wiederholungen, Reaktivierung und Entfernung.",
+      "it": "Notifiche eventi della persona con firma di integrità, test, nuovi tentativi, riattivazione e rimozione.",
+      "ja": "個人のイベント通知。完全性の署名、テスト、再試行、再有効化、削除を扱います。",
+      "ar": "إشعارات أحداث الشخص بتوقيع سلامة واختبار وإعادة محاولة وإعادة تفعيل وإزالة."
+    },
+    "rota": "/app/webhooks/",
+    "modulo": null,
+    "origem": {
+      "aba": "person",
+      "rotas": [],
+      "itens_mapa": [
+        5
+      ]
+    },
+    "endpoints": [
+      "POST /api/person/webhooks",
+      "GET /api/person/webhooks",
+      "POST /api/person/webhooks/:id/test",
+      "POST /api/person/webhooks/:id/reactivate",
+      "DELETE /api/person/webhooks/:id"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "api-keys",
+    "nome": {
+      "pt-BR": "API Keys",
+      "en": "API Keys",
+      "es": "API Keys",
+      "de": "API Keys",
+      "it": "API Keys",
+      "ja": "API Keys",
+      "ar": "API Keys"
+    },
+    "descricao": {
+      "pt-BR": "Chaves de integração da pessoa: identificação, criação, listagem e revogação na plataforma atual.",
+      "en": "Person integration keys: identification, creation, listing and revocation in the current platform.",
+      "es": "Claves de integración de la persona: identificación, creación, listado y revocación en la plataforma actual.",
+      "de": "Integrationsschlüssel einer Person: Kennzeichnung, Erstellung, Auflistung und Widerruf in der bisherigen Plattform.",
+      "it": "Chiavi di integrazione della persona: identificazione, creazione, elenco e revoca nella piattaforma attuale.",
+      "ja": "現行プラットフォームの個人用連携キー：識別、作成、一覧、失効。",
+      "ar": "مفاتيح دمج الشخص: التعريف والإنشاء والعرض والإلغاء في المنصة الحالية."
+    },
+    "rota": "/app/api-keys/",
+    "modulo": null,
+    "origem": {
+      "aba": "person",
+      "rotas": [],
+      "itens_mapa": [
+        5
+      ]
+    },
+    "endpoints": [
+      "POST /api/person/api-keys",
+      "GET /api/person/api-keys",
+      "DELETE /api/person/api-keys/:id"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "administradores",
+    "nome": {
+      "pt-BR": "Gestão de administradores (root)",
+      "en": "Administrator management (root)",
+      "es": "Gestión de administradores (root)",
+      "de": "Administratorverwaltung (root)",
+      "it": "Gestione amministratori (root)",
+      "ja": "管理者管理（root）",
+      "ar": "إدارة المسؤولين (root)"
+    },
+    "descricao": {
+      "pt-BR": "Gestão de usuários administradores, papéis, ativação e recuperação de acesso documentada na API.",
+      "en": "Administrator users, roles, activation and access recovery management documented in the API.",
+      "es": "Gestión de administradores, roles, activación y recuperación de acceso documentada en la API.",
+      "de": "In der API dokumentierte Verwaltung von Administratoren, Rollen, Aktivierung und Zugangswiederherstellung.",
+      "it": "Gestione di amministratori, ruoli, attivazione e recupero accesso documentata nella API.",
+      "ja": "APIに記載された管理者、権限、アクティブ状態、アクセス復旧の管理。",
+      "ar": "إدارة مستخدمي الإدارة والأدوار والتفعيل واستعادة الدخول الموثقة في API."
+    },
+    "rota": "/app/administradores/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        6
+      ]
+    },
+    "endpoints": [
+      "POST /api/admin/password",
+      "GET /api/admin/users",
+      "POST /api/admin/users/:id/role"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "auditoria",
+    "nome": {
+      "pt-BR": "Auditoria",
+      "en": "Audit",
+      "es": "Auditoría",
+      "de": "Audit",
+      "it": "Audit",
+      "ja": "監査",
+      "ar": "التدقيق"
+    },
+    "descricao": {
+      "pt-BR": "Trilha de auditoria da plataforma, documentada para acesso administrativo.",
+      "en": "Platform audit trail documented for administrator access.",
+      "es": "Registro de auditoría de la plataforma documentado para acceso administrativo.",
+      "de": "Dokumentiertes Prüfprotokoll der Plattform für Administratoren.",
+      "it": "Traccia di audit della piattaforma documentata per accesso amministrativo.",
+      "ja": "管理者アクセス用として記載されたプラットフォームの監査記録。",
+      "ar": "سجل تدقيق المنصة الموثق لوصول الإدارة."
+    },
+    "rota": "/app/auditoria/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        7
+      ]
+    },
+    "endpoints": [
+      "GET /api/audit"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "saude",
+    "nome": {
+      "pt-BR": "Saúde",
+      "en": "Health",
+      "es": "Salud",
+      "de": "Systemzustand",
+      "it": "Stato di salute",
+      "ja": "稼働状態",
+      "ar": "السلامة التشغيلية"
+    },
+    "descricao": {
+      "pt-BR": "Estado da conexão do banco de dados documentado na API; sem leitura ao vivo nesta versão.",
+      "en": "Database connection status documented in the API; no live reading in this version.",
+      "es": "Estado de conexión de la base de datos documentado en la API; sin lectura en vivo en esta versión.",
+      "de": "In der API dokumentierter Datenbank-Verbindungsstatus; keine Live-Abfrage in dieser Version.",
+      "it": "Stato della connessione al database documentato nella API; nessuna lettura dal vivo in questa versione.",
+      "ja": "APIに記載されたデータベース接続状態。この版ではライブ取得を行いません。",
+      "ar": "حالة اتصال قاعدة البيانات الموثقة في API؛ دون قراءة مباشرة في هذه النسخة."
+    },
+    "rota": "/app/saude/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        7
+      ]
+    },
+    "endpoints": [
+      "GET /api/db/health"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "explorer-cru",
+    "nome": {
+      "pt-BR": "Explorer “cru”",
+      "en": "Raw Explorer",
+      "es": "Explorer «crudo»",
+      "de": "Direkter Explorer",
+      "it": "Explorer diretto",
+      "ja": "直接Explorer",
+      "ar": "Explorer المباشر"
+    },
+    "descricao": {
+      "pt-BR": "Transmissão de transações assinadas e acesso à rede para integradores, documentados na API.",
+      "en": "Signed transaction broadcasting and network access for integrators documented in the API.",
+      "es": "Transmisión de transacciones firmadas y acceso a la red para integradores documentados en la API.",
+      "de": "In der API dokumentierte Übertragung signierter Transaktionen und Netzwerkzugang für Integratoren.",
+      "it": "Trasmissione di transazioni firmate e accesso alla rete per integratori documentati nella API.",
+      "ja": "APIに記載された連携開発者向けの署名済み取引の送信とネットワークアクセス。",
+      "ar": "بث المعاملات الموقعة والوصول إلى الشبكة للمكاملين كما هو موثق في API."
+    },
+    "rota": "/app/explorer-cru/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        8
+      ]
+    },
+    "endpoints": [
+      "POST /api/tx/broadcast",
+      "POST /api/rpc?net="
+    ],
+    "move_valor": true,
+    "operacao_financeira": true,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "rotas-legadas",
+    "nome": {
+      "pt-BR": "Rotas legadas ou de rede padrão",
+      "en": "Legacy or default-network routes",
+      "es": "Rutas heredadas o de red predeterminada",
+      "de": "Alte Routen und Standardnetzwerk",
+      "it": "Rotte precedenti o della rete predefinita",
+      "ja": "従来ルート・既定ネットワーク",
+      "ar": "المسارات القديمة أو الشبكة الافتراضية"
+    },
+    "descricao": {
+      "pt-BR": "Referências de compatibilidade para rede, MTC e histórico; a área de tokens de teste fica exclusivamente no Faucet Testnet.",
+      "en": "Compatibility references for network, MTC and history; test tokens are limited to the Testnet Faucet.",
+      "es": "Referencias de compatibilidad para red, MTC e historial; los tokens de prueba se limitan al Faucet Testnet.",
+      "de": "Kompatibilitätsreferenzen für Netzwerk, MTC und Verlauf; Test-Token ausschließlich im Testnet-Faucet.",
+      "it": "Riferimenti di compatibilità per rete, MTC e storico; token di prova solo nel Faucet Testnet.",
+      "ja": "ネットワーク、MTC、履歴の互換性情報。テスト用トークンはTestnet Faucetのみで扱います。",
+      "ar": "مراجع توافق للشبكة وMTC والسجل؛ رموز الاختبار محصورة في Faucet Testnet."
+    },
+    "rota": "/app/rotas-legadas/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        9
+      ]
+    },
+    "endpoints": [
+      "GET /api/networks/:id/price/history",
+      "GET /api/network",
+      "GET /api/mtc",
+      "GET /api/faucet",
+      "POST /api/faucet/dispense"
+    ],
+    "move_valor": true,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "hash-cartorio",
+    "nome": {
+      "pt-BR": "Hashing do cartório",
+      "en": "Notary hashing",
+      "es": "Hash de notaría",
+      "de": "Notariats-Hashing",
+      "it": "Hash notarile",
+      "ja": "公証ハッシュ",
+      "ar": "بصمة التوثيق"
+    },
+    "descricao": {
+      "pt-BR": "Cálculo da impressão digital de documentos para conferência de integridade, documentado fora da aba Cartório.",
+      "en": "Document fingerprint calculation for integrity checks, documented outside the Notary tab.",
+      "es": "Cálculo de la huella digital de documentos para verificar integridad, documentado fuera de la pestaña Notaría.",
+      "de": "Berechnung digitaler Dokumentenabdrücke zur Integritätsprüfung, außerhalb des Notariats-Reiters dokumentiert.",
+      "it": "Calcolo dell’impronta digitale dei documenti per verificarne l’integrità, documentato fuori dalla scheda Notaio.",
+      "ja": "公証タブ以外に記載された、文書の完全性確認用のデジタル指紋計算。",
+      "ar": "حساب البصمة الرقمية للمستندات للتحقق من سلامتها، موثق خارج تبويب التوثيق."
+    },
+    "rota": "/app/hash-cartorio/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        10
+      ]
+    },
+    "endpoints": [
+      "POST /api/notary/hash"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "documentacao",
+    "nome": {
+      "pt-BR": "Documentação da API",
+      "en": "API documentation",
+      "es": "Documentación de la API",
+      "de": "API-Dokumentation",
+      "it": "Documentazione API",
+      "ja": "APIドキュメント",
+      "ar": "توثيق API"
+    },
+    "descricao": {
+      "pt-BR": "Documentação de acesso, redes e integrações da API da plataforma atual.",
+      "en": "Access, network and integration documentation for the current platform API.",
+      "es": "Documentación de acceso, redes e integraciones de la API de la plataforma actual.",
+      "de": "Zugangs-, Netzwerk- und Integrationsdokumentation der bisherigen Plattform-API.",
+      "it": "Documentazione di accesso, reti e integrazioni API della piattaforma attuale.",
+      "ja": "現行プラットフォームAPIのアクセス、ネットワーク、連携のドキュメント。",
+      "ar": "توثيق الوصول والشبكات والتكامل لواجهة API المنصة الحالية."
+    },
+    "rota": "/app/documentacao/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [
+        "/docs",
+        "/docs.html"
+      ],
+      "itens_mapa": [
+        11
+      ]
+    },
+    "endpoints": [],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "referencia-api",
+    "nome": {
+      "pt-BR": "Referência da API",
+      "en": "API reference",
+      "es": "Referencia de la API",
+      "de": "API-Referenz",
+      "it": "Riferimento API",
+      "ja": "APIリファレンス",
+      "ar": "مرجع API"
+    },
+    "descricao": {
+      "pt-BR": "Referência das operações e formatos de resposta documentados na API atual.",
+      "en": "Reference for operations and response formats documented in the current API.",
+      "es": "Referencia de operaciones y formatos de respuesta documentados en la API actual.",
+      "de": "Referenz der in der bisherigen API dokumentierten Operationen und Antwortformate.",
+      "it": "Riferimento delle operazioni e dei formati di risposta documentati nella API attuale.",
+      "ja": "現行APIに記載された操作と応答形式のリファレンス。",
+      "ar": "مرجع العمليات وتنسيقات الاستجابة الموثقة في API الحالية."
+    },
+    "rota": "/app/referencia-api/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [
+        "/api-reference.html"
+      ],
+      "itens_mapa": [
+        11
+      ]
+    },
+    "endpoints": [],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "guias",
+    "nome": {
+      "pt-BR": "Guias de integração",
+      "en": "Integration guides",
+      "es": "Guías de integración",
+      "de": "Integrationsleitfäden",
+      "it": "Guide di integrazione",
+      "ja": "連携ガイド",
+      "ar": "أدلة التكامل"
+    },
+    "descricao": {
+      "pt-BR": "Guias por área e orientação inicial de integração presentes na documentação atual.",
+      "en": "Area guides and integration getting-started instructions in the current documentation.",
+      "es": "Guías por área y orientación inicial de integración en la documentación actual.",
+      "de": "Bereichsleitfäden und Integrationseinstieg aus der bisherigen Dokumentation.",
+      "it": "Guide per area e indicazioni iniziali di integrazione nella documentazione attuale.",
+      "ja": "現行ドキュメントの分野別ガイドと連携の始め方。",
+      "ar": "أدلة حسب المجال وإرشادات بدء التكامل الواردة في التوثيق الحالي."
+    },
+    "rota": "/app/guias/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [
+        "/guides.html"
+      ],
+      "itens_mapa": [
+        11
+      ]
+    },
+    "endpoints": [],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "llms",
+    "nome": {
+      "pt-BR": "Resumo para LLMs",
+      "en": "LLM summary",
+      "es": "Resumen para LLMs",
+      "de": "LLM-Zusammenfassung",
+      "it": "Riepilogo per LLM",
+      "ja": "LLM向け要約",
+      "ar": "ملخص لنماذج اللغة"
+    },
+    "descricao": {
+      "pt-BR": "Resumo estruturado da plataforma para ferramentas de leitura e integração.",
+      "en": "Structured platform summary for reading and integration tools.",
+      "es": "Resumen estructurado de la plataforma para herramientas de lectura e integración.",
+      "de": "Strukturierte Plattformzusammenfassung für Lese- und Integrationswerkzeuge.",
+      "it": "Riepilogo strutturato della piattaforma per strumenti di lettura e integrazione.",
+      "ja": "読み取り・連携ツール向けのプラットフォーム構造化要約。",
+      "ar": "ملخص منظم للمنصة لأدوات القراءة والتكامل."
+    },
+    "rota": "/app/llms/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [
+        "/llms.txt"
+      ],
+      "itens_mapa": [
+        11
+      ]
+    },
+    "endpoints": [],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "status-redes",
+    "nome": {
+      "pt-BR": "Faixa de status das redes",
+      "en": "Network status strip",
+      "es": "Franja de estado de redes",
+      "de": "Netzwerkstatusleiste",
+      "it": "Fascia stato reti",
+      "ja": "ネットワーク状態バー",
+      "ar": "شريط حالة الشبكات"
+    },
+    "descricao": {
+      "pt-BR": "Faixa comum do painel com estado, bloco e gas por rede; sem dados ao vivo nesta versão.",
+      "en": "Shared panel strip with network status, block and gas; no live data in this version.",
+      "es": "Franja común del panel con estado, bloque y gas por red; sin datos en vivo en esta versión.",
+      "de": "Gemeinsame Statusleiste mit Zustand, Block und Gas je Netzwerk; keine Live-Daten in dieser Version.",
+      "it": "Fascia comune del pannello con stato, blocco e gas per rete; nessun dato dal vivo in questa versione.",
+      "ja": "各ネットワークの状態、ブロック、ガスを扱う共通バー。この版はライブデータを表示しません。",
+      "ar": "شريط مشترك للوحة بحالة الشبكة والكتلة والغاز؛ دون بيانات مباشرة في هذه النسخة."
+    },
+    "rota": "/app/status-redes/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        12
+      ]
+    },
+    "endpoints": [
+      "GET /api/networks"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  },
+  {
+    "id": "fatos-rede",
+    "nome": {
+      "pt-BR": "Fatos da rede",
+      "en": "Network facts",
+      "es": "Datos de la red",
+      "de": "Netzwerkdaten",
+      "it": "Dati della rete",
+      "ja": "ネットワーク仕様",
+      "ar": "حقائق الشبكة"
+    },
+    "descricao": {
+      "pt-BR": "Informações da MutualChain e do MTC presentes no rodapé do painel, com referência às redes e ao padrão do token.",
+      "en": "MutualChain and MTC information from the panel footer, referencing networks and the token standard.",
+      "es": "Información de MutualChain y MTC presente en el pie del panel, con referencia a redes y estándar del token.",
+      "de": "MutualChain- und MTC-Informationen aus dem Panel-Fußbereich mit Netzwerk- und Tokenstandard-Referenz.",
+      "it": "Informazioni MutualChain e MTC presenti nel piè di pagina del pannello, con reti e standard del token.",
+      "ja": "現行パネルのフッターにあるMutualChainとMTCの情報。ネットワークとトークン規格を参照します。",
+      "ar": "معلومات MutualChain وMTC في تذييل اللوحة مع الإشارة إلى الشبكات ومعيار الرمز."
+    },
+    "rota": "/app/fatos-rede/",
+    "modulo": null,
+    "origem": {
+      "aba": null,
+      "rotas": [],
+      "itens_mapa": [
+        12
+      ]
+    },
+    "endpoints": [
+      "GET /api/networks",
+      "GET /api/mtc"
+    ],
+    "move_valor": false,
+    "operacao_financeira": false,
+    "estado": "em_implantacao"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/Mutual-Capital/mutucoin-site.git",
+  "branch": "main",
+  "cloudflareAccountName": "Mutual | Global",
+  "cloudflareAccountId": "14aeea46282365ca4559b74416191550",
+  "cloudflarePagesProject": "mutucoin-institucional",
+  "publicOrigin": "https://mutucoin.xyz",
+  "publicDirectory": "dist-public",
+  "legacySourceUse": "historical-reference-only",
+  "googleCloudDeployment": false,
+  "newPaidSubscriptions": false
+}

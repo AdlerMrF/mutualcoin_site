@@ -1,0 +1,745 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [aria-hidden]:
+    - paragraph: Conectando possibilidades
+  - generic [ref=e3]:
+    - generic [ref=e4]: Processadora de tecnologia. Software como serviço.
+    - generic [ref=e5]: Versão local · apresentação institucional
+  - banner [ref=e6]:
+    - generic [ref=e10]:
+      - link "Mutual Capital — início" [ref=e11] [cursor=pointer]:
+        - /url: "#hero"
+        - generic [ref=e13]:
+          - text: Mutual
+          - emphasis [ref=e14]: Capital
+      - navigation "Navegação principal" [ref=e15]:
+        - link "Módulos" [ref=e16] [cursor=pointer]:
+          - /url: "#solutions"
+        - link "Para quem" [ref=e17] [cursor=pointer]:
+          - /url: "#icp"
+        - link "Mercados" [ref=e18] [cursor=pointer]:
+          - /url: /mercados/
+        - group [ref=e19]:
+          - generic "Plataforma ⌄" [ref=e20] [cursor=pointer]
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - link "Acessar" [ref=e23] [cursor=pointer]:
+            - /url: https://terminal.mutualglobal.com.br/
+          - link "Fazer cadastro" [ref=e24] [cursor=pointer]:
+            - /url: "#contact"
+        - button "Tema escuro" [ref=e25] [cursor=pointer]
+        - generic [ref=e29]:
+          - generic [ref=e30]: Idioma do site
+          - 'button "Idioma do site: Português" [ref=e32] [cursor=pointer]':
+            - generic [ref=e34]: Português
+        - link "Fale com a Mutual" [ref=e37] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e39]:
+    - region "Tecnologia que conecta." [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: Segurança + infraestrutura como serviço
+          - heading "Tecnologia que conecta." [level=1] [ref=e44]
+          - generic [ref=e46]:
+            - link "Explorar os módulos" [ref=e47] [cursor=pointer]:
+              - /url: "#solutions"
+            - link "Contato institucional" [ref=e51] [cursor=pointer]:
+              - /url: "#contact"
+            - generic [ref=e53]:
+              - link "Acessar" [ref=e54] [cursor=pointer]:
+                - /url: https://terminal.mutualglobal.com.br/
+              - link "Fazer cadastro" [ref=e55] [cursor=pointer]:
+                - /url: "#contact"
+        - figure "Compensação de pagamentos ao redor do mundo Visualização conceitual · não representa cobertura disponível" [ref=e56]:
+          - generic [ref=e57]:
+            - generic "Compensação de pagamentos ao redor do mundo"
+          - generic [ref=e58]:
+            - text: Compensação de pagamentos ao redor do mundo
+            - generic [ref=e59]: Visualização conceitual · não representa cobertura disponível
+    - region "Sua operação precisa conectar sistemas." [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]: O desafio
+          - heading "Sua operação precisa conectar sistemas." [level=2] [ref=e64]
+          - paragraph [ref=e65]: Ativos digitais, pagamentos e fluxos internacionais podem exigir integrações separadas. A Mutual reúne módulos para organizar essas conexões, com escopo definido para cada parceiro.
+        - link "Explorar os módulos" [ref=e66] [cursor=pointer]:
+          - /url: "#solutions"
+    - generic [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]: Nosso manifesto
+        - heading "Mover valor começa por conectar tecnologia." [level=2] [ref=e71]
+        - paragraph [ref=e72]: "A visão institucional da Mutual: aproximar o sistema financeiro do mundo digital com software, conexões com parceiros licenciados e clareza de responsabilidades."
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [aria-hidden] [ref=e75]: "01"
+          - heading "Conectar, em vez de fragmentar." [level=3] [ref=e76]
+          - paragraph [ref=e77]: Ativos digitais, meios de pagamento e fluxos internacionais na mesma proposta de infraestrutura.
+        - generic [ref=e78]:
+          - generic [aria-hidden] [ref=e79]: "02"
+          - heading "Tecnologia acessível à sua operação." [level=3] [ref=e80]
+          - paragraph [ref=e81]: Módulos de software que podem compor o serviço da sua empresa, com escopo definido para cada integração.
+        - generic [ref=e82]:
+          - generic [aria-hidden] [ref=e83]: "03"
+          - heading "Clareza em cada movimento." [level=3] [ref=e84]
+          - paragraph [ref=e85]: Responsabilidades, disponibilidade e condições precisam estar claras antes da ativação de qualquer operação.
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]: Segurança + infraestrutura
+        - heading "Nove módulos. Uma infraestrutura Mutual." [level=2] [ref=e90]
+        - paragraph [ref=e91]: Segurança como princípio, infraestrutura como base. Combine os serviços para sua operação. Disponibilidade, ativos, redes e controles são definidos no escopo contratado.
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - generic [ref=e94]: Software como serviço
+          - heading "Mutual Cripto" [level=3] [ref=e101]
+          - paragraph [ref=e102]: Conector para ativos digitais.
+          - paragraph [ref=e103]: Conector tecnológico para solicitações de compra e venda de criptoativos em balcão, executadas por parceiros licenciados.
+        - generic [ref=e104]:
+          - generic [ref=e105]: Software como serviço
+          - heading "Mutual On-Ramp" [level=3] [ref=e111]
+          - paragraph [ref=e112]: Do real ao ativo digital.
+          - paragraph [ref=e113]: Software que conecta reais a ativos digitais; conversão e operação financeira executadas por parceiros licenciados.
+        - generic [ref=e114]:
+          - generic [ref=e115]: Software como serviço
+          - heading "Mutual Off-Ramp" [level=3] [ref=e121]
+          - paragraph [ref=e122]: Do ativo digital ao real.
+          - paragraph [ref=e123]: Software que conecta ativos digitais a reais; conversão e operação financeira executadas por parceiros licenciados.
+        - generic [ref=e124]:
+          - generic [ref=e125]: Software como serviço
+          - heading "Mutual Câmbio" [level=3] [ref=e132]
+          - paragraph [ref=e133]: Fluxos além das fronteiras.
+          - paragraph [ref=e134]: Software para conectar câmbio e pagamentos internacionais, executados por parceiros licenciados, com câmbio definido na contratação e documentação da operação.
+        - generic [ref=e135]:
+          - generic [ref=e136]: Software como serviço
+          - heading "Mutual On-Chain" [level=3] [ref=e145]
+          - paragraph [ref=e146]: Inteligência on-chain da Mutual.
+          - paragraph [ref=e147]: Produto próprio para análise de carteiras, endereços e fluxos nas redes de ativos digitais.
+        - generic [ref=e148]:
+          - generic [ref=e149]: Software como serviço
+          - heading "Mutual Pay" [level=3] [ref=e155]
+          - paragraph [ref=e156]: Pagamentos conectados ao seu produto.
+          - paragraph [ref=e157]: Conectores de meios de pagamento para o produto da sua empresa; operações executadas por parceiros licenciados. Mutual Pix é um módulo separado.
+        - generic [ref=e158]:
+          - generic [ref=e159]: Software como serviço
+          - heading "Mutual Cofre de Ativos Digitais" [level=3] [ref=e165]
+          - paragraph [ref=e166]: Tecnologia de guarda com parceiros licenciados.
+          - paragraph [ref=e167]: Tecnologia de guarda e controle de movimentações operada por parceiros licenciados. Envio de ativos em implantação, sujeito à validação antes da ativação.
+          - generic [ref=e168]: Em implantação
+        - generic [ref=e169]:
+          - generic [ref=e170]: Software como serviço
+          - heading "Mutual Onboarding" [level=3] [ref=e176]
+          - paragraph [ref=e177]: Cadastro e verificação de identidade como serviço.
+          - paragraph [ref=e178]: Infraestrutura para cadastro, coleta de documentos e verificação de identidade (KYC, conheça seu cliente). Etapas, acesso a dados e aprovações são definidos por integração e contratação.
+        - generic [ref=e179]:
+          - generic [ref=e180]: Software como serviço
+          - heading "Mutual Pix" [level=3] [ref=e186]
+          - paragraph [ref=e187]: Pix as a Service para o seu produto.
+          - paragraph [ref=e188]: Conectores para integrar Pix ao seu produto; operações executadas por parceiros licenciados. Parâmetros, limites e registros conforme contratação. Separado do Mutual Pay.
+    - generic [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e192]: Plataforma como serviço
+        - heading "Uma integração. Módulos que se combinam." [level=2] [ref=e193]
+        - paragraph [ref=e194]: O desenho de cada integração considera sua operação, os serviços contratados e as etapas de implantação.
+      - tablist "Plataforma" [ref=e196]:
+        - tab "Integração por API" [ref=e197] [cursor=pointer]
+        - tab "Roteamento por cliente" [ref=e198] [cursor=pointer]
+        - tab "Motor de spread e taxas" [ref=e199] [cursor=pointer]
+        - tab "Tecnologia de envio de ativos" [ref=e200] [cursor=pointer]
+    - region "Uma camada de integração. Escopo verificável." [ref=e202]:
+      - generic [ref=e203]:
+        - generic [ref=e204]:
+          - generic [ref=e205]: Técnico · Integradores
+          - heading "Uma camada de integração. Escopo verificável." [level=2] [ref=e206]
+          - paragraph [ref=e207]: Software e conectores Mutual apoiam a integração. As capacidades abaixo estão em implantação; acesso e documentação são definidos com cada integrador.
+        - generic [ref=e208]:
+          - article [ref=e209]:
+            - generic [aria-hidden] [ref=e210]: "01"
+            - heading "API unificada · REST" [level=3] [ref=e211]
+            - paragraph [ref=e212]: Interface unificada de integração em implantação. O contrato REST e os módulos disponíveis serão confirmados na documentação de cada integração.
+            - generic [ref=e213]: Em implantação
+          - article [ref=e214]:
+            - generic [aria-hidden] [ref=e215]: "02"
+            - heading "Webhooks · notificações de eventos" [level=3] [ref=e216]
+            - paragraph [ref=e217]: Notificações automáticas entre sistemas em implantação. Eventos, autenticação e tratamento de falhas dependem do contrato técnico aprovado.
+            - generic [ref=e218]: Em implantação
+          - article [ref=e219]:
+            - generic [aria-hidden] [ref=e220]: "03"
+            - heading "Parceiro executor em cada resposta" [level=3] [ref=e221]
+            - paragraph [ref=e222]: "Identificação do parceiro licenciado em cada resposta financeira: requisito em implantação, sujeito à validação do contrato e da integração."
+            - generic [ref=e223]: Em implantação
+          - article [ref=e224]:
+            - generic [aria-hidden] [ref=e225]: "04"
+            - heading "Sandbox · ambiente de testes" [level=3] [ref=e226]
+            - paragraph [ref=e227]: Ambiente de testes para clientes em implantação. Acesso externo e documentação serão disponibilizados após validação.
+            - generic [ref=e228]: Em implantação
+        - paragraph [ref=e229]: Operações financeiras são executadas via parceiro licenciado. Disponibilidade técnica e permissões precisam ser confirmadas para cada integração.
+        - link "Conversar sobre integração" [ref=e230] [cursor=pointer]:
+          - /url: "#contact"
+    - generic [ref=e232]:
+      - figure "Ecossistema multirrede com MutualChain no centro Visualização conceitual · não representa cobertura disponível" [ref=e233]:
+        - generic [ref=e234]:
+          - generic "Ecossistema multirrede com MutualChain no centro"
+        - generic [ref=e235]:
+          - text: Ecossistema multirrede com MutualChain no centro
+          - generic [ref=e236]: Visualização conceitual · não representa cobertura disponível
+      - generic [ref=e238]:
+        - generic [ref=e239]: Ecossistema Mutual
+        - heading "Várias redes. Uma visão conectada." [level=2] [ref=e240]
+        - paragraph [ref=e241]: MutualChain no centro da representação do ecossistema. Os módulos aproximam pagamentos, ativos digitais e análise de fluxos em uma proposta de tecnologia como serviço.
+    - generic [ref=e242]:
+      - generic [ref=e244]:
+        - generic [ref=e245]: Conexões que compõem
+        - heading "Da moeda local ao ecossistema digital." [level=2] [ref=e246]
+        - paragraph [ref=e247]: Explore como os módulos se relacionam. Cada composição tem escopo e disponibilidade próprios.
+      - region "Da moeda local ao ecossistema digital." [ref=e251]:
+        - generic [ref=e252]:
+          - generic [ref=e253]: "01"
+          - heading "Entrada em reais" [level=3] [ref=e254]
+          - paragraph [ref=e255]: Mutual Pix e Mutual On-Ramp conectam o pagamento local ao fluxo com ativos digitais.
+        - generic [ref=e256]:
+          - generic [ref=e257]: "02"
+          - heading "Conexões para conversão" [level=3] [ref=e258]
+          - paragraph [ref=e259]: Mutual Cripto e Mutual Câmbio conectam às conversões executadas por parceiros licenciados.
+        - generic [ref=e260]:
+          - generic [ref=e261]: "03"
+          - heading "Saída e pagamentos" [level=3] [ref=e262]
+          - paragraph [ref=e263]: Mutual Off-Ramp e Mutual Câmbio conectam o destino do fluxo à operação.
+        - generic [ref=e264]:
+          - generic [ref=e265]: "04"
+          - heading "Análise e proteção" [level=3] [ref=e266]
+          - paragraph [ref=e267]: Mutual On-Chain analisa fluxos; Mutual Cofre de Ativos Digitais oferece tecnologia de guarda operada por parceiros licenciados. Envio em implantação.
+    - generic [ref=e270]:
+      - generic [ref=e272]:
+        - generic [ref=e273]: Como funciona
+        - heading "Da conversa à ativação, com clareza." [level=2] [ref=e274]
+      - region "Da conversa à ativação, com clareza." [ref=e276]:
+        - generic [ref=e277]:
+          - generic [ref=e278]:
+            - generic [ref=e279] [cursor=pointer]
+            - generic [ref=e281]:
+              - generic [aria-hidden]: "01"
+              - generic [ref=e282]:
+                - generic [ref=e283]: Entendimento
+                - heading "Conhecer a sua operação." [level=3] [ref=e284]
+                - paragraph [ref=e285]: Mapeamento dos fluxos, mercados, ativos e necessidades da empresa.
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - generic [aria-hidden]: "02"
+              - generic [ref=e288]:
+                - generic [ref=e289]: Composição
+                - heading "Definir os módulos e o escopo." [level=3] [ref=e290]
+                - paragraph [ref=e291]: Seleção dos serviços SaaS e das conexões com parceiros licenciados, com responsabilidades e disponibilidade definidas.
+            - generic [ref=e292] [cursor=pointer]
+          - generic [ref=e294]:
+            - generic [ref=e295] [cursor=pointer]
+            - generic [ref=e297]:
+              - generic [aria-hidden]: "03"
+              - generic [ref=e298]:
+                - generic [ref=e299]: Integração
+                - heading "Conectar e validar." [level=3] [ref=e300]
+                - paragraph [ref=e301]: Integração técnica e verificação dos fluxos previstos. Funções em implantação seguem identificadas até a validação.
+          - generic [ref=e302]:
+            - generic [ref=e303]:
+              - generic [aria-hidden]: "04"
+              - generic [ref=e304]:
+                - generic [ref=e305]: Ativação
+                - heading "Ativar o que foi aprovado." [level=3] [ref=e306]
+                - paragraph [ref=e307]: Ativação restrita ao escopo validado e contratado, com acompanhamento das condições operacionais.
+            - generic [ref=e308] [cursor=pointer]
+    - generic [ref=e311]:
+      - generic [ref=e312]:
+        - generic [ref=e313]:
+          - generic [ref=e314]: Conexões internacionais
+          - heading "Do Brasil para novos caminhos." [level=2] [ref=e315]
+          - paragraph [ref=e316]: A visão dos corredores Mutual conecta pagamentos locais e ativos digitais a fluxos internacionais. Países, moedas, limites e prazos são definidos para cada contratação.
+        - paragraph [ref=e317]: A animação ilustra o conceito de conexão global. Não é uma relação de países ou rotas já habilitados.
+      - figure "Corredores de pagamento a partir do Brasil Visualização conceitual · não representa cobertura disponível" [ref=e318]:
+        - generic [ref=e319]:
+          - generic "Corredores de pagamento a partir do Brasil"
+        - generic [ref=e320]:
+          - text: Corredores de pagamento a partir do Brasil
+          - generic [ref=e321]: Visualização conceitual · não representa cobertura disponível
+    - region "Conexões globais. Responsabilidades claras." [ref=e322]:
+      - generic [ref=e323]:
+        - generic [ref=e324]:
+          - generic [ref=e325]: Infraestrutura Global
+          - heading "Conexões globais. Responsabilidades claras." [level=2] [ref=e326]
+          - paragraph [ref=e327]: Software e conectores para organizar o acesso a operações internacionais via parceiro licenciado. Mercados, moedas e disponibilidade dependem do parceiro executor e da contratação.
+        - generic [ref=e328]:
+          - generic [ref=e329]: Mutual Câmbio · conexões internacionais
+          - generic [ref=e330]: Mutual Pay · integração de pagamentos
+          - generic [ref=e331]: Mutual Cripto · conexão a ativos digitais
+          - generic [ref=e332]: Mutual Onboarding · cadastro e verificação
+        - paragraph [ref=e333]: Via parceiro licenciado
+    - region "Uma infraestrutura. Diferentes camadas de acesso." [ref=e334]:
+      - generic [ref=e335]:
+        - generic [ref=e336]:
+          - generic [ref=e337]: Modelos de Distribuição
+          - heading "Uma infraestrutura. Diferentes camadas de acesso." [level=2] [ref=e338]
+          - paragraph [ref=e339]: "Da tecnologia à interface do cliente: modelos de distribuição para estruturar o acesso via parceiro licenciado. O escopo de cada integração é definido na contratação."
+        - generic [ref=e340]:
+          - list [ref=e341]:
+            - listitem [ref=e342]:
+              - generic [aria-hidden] [ref=e343]: "01"
+              - heading "Core · Tecnologia Mutual Capital" [level=3] [ref=e344]
+              - paragraph [ref=e345]: Software, APIs e módulos tecnológicos conectam as camadas de acesso aos parceiros executores.
+            - listitem [ref=e346]:
+              - generic [aria-hidden] [ref=e347]: "02"
+              - heading "B2B · Empresa a empresa" [level=3] [ref=e348]
+              - paragraph [ref=e349]: Fintechs e plataformas integram módulos para suas empresas clientes, via parceiro licenciado.
+            - listitem [ref=e350]:
+              - generic [aria-hidden] [ref=e351]: "03"
+              - heading "B2B2B · Distribuição entre empresas" [level=3] [ref=e352]
+              - paragraph [ref=e353]: Uma empresa integradora conecta outras empresas à tecnologia, com execução financeira via parceiro licenciado.
+            - listitem [ref=e354]:
+              - generic [aria-hidden] [ref=e355]: "04"
+              - heading "B2C / B2B2C · Pessoas e clientes finais" [level=3] [ref=e356]
+              - paragraph [ref=e357]: Interfaces de acesso aproximam o cliente final dos serviços executados via parceiro licenciado.
+            - listitem [ref=e358]:
+              - generic [aria-hidden] [ref=e359]: "05"
+              - heading "Embedded · Tecnologia na sua plataforma" [level=3] [ref=e360]
+              - paragraph [ref=e361]: Módulos integrados à jornada do cliente, com escopo técnico e parceiro executor definidos na contratação.
+          - complementary [ref=e362]:
+            - heading "Tecnologia no centro. Execução identificada." [level=3] [ref=e363]
+            - paragraph [ref=e364]: A Mutual fornece a camada tecnológica. Cada operação financeira cabe ao parceiro licenciado responsável, conforme as regras da sua jurisdição.
+            - generic [ref=e365]: Via parceiro licenciado
+    - generic [ref=e366]:
+      - generic [ref=e367]:
+        - generic [ref=e368]:
+          - generic [ref=e369]: Para quem construímos
+          - heading "Sua marca. Sua operação. Tecnologia Mutual." [level=2] [ref=e370]
+          - paragraph [ref=e371]: Uma proposta institucional para empresas que conectam o Brasil aos ativos digitais e aos mercados internacionais.
+        - tablist "Para quem" [ref=e372]:
+          - tab "Corretoras" [selected] [ref=e373] [cursor=pointer]
+          - tab "Fintechs" [ref=e374] [cursor=pointer]
+        - tabpanel "Corretoras" [ref=e376]:
+          - generic [ref=e378]:
+            - heading "Conectores para sua corretora." [level=3] [ref=e379]
+            - paragraph [ref=e380]: Software para conectar solicitações OTC e conversões executadas por parceiros licenciados, com análise pelo Mutual On-Chain.
+      - generic [ref=e382]:
+        - heading "O valor atravessa fronteiras. A tecnologia conecta cada etapa." [level=2] [ref=e384]
+        - link "C o r r e d o r e s" [ref=e385] [cursor=pointer]:
+          - /url: "#jurisdictions"
+          - generic [aria-hidden]:
+            - generic [aria-hidden]:
+              - generic: Conexões internacionais
+              - heading [level=2]: Do Brasil para novos caminhos.
+              - paragraph: A visão dos corredores Mutual conecta pagamentos locais e ativos digitais a fluxos internacionais. Países, moedas, limites e prazos são definidos para cada contratação.
+          - generic [ref=e386]:
+            - generic [ref=e387]: C
+            - generic [ref=e388]: o
+            - generic [ref=e389]: r
+            - generic [ref=e390]: r
+            - generic [ref=e391]: e
+            - generic [ref=e392]: d
+            - generic [ref=e393]: o
+            - generic [ref=e394]: r
+            - generic [ref=e395]: e
+            - generic [ref=e396]: s
+    - region "Uma infraestrutura. Todos os mercados." [ref=e399]:
+      - generic [ref=e400]:
+        - generic [ref=e401]:
+          - generic [ref=e402]: Mercados Atendíveis
+          - heading "Uma infraestrutura. Todos os mercados." [level=2] [ref=e403]
+          - paragraph [ref=e404]: 16 módulos de integração compõem o catálogo institucional para pessoas, empresas e distribuidores. O acesso a cada mercado ocorre via parceiro licenciado, conforme escopo e disponibilidade.
+        - generic [ref=e405]:
+          - link [ref=e406] [cursor=pointer]:
+            - /url: "#segment-tab-b2c"
+            - generic [aria-hidden] [ref=e407]: "01"
+            - heading "Pessoas e profissionais" [level=3] [ref=e408]
+            - paragraph [ref=e409]: Câmbio, ativos digitais e negócios internacionais. Explore os segmentos B2C e seus módulos de integração.
+          - link [ref=e410] [cursor=pointer]:
+            - /url: "#segment-tab-b2b"
+            - generic [aria-hidden] [ref=e411]: "02"
+            - heading "Empresas e plataformas" [level=3] [ref=e412]
+            - paragraph [ref=e413]: Fintechs, corretoras, comércio e tesourarias. Explore os segmentos B2B e seus módulos de integração.
+        - paragraph [ref=e414]: Via parceiro licenciado
+    - region "Tecnologia para conectar cada necessidade." [ref=e415]:
+      - generic [ref=e416]:
+        - generic [ref=e417]:
+          - generic [ref=e418]: Para quem construímos
+          - heading "Tecnologia para conectar cada necessidade." [level=2] [ref=e419]
+          - paragraph [ref=e420]: Casos de uso com software Mutual e operações financeiras executadas por parceiros licenciados.
+        - generic [ref=e421]:
+          - article [ref=e422]:
+            - generic [aria-hidden] [ref=e423]: "01"
+            - heading "Importação e exportação" [level=3] [ref=e424]
+            - paragraph [ref=e425]: Mutual Câmbio conecta pagamentos a fornecedores e recebimentos de compradores no exterior via parceiros licenciados, com preço transparente.
+            - link "Saiba mais Importação e exportação" [ref=e426] [cursor=pointer]:
+              - /url: "#module-4"
+              - generic [ref=e427]: Saiba mais
+              - generic [aria-hidden] [ref=e428]: ↗
+          - article [ref=e429]:
+            - generic [aria-hidden] [ref=e430]: "02"
+            - heading "Logística" [level=3] [ref=e431]
+            - paragraph [ref=e432]: Mutual Câmbio conecta recebimentos em dólar de marketplaces e pagamentos a agentes locais em outras moedas via parceiros licenciados, a partir de uma solicitação.
+            - link "Saiba mais Logística" [ref=e433] [cursor=pointer]:
+              - /url: "#module-4"
+              - generic [ref=e434]: Saiba mais
+              - generic [aria-hidden] [ref=e435]: ↗
+          - article [ref=e436]:
+            - generic [aria-hidden] [ref=e437]: "03"
+            - heading "Fintechs e PSPs" [level=3] [ref=e438]
+            - paragraph [ref=e439]: Mutual Pix conecta trilhos de pagamento via API a parceiros licenciados, com integração aos módulos de ativos digitais.
+            - link "Saiba mais Fintechs e PSPs" [ref=e440] [cursor=pointer]:
+              - /url: "#module-9"
+              - generic [ref=e441]: Saiba mais
+              - generic [aria-hidden] [ref=e442]: ↗
+        - group [ref=e443]:
+          - generic "Ver todos os casos de uso" [ref=e444] [cursor=pointer]
+    - region "Pessoas e empresas. Conexões com propósito." [ref=e445]:
+      - generic [ref=e446]:
+        - generic [ref=e447]:
+          - generic [ref=e448]: Segmentos
+          - heading "Pessoas e empresas. Conexões com propósito." [level=2] [ref=e449]
+          - paragraph [ref=e450]: Módulos de integração para cada segmento; operações financeiras via parceiro licenciado.
+        - tablist "Segmentos" [ref=e451]:
+          - tab "B2C · Pessoas" [selected] [ref=e452] [cursor=pointer]
+          - tab "B2B · Empresas" [ref=e453] [cursor=pointer]
+        - tabpanel "B2C · Pessoas" [ref=e454]:
+          - generic [ref=e455]:
+            - article [ref=e456]:
+              - heading "Câmbio e Remessas" [level=3] [ref=e464]
+              - paragraph [ref=e465]: Interface para remessas e conversão de moedas via parceiro licenciado.
+              - generic [ref=e466]:
+                - generic [ref=e467]: Módulos de integração
+                - list [ref=e468]:
+                  - listitem [ref=e469]: M03 eFX
+              - generic [ref=e470]: Via parceiro licenciado
+            - article [ref=e471]:
+              - heading "Ativos Digitais" [level=3] [ref=e477]
+              - paragraph [ref=e478]: Interface com chaves do próprio usuário e conexão on/off-ramp via parceiro licenciado.
+              - generic [ref=e479]:
+                - generic [ref=e480]: Módulos de integração
+                - list [ref=e481]:
+                  - listitem [ref=e482]: M04 On-Ramp
+                  - listitem [ref=e483]: M05 Off-Ramp
+              - generic [ref=e484]: Via parceiro licenciado
+            - article [ref=e485]:
+              - heading "Cartão Global Multi-Moeda" [level=3] [ref=e490]
+              - paragraph [ref=e491]: Interface para cartão internacional; emissão e operação via parceiro licenciado.
+              - generic [ref=e492]:
+                - generic [ref=e493]: Módulos de integração
+                - list [ref=e494]:
+                  - listitem [ref=e495]: M08 BaaS
+              - generic [ref=e496]: Via parceiro licenciado
+            - article [ref=e497]:
+              - heading "Diversificação de Reservas (Digital Vault)" [level=3] [ref=e502]
+              - paragraph [ref=e503]: Tecnologia para organizar saldos em múltiplos ativos e moedas, com operações via parceiro licenciado.
+              - generic [ref=e504]:
+                - generic [ref=e505]: Módulos de integração
+                - list [ref=e506]:
+                  - listitem [ref=e507]: M14 Digital Vault
+              - generic [ref=e508]: Via parceiro licenciado
+            - article [ref=e509]:
+              - heading "Privacidade por Design (Mutual ID)" [level=3] [ref=e515]
+              - paragraph [ref=e516]: Interface que minimiza a exposição de dados pessoais, mantendo o KYC exigido na operação via parceiro licenciado.
+              - generic [ref=e517]:
+                - generic [ref=e518]: Módulos de integração
+                - list [ref=e519]:
+                  - listitem [ref=e520]: M15 Mutual ID
+              - generic [ref=e521]: Via parceiro licenciado
+            - article [ref=e522]:
+              - heading "Nômades e Freelancers" [level=3] [ref=e528]
+              - paragraph [ref=e529]: Conexão a recebimentos em ativos digitais ou moeda estrangeira de clientes internacionais via parceiro licenciado.
+              - generic [ref=e530]:
+                - generic [ref=e531]: Módulos de integração
+                - list [ref=e532]:
+                  - listitem [ref=e533]: M05 Off-Ramp
+              - generic [ref=e534]: Via parceiro licenciado
+            - article [ref=e535]:
+              - heading "MEI e Microempreendedor" [level=3] [ref=e541]
+              - paragraph [ref=e542]: Checkout multimoeda e conexão a recebimentos locais e internacionais via parceiro licenciado.
+              - generic [ref=e543]:
+                - generic [ref=e544]: Módulos de integração
+                - list [ref=e545]:
+                  - listitem [ref=e546]: M07 Checkout
+                  - listitem [ref=e547]: M06 PIX aaS
+              - generic [ref=e548]: Via parceiro licenciado
+            - article [ref=e549]:
+              - heading "Escrow para Negócios" [level=3] [ref=e555]
+              - paragraph [ref=e556]: Tecnologia para instruções de pagamento condicional, com execução via parceiro licenciado.
+              - generic [ref=e557]:
+                - generic [ref=e558]: Módulos de integração
+                - list [ref=e559]:
+                  - listitem [ref=e560]: M16 Escrow Tech
+              - generic [ref=e561]: Via parceiro licenciado
+    - region "Inteligência Financeira e Tecnológica" [ref=e562]:
+      - generic [ref=e563]:
+        - generic [ref=e564]:
+          - generic [ref=e565]:
+            - generic [ref=e566]:
+              - generic [ref=e567]: Mutual Advisory
+              - heading "Inteligência Financeira e Tecnológica" [level=2] [ref=e568]
+              - paragraph [ref=e569]: Além da infraestrutura, reunimos inteligência financeira, regulatória e tecnológica para apoiar clientes e parceiros na navegação do sistema financeiro global.
+            - figure "Retrato de partículas e grafo de conhecimento · ilustração conceitual." [ref=e570]:
+              - img "Mascote Mutual em partículas com grafo de conhecimento ao fundo" [ref=e571]
+          - generic [ref=e573]:
+            - article [ref=e574]:
+              - generic [aria-hidden] [ref=e575]: "01"
+              - heading "Expansão empresarial global" [level=3] [ref=e576]
+              - paragraph [ref=e577]: Mapeamento de jurisdições, estruturas empresariais e especialistas para apoiar a presença internacional.
+            - article [ref=e578]:
+              - generic [aria-hidden] [ref=e579]: "02"
+              - heading "Estruturação patrimonial internacional" [level=3] [ref=e580]
+              - paragraph [ref=e581]: Mapeamento de estruturas e conexão a especialistas. A execução cabe aos profissionais habilitados na jurisdição correspondente.
+            - group [ref=e582]:
+              - generic "Ver todas as frentes de inteligência" [ref=e583] [cursor=pointer]
+        - paragraph [ref=e584]: A Mutual atua com inteligência e mapeamento. Operações financeiras são executadas via parceiro licenciado; serviços jurídicos e tributários, pelos profissionais habilitados correspondentes.
+    - generic [ref=e586]:
+      - generic [ref=e587]:
+        - generic [ref=e588]: Idiomas como parte do produto
+        - heading "Conexões globais começam pelo entendimento." [level=2] [ref=e589]
+        - paragraph [ref=e590]: Nove módulos apresentados em português, inglês, espanhol, alemão, italiano, japonês e árabe, com leitura da direita para a esquerda.
+      - generic [ref=e591]:
+        - paragraph [ref=e592]: Português · English · Español · Deutsch · Italiano · 日本語 · العربية
+        - paragraph [ref=e593]: Uma infraestrutura, diferentes idiomas.
+    - region "Por que nos escolhem" [ref=e594]:
+      - generic [ref=e595]:
+        - generic [ref=e599]:
+          - generic [ref=e600]: Tecnologia com responsabilidade
+          - heading "Por que nos escolhem" [level=2] [ref=e601]
+          - paragraph [ref=e602]: Conexões claras, do desenho da integração à execução pelo parceiro licenciado.
+        - generic [ref=e603]:
+          - article [ref=e604]:
+            - heading "Segurança" [level=3] [ref=e608]
+            - paragraph [ref=e609]: Aprovação em camadas e registros fazem parte do desenho de controle. Controles alinhados à ISO/IEC 27001 estão em implantação.
+          - article [ref=e610]:
+            - heading "Rapidez" [level=3] [ref=e613]
+            - paragraph [ref=e614]: Conectores e módulos combináveis organizam etapas da integração. Os prazos são definidos no escopo contratado.
+          - article [ref=e615]:
+            - heading "Estabilidade" [level=3] [ref=e618]
+            - paragraph [ref=e619]: Disponibilidade e condições são definidas por integração. Funções em implantação permanecem identificadas antes da ativação.
+          - article [ref=e620]:
+            - heading "Conformidade" [level=3] [ref=e624]
+            - paragraph [ref=e625]: Operações financeiras via parceiro licenciado, com autorizações próprias e responsabilidade pela execução.
+        - link "Governança e Conformidade" [ref=e626] [cursor=pointer]:
+          - /url: /governanca-e-conformidade/
+    - region "Tecnologia pura. Parceiros executam." [ref=e627]:
+      - generic [ref=e628]:
+        - generic [ref=e629]:
+          - generic [ref=e630]: O que somos
+          - heading "Tecnologia pura. Parceiros executam." [level=2] [ref=e631]
+          - paragraph [ref=e632]: Software, APIs e 16 módulos de integração. Operações financeiras, câmbio, custódia e liquidação são executadas por parceiros com autorizações regulatórias próprias — sob responsabilidade deles.
+        - generic [ref=e633]:
+          - article [ref=e634]:
+            - generic [ref=e635]: "01"
+            - heading "Provedora de Software e APIs" [level=3] [ref=e636]
+            - paragraph [ref=e637]: — Interfaces, conectores e módulos tecnológicos. Não realizamos, não intermediamos e não somos contraparte de operações financeiras, cambiais, de custódia ou de liquidação. Essas atividades são dos parceiros licenciados.
+          - article [ref=e638]:
+            - generic [ref=e639]: "02"
+            - heading "Rede Global de Parceiros Licenciados" [level=3] [ref=e640]
+            - paragraph [ref=e641]: — Cada operação financeira é executada por um parceiro com autorização própria do regulador competente na jurisdição correspondente. O parceiro é o único responsável pelo cumprimento das obrigações regulatórias da operação que executa.
+          - article [ref=e642]:
+            - generic [ref=e643]: "03"
+            - heading "Inteligência Financeira e Tecnológica" [level=3] [ref=e644]
+            - paragraph [ref=e645]: — Além da infraestrutura operacional, a Mutual Capital reúne inteligência financeira, regulatória e tecnológica para apoiar clientes e parceiros na navegação do sistema financeiro global — de pagamentos a estruturação patrimonial internacional.
+    - region "Responsabilidades claras em cada conexão." [ref=e646]:
+      - generic [ref=e647]:
+        - generic [ref=e648]:
+          - generic [ref=e649]: Conformidade e mercado
+          - heading "Responsabilidades claras em cada conexão." [level=2] [ref=e650]
+          - paragraph [ref=e651]: Tecnologia Mutual, execução por parceiros licenciados e documentação da operação.
+        - generic [ref=e652]:
+          - article [ref=e653]:
+            - generic [aria-hidden] [ref=e654]: "01"
+            - heading "Parceiros licenciados" [level=3] [ref=e655]
+            - paragraph [ref=e656]: Operações financeiras são executadas por parceiros com autorizações próprias nas respectivas jurisdições, sob responsabilidade deles.
+          - article [ref=e657]:
+            - generic [aria-hidden] [ref=e658]: "02"
+            - heading "PLD/AML e KYC" [level=3] [ref=e659]
+            - paragraph [ref=e660]: Mutual Onboarding oferece tecnologia para cadastro e verificação de identidade, apoiando os processos de prevenção à lavagem de dinheiro (PLD/AML) e KYC dos parceiros licenciados.
+          - article [ref=e661]:
+            - generic [aria-hidden] [ref=e662]: "03"
+            - heading "Preço e taxas transparentes" [level=3] [ref=e663]
+            - paragraph [ref=e664]: Preço, câmbio e taxas da operação do parceiro são apresentados na contratação; o motor configurável de spread e taxas está em implantação.
+          - article [ref=e665]:
+            - generic [aria-hidden] [ref=e666]: "04"
+            - heading "Documentação da operação" [level=3] [ref=e667]
+            - paragraph [ref=e668]: A integração organiza registros e comprovantes da operação executada pelo parceiro licenciado.
+          - article [ref=e669]:
+            - generic [aria-hidden] [ref=e670]: "05"
+            - heading "Segurança e controle" [level=3] [ref=e671]
+            - paragraph [ref=e672]: "Mutual Cofre de Ativos Digitais: tecnologia de guarda operada por parceiros licenciados, com aprovação em camadas e trilha imutável no desenho de controle; controles alinhados à ISO/IEC 27001, em implantação."
+    - generic [ref=e674]:
+      - generic [ref=e675]: Proteção de ativos
+      - heading "Ativos digitais em trilhos próprios" [level=2] [ref=e676]
+      - paragraph [ref=e677]: Envio de ativos em implantação. Controles alinhados à ISO/IEC 27001, em implantação.
+      - paragraph [ref=e678]: "Tecnologia de guarda operada por parceiros licenciados: limites, aprovação em camadas e trilha imutável compõem o desenho de controle do Mutual Cofre de Ativos Digitais."
+      - generic [ref=e679]:
+        - generic [ref=e680]:
+          - heading "Limites por operação" [level=3] [ref=e684]
+          - paragraph [ref=e685]: Definição dos parâmetros de movimentação no escopo operacional.
+        - generic [ref=e686]:
+          - heading "Aprovação em camadas" [level=3] [ref=e689]
+          - paragraph [ref=e690]: Etapas de autorização antes da execução pelo parceiro licenciado.
+        - generic [ref=e691]:
+          - heading "Registro de ponta a ponta" [level=3] [ref=e695]
+          - paragraph [ref=e696]: Rastreabilidade das instruções tecnológicas e dos registros da operação do parceiro.
+    - region "Documentos" [ref=e697]:
+      - generic [ref=e698]:
+        - generic [ref=e699]:
+          - heading "Documentos" [level=2] [ref=e700]
+          - paragraph [ref=e701]: Consulte as versões e o andamento das políticas e declarações de governança da Mutual.
+        - link "Ver documentos" [ref=e702] [cursor=pointer]:
+          - /url: /governanca-e-conformidade/
+    - region "Um olhar sobre o mercado." [ref=e703]:
+      - generic [ref=e704]:
+        - generic [ref=e705]:
+          - generic [ref=e706]:
+            - generic [ref=e707]: Referência de mercado
+            - heading "Um olhar sobre o mercado." [level=2] [ref=e708]
+            - paragraph [ref=e709]: Cotações públicas como contexto para a leitura dos módulos Mutual.
+          - link "Explorar mercados" [ref=e710] [cursor=pointer]:
+            - /url: /mercados/
+        - figure "Powered by TradingView" [ref=e711]:
+          - paragraph [ref=e713]: Carregando referência de mercado…
+          - link "Powered by TradingView" [ref=e715] [cursor=pointer]:
+            - /url: https://www.tradingview.com/
+        - figure "Powered by TradingView" [ref=e716]:
+          - paragraph [ref=e718]: Carregando referência de mercado…
+          - link "Powered by TradingView" [ref=e720] [cursor=pointer]:
+            - /url: https://www.tradingview.com/
+        - paragraph [ref=e721]: Dados de terceiros, sujeitos a atraso e indisponibilidade. Não são cotações da Mutual nem recomendação de investimento.
+        - link "Mercados" [ref=e722] [cursor=pointer]:
+          - /url: /mercados/
+    - region "Perguntas frequentes" [ref=e723]:
+      - generic [ref=e724]:
+        - generic [ref=e725]:
+          - generic [ref=e726]: Antes de começar
+          - heading "Perguntas frequentes" [level=2] [ref=e727]
+          - paragraph [ref=e728]: Respostas sobre o papel da Mutual, a disponibilidade e os acessos.
+        - generic [ref=e729]:
+          - generic [ref=e730]:
+            - group [ref=e731]:
+              - generic "O que a Mutual oferece? +" [ref=e732] [cursor=pointer]
+            - group [ref=e733]:
+              - generic "Quem executa as operações financeiras? +" [ref=e734] [cursor=pointer]
+            - group [ref=e735]:
+              - generic "Todos os recursos já estão disponíveis? +" [ref=e736] [cursor=pointer]
+            - group [ref=e737]:
+              - generic "Como acessar ou fazer cadastro? +" [ref=e738] [cursor=pointer]
+          - figure "Retrato de partículas e grafo de conhecimento · ilustração conceitual." [ref=e739]:
+            - img "Mascote Mutual em partículas com grafo de conhecimento ao fundo" [ref=e740]
+    - region "Acesse de onde estiver" [ref=e742]:
+      - generic [ref=e743]:
+        - generic [ref=e744]:
+          - generic [ref=e747]:
+            - generic [ref=e748]: Mutual Capital
+            - paragraph [ref=e749]: Terminal web Mutual
+            - generic [ref=e750]: Mutual Cripto
+            - generic [ref=e751]: Mutual Pay
+            - generic [ref=e752]: Mutual Pix
+          - paragraph [ref=e753]: Ilustração conceitual do acesso web.
+        - generic [ref=e754]:
+          - generic [ref=e755]:
+            - generic [ref=e756]: Acesso web
+            - heading "Acesse de onde estiver" [level=2] [ref=e757]
+            - paragraph [ref=e758]: Use o Terminal web pelo botão Acessar. Para cadastro, fale com a Mutual pelo contato institucional; o endereço específico de cadastro ainda não foi disponibilizado.
+          - generic [ref=e759]:
+            - link "Acessar" [ref=e760] [cursor=pointer]:
+              - /url: https://terminal.mutualglobal.com.br/
+            - link "Fazer cadastro" [ref=e761] [cursor=pointer]:
+              - /url: "#contact"
+          - link "API / Desenvolvedor" [ref=e762] [cursor=pointer]:
+            - /url: "#api"
+          - paragraph [ref=e763]: Integrações e documentação de API são definidas com cada integrador. Recursos em implantação dependem de validação.
+    - generic [ref=e767]:
+      - generic [ref=e768]: Contato institucional
+      - heading "Vamos conectar sua próxima operação." [level=2] [ref=e769]
+      - paragraph [ref=e770]: O canal comercial está pendente de definição pelo dono. Os dados institucionais da Mutual estão abaixo.
+      - link "Fale com a Mutual" [ref=e771] [cursor=pointer]:
+        - /url: mailto:contato@mutualcapital.org
+      - generic [ref=e772]: Canal comercial pendente
+      - generic [ref=e773]:
+        - paragraph [ref=e774]: Mutual Capital Tecnologia Financeira e Participações Ltda.
+        - paragraph [ref=e775]: CNPJ 09.232.421/0001-12
+        - paragraph [ref=e776]: Rua Aguaçu, 171, Bloco E, Sala M17, Alphaville, Campinas-SP, CEP 13098-321.
+  - contentinfo "Rodapé institucional" [ref=e777]:
+    - generic [ref=e778]:
+      - link "Mutual Capital" [ref=e779] [cursor=pointer]:
+        - /url: "#hero"
+      - paragraph [ref=e781]: Processadora de tecnologia. Software e APIs; operações financeiras executadas por parceiros licenciados.
+    - generic [ref=e782]:
+      - group [ref=e783]:
+        - generic "Informações institucionais" [ref=e784]
+        - generic [ref=e785]:
+          - link "Sobre nós" [ref=e786] [cursor=pointer]:
+            - /url: "#position"
+          - link "Termos de Uso" [ref=e787] [cursor=pointer]:
+            - /url: /governanca-e-conformidade/#document-termos-uso
+          - link "Política de Privacidade" [ref=e788] [cursor=pointer]:
+            - /url: /governanca-e-conformidade/#document-privacidade-lgpd
+          - link "Divulgação de Risco" [ref=e789] [cursor=pointer]:
+            - /url: /governanca-e-conformidade/#document-divulgacao-risco
+          - link "Governança e Conformidade" [ref=e790] [cursor=pointer]:
+            - /url: /governanca-e-conformidade/
+          - paragraph [ref=e791]: Termos e privacidade · documentos em elaboração
+      - group [ref=e792]:
+        - generic "Serviços" [ref=e793]
+        - generic [ref=e794]:
+          - link "Mutual Cripto" [ref=e795] [cursor=pointer]:
+            - /url: "#module-1"
+          - link "Mutual On-Ramp" [ref=e796] [cursor=pointer]:
+            - /url: "#module-2"
+          - link "Mutual Off-Ramp" [ref=e797] [cursor=pointer]:
+            - /url: "#module-3"
+          - link "Mutual Câmbio" [ref=e798] [cursor=pointer]:
+            - /url: "#module-4"
+          - link "Mutual On-Chain" [ref=e799] [cursor=pointer]:
+            - /url: "#module-5"
+          - link "Mutual Pay" [ref=e800] [cursor=pointer]:
+            - /url: "#module-6"
+          - link "Mutual Cofre de Ativos Digitais" [ref=e801] [cursor=pointer]:
+            - /url: "#module-7"
+          - link "Mutual Onboarding" [ref=e802] [cursor=pointer]:
+            - /url: "#module-8"
+          - link "Mutual Pix" [ref=e803] [cursor=pointer]:
+            - /url: "#module-9"
+          - link "API / Desenvolvedor" [ref=e804] [cursor=pointer]:
+            - /url: "#api"
+          - link "Para quem construímos" [ref=e805] [cursor=pointer]:
+            - /url: "#usecases"
+          - link "Segmentos" [ref=e806] [cursor=pointer]:
+            - /url: "#segments"
+          - link "Conformidade e mercado" [ref=e807] [cursor=pointer]:
+            - /url: "#compliance"
+          - link "Infraestrutura Global" [ref=e808] [cursor=pointer]:
+            - /url: "#global-strip"
+          - link "Mercados Atendíveis" [ref=e809] [cursor=pointer]:
+            - /url: "#markets"
+          - link "Modelos de Distribuição" [ref=e810] [cursor=pointer]:
+            - /url: "#distribution"
+          - link "Mutual Advisory" [ref=e811] [cursor=pointer]:
+            - /url: "#advisory"
+      - group [ref=e812]:
+        - generic "Suporte" [ref=e813]
+        - generic [ref=e814]:
+          - link "Contato" [ref=e815] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Perguntas frequentes" [ref=e816] [cursor=pointer]:
+            - /url: "#faq"
+          - link "Mercados" [ref=e817] [cursor=pointer]:
+            - /url: /mercados/
+      - group [ref=e818]:
+        - generic "Contato" [ref=e819]
+        - generic [ref=e820]:
+          - link "suporte@mutualcapital.org" [ref=e821] [cursor=pointer]:
+            - /url: mailto:suporte@mutualcapital.org
+          - link "contato@mutualcapital.org" [ref=e823] [cursor=pointer]:
+            - /url: mailto:contato@mutualcapital.org
+          - link "juridico@mutualcapital.com.br" [ref=e825] [cursor=pointer]:
+            - /url: mailto:juridico@mutualcapital.com.br
+          - paragraph [ref=e827]: Canal comercial pendente
+      - group [ref=e828]:
+        - generic "Idioma do site" [ref=e829]
+        - generic [ref=e830]:
+          - generic [ref=e831]: Idioma do site
+          - 'button "Idioma do site: Português" [ref=e833] [cursor=pointer]':
+            - generic [ref=e835]: Português
+    - generic [ref=e838]:
+      - paragraph [ref=e839]: © 2026 Mutual Capital Tecnologia Financeira e Participações Ltda. Todos os direitos reservados.
+      - paragraph [ref=e840]: Mutual Capital Tecnologia Financeira e Participações Ltda.
+      - paragraph [ref=e841]: CNPJ 09.232.421/0001-12
+      - paragraph [ref=e842]: Rua Aguaçu, 171, Bloco E, Sala M17, Alphaville, Campinas-SP, CEP 13098-321.
+      - paragraph [ref=e843]: Apresentação institucional de software e APIs. Operações financeiras são executadas por parceiros licenciados, sob responsabilidade deles. Disponibilidade e condições dependem de contratação; funções em implantação seguem identificadas.

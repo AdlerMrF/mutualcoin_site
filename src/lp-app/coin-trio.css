@@ -1,0 +1,74 @@
+/* Moedas do mascote em triângulo: USDT, USDC e Mutucoin.
+   Slot 0 fica na frente (com o flip e o brilho de sempre); slots 1 e 2 ficam atrás, menores e mais apagados.
+   A troca é só uma transição de transform/opacity entre os slots. */
+[data-lp-polish] #voices .voices__trio {
+  filter: none;
+  outline: none;
+  cursor: pointer;
+}
+[data-lp-polish] #voices .voices__trio::after { border-color: transparent; }
+[data-lp-polish] #voices .voices__trio:focus-visible::after { border: 2px solid #FCB71B; inset: -6%; }
+[data-lp-polish] #voices .voices__face {
+  position: absolute;
+  inset: 0;
+  transition:
+    transform .6s cubic-bezier(.34, 1.3, .5, 1),
+    opacity .45s ease,
+    filter .45s ease;
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 25%)) drop-shadow(0 9px 10px rgb(3 8 18 / 40%));
+}
+/* Sem anel e sem brilho fixos: eles não acompanham o giro e deixavam um resto de círculo branco. */
+[data-lp-polish] #voices .voices__face::after { content: none; }
+[data-lp-polish] #voices .voices__trio::before { content: none; animation: none; }
+[data-lp-polish] #voices .voices__face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: none !important;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+[data-lp-polish] #voices .voices__face--usdc img,
+[data-lp-polish] #voices .voices__face--mtc img { clip-path: none; scale: 1; object-fit: contain; }
+
+[data-lp-polish] #voices .voices__face[data-slot="0"] { z-index: 3; transform: translate(0, 0) scale(1); opacity: 1; }
+[data-lp-polish] #voices .voices__face[data-slot="1"] {
+  z-index: 1;
+  transform: translate(48%, -52%) scale(.62);
+  opacity: .72;
+  filter: brightness(.7) drop-shadow(0 6px 8px rgb(3 8 18 / 45%));
+}
+[data-lp-polish] #voices .voices__face[data-slot="2"] {
+  z-index: 2;
+  transform: translate(-48%, -52%) scale(.62);
+  opacity: .72;
+  filter: brightness(.7) drop-shadow(0 6px 8px rgb(3 8 18 / 45%));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Cada moeda flutua sozinha (ritmo, atraso e balanço próprios). Usa `translate` e `rotate`,
+     que somam com o `transform` dos slots sem atrapalhar a troca. O grupo deixa de levitar junto. */
+  [data-lp-polish] #voices .voices__trio { animation: none; transform: none; }
+  [data-lp-polish] #voices .voices__face {
+    animation: lp-trio-float var(--float-dur, 3.6s) cubic-bezier(.45, 0, .55, 1) var(--float-delay, 0s) infinite;
+    animation-play-state: paused;
+  }
+  [data-lp-polish] #voices .voices__robot.is-motion-visible .voices__face { animation-play-state: running; }
+  [data-lp-polish] #voices .voices__face--usdt { --float-dur: 3.4s; --float-delay: 0s; --float-x: 3px; --float-tilt: -8deg; }
+  [data-lp-polish] #voices .voices__face--usdc { --float-dur: 4.3s; --float-delay: -1.6s; --float-x: -4px; --float-tilt: 7deg; }
+  [data-lp-polish] #voices .voices__face--mtc { --float-dur: 3.9s; --float-delay: -2.7s; --float-x: 2px; --float-tilt: -5deg; }
+  @keyframes lp-trio-float {
+    0%, 100% { translate: 0 5px; rotate: var(--float-tilt); }
+    50% { translate: var(--float-x) -9px; rotate: calc(var(--float-tilt) * -0.8); }
+  }
+  /* As três giram, cada uma no seu tempo; trocar de lugar não interrompe o giro. */
+  [data-lp-polish] #voices .voices__face img {
+    animation: lp-coin-spin var(--spin-cycle) cubic-bezier(.16, 1, .3, 1) var(--spin-delay) infinite !important;
+  }
+  [data-lp-polish] #voices .voices__face--usdt { --spin-cycle: 9s; --spin-delay: 1s; }
+  [data-lp-polish] #voices .voices__face--usdc { --spin-cycle: 11s; --spin-delay: 4s; }
+  [data-lp-polish] #voices .voices__face--mtc { --spin-cycle: 10s; --spin-delay: 7s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-lp-polish] #voices .voices__face { transition: opacity .2s ease; }
+}

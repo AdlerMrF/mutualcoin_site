@@ -1,0 +1,113 @@
+/* Repaginação (só na versão refinada, [data-lp-polish]).
+   Copy intacta: nada aqui reescreve texto, só muda forma, ordem visual e peso.
+   Regras sem @layer: vencem lp-sections e lp-scenes de lp-app.css. */
+
+/* 1 · Confiança: nada que pareça controle sem ser controle.
+   Sliders, chaves e seletor Pix/USDT na lista de serviços não respondem a clique e sugerem
+   ajustes que o visitante não pode fazer. Ficam só os selos verdadeiros (Em implantação, REST). */
+[data-lp-polish] #tune .tune__ctl:not(.tune__tag) { display: none; }
+[data-lp-polish] #tune .tune__tag {
+  align-self: center;
+  padding: 0.3125rem 0.75rem;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #2b3b56;
+  color: #8898C0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* O cartão gigante repetia o título do hero ("Uma rede própria. Um ecossistema."). A informação
+   técnica dele (PoA · blocos de 2 s · mainnet 28001) já está em Segurança. */
+[data-lp-polish] #tune .tune__stage { display: none; }
+[data-lp-polish] #tune { padding-top: clamp(4rem, 8vw, 7rem); }
+[data-lp-polish] #tune .tune__body { margin-top: 0; }
+
+/* Serviços em grade de módulos: oito itens lidos em duas colunas, cada um com o mesmo peso. */
+@media (min-width: 64rem) {
+  [data-lp-polish] #tune .tune__body { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 2.5rem 4.5rem; }
+  [data-lp-polish] #tune .tune__head { position: sticky; top: calc(var(--page-nav-h, 5.5rem) + 2rem); align-self: start; }
+  [data-lp-polish] #tune .tune__settings { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.5rem; border-top: 0; }
+  [data-lp-polish] #tune .tune__row { align-content: start; padding-block: 1.375rem; border-top: 1px solid #1B2A46; border-bottom: 0; }
+}
+/* Selo abaixo da descrição: não disputa largura com o texto. */
+[data-lp-polish] #tune .tune__row { grid-template-columns: minmax(0, 1fr); }
+[data-lp-polish] #tune .tune__tag { grid-column: 1; grid-row: auto; justify-self: start; margin-top: 0.625rem; }
+
+/* Telefone do painel: o botão dourado de "encerrar chamada" era sobra do template de chamadas. */
+[data-lp-polish] #calls .phone__end { display: none; }
+[data-lp-polish] #calls .phone__top { grid-template-columns: 1fr; }
+/* Texto mínimo legível dentro da ilustração (antes 10–11 px). */
+[data-lp-polish] #calls :is(.phone__note, .phone__cue, .phone__state, .phone__number, .phone__saved) { font-size: 0.75em; }
+[data-lp-polish] #calls .phone__bar span { font-size: 0.6875em; }
+
+/* 2 · Uma ação principal por vez. O dourado sólido fica para o contato; "Conhecer os serviços"
+   é uma ação de leitura e vira botão secundário (contorno). */
+[data-lp-polish] #calls .calls__head-copy .m-btn {
+  background: transparent;
+  color: #EEF1F9;
+  box-shadow: inset 0 0 0 1px #2b3b56;
+}
+[data-lp-polish] #calls .calls__head-copy .m-btn .m-btn__wave { background: #FCB71B; color: #030b1e; }
+@media (hover: hover) and (pointer: fine) {
+  [data-lp-polish] #calls .calls__head-copy .m-btn:hover { box-shadow: inset 0 0 0 1px #FCB71B, 0 18px 32px -12px rgb(0 0 0 / 80%); }
+}
+
+/* Passo 2 deixa de ser um bloco inteiro dourado (competia com os botões): mesmo cartão navy,
+   com o dourado só no número e num contorno fino. */
+[data-lp-polish] #setup .setup__card:nth-child(2) {
+  background: #0E162E;
+  color: #EEF1F9;
+  box-shadow: inset 0 0 0 1px rgb(252 183 27 / 28%);
+  --color-1: #030b1e;
+  --color-2: #EEF1F9;
+  --color-5: #8898C0;
+}
+[data-lp-polish] #setup .setup__card:nth-child(2) .m-text-8 { color: #8898C0; }
+[data-lp-polish] #setup .setup__card:nth-child(2) .setup__num { color: #FCB71B; }
+[data-lp-polish] #setup .setup__card:nth-child(2) .setup__option { border-color: #2b3b56; }
+[data-lp-polish] #setup .setup__card:nth-child(2) .setup__option--on { background: #1B2A46; border-color: #FCB71B; color: #EEF1F9; }
+
+/* 3 · Ritmo: menos rolagem vazia entre um conteúdo e outro. */
+/* Plataforma: cada módulo ocupava quase meia tela; agora um terço, e o painel acompanha igual
+   (a linha do tempo mede a lista, então os passos do telefone se ajustam sozinhos). */
+@media (min-width: 48rem) {
+  [data-lp-polish] #calls .calls__item { min-height: 30vh; }
+}
+/* Passos: cartões do tamanho do conteúdo, não de meia tela. */
+[data-lp-polish] #setup .setup__card { min-height: 0; padding-block: clamp(1.75rem, 3.5vw, 2.75rem); }
+[data-lp-polish] #setup .setup__num { font-size: clamp(4rem, 8vw, 6.5rem); }
+
+/* 4 · Alinhamento: título e texto de apoio começam na mesma linha em todos os cabeçalhos de seção.
+   Antes o título "caía" para a base enquanto o texto subia, e cada seção alinhava de um jeito. */
+[data-lp-polish] :is(#listen .listen__head, #calls .calls__head, #rooms .rooms__head, #setup .setup__head) { align-items: start; }
+[data-lp-polish] :is(#calls .calls__head-copy, #rooms .rooms__lead, #setup .setup__head .m-text-4, #listen .listen__lead) { padding-top: 0.5rem; }
+[data-lp-polish] #calls .calls__head-copy { background: none; }
+
+/* Segurança: fatos em grade alinhada (linhas da mesma altura nas duas colunas),
+   sem o deslocamento em cascata que fazia os cartões parecerem soltos. */
+@media (min-width: 48rem) {
+  [data-lp-polish] #voices .voices__cols { grid-template-rows: repeat(4, auto); row-gap: 1rem; }
+  [data-lp-polish] #voices .voices__col { grid-row: 1 / span 4; grid-template-rows: subgrid; gap: inherit; }
+  [data-lp-polish] #voices .voices__col + .voices__col { margin-top: 0; }
+  [data-lp-polish] #voices .voices__cols > ul { animation: none; translate: none; }
+  [data-lp-polish] #voices .voices__col > .m-card { height: 100%; }
+}
+[data-lp-polish] #voices .voices__col > li { animation: none; translate: none; }
+/* "Em implantação" não é um controle atual: borda tracejada e fundo vazio para não se passar por um. */
+[data-lp-polish] #voices .voices__col:first-child > li:last-child { background: transparent; box-shadow: none; border: 1px dashed #2b3b56; }
+
+/* Casos de uso: as ondas atravessando a arte eram o "áudio" do template e cortavam a ilustração. */
+[data-lp-polish] #rooms .rooms__lines { display: none; }
+
+/* 5 · Celular. */
+@media (max-width: 47.99rem) {
+  /* O telefone fixo cobria metade da tela por cima do texto dos módulos. No celular os módulos
+     viram uma lista simples e o painel sai. */
+  [data-lp-polish] #calls .calls__aside { display: none; }
+  [data-lp-polish] #calls .calls__list { padding-bottom: 0; }
+  [data-lp-polish] #calls .calls__item { min-height: 0; padding-block: 1.25rem; }
+  [data-lp-polish][data-8b-live] #calls .calls__list > li { animation: none; opacity: 1; }
+}

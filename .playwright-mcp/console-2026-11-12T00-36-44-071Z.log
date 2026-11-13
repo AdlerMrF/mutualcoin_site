@@ -1,0 +1,16 @@
+[   66091ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5199/@vite/client:865
+[   91758ms] [ERROR] Executing inline event handler violates the following Content Security Policy directive 'script-src 'nonce-HSqYhp7hNz9Pt5fvyPFlUw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:'. Note that 'unsafe-inline' is ignored if either a hash or nonce value is present in the source list. The action has been blocked. @ https://www.google.com/search?q=%5D&oq=%5D&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBjcyajBqNKgCALACAQ&sourceid=chrome&source=chrome.ob&ie=UTF-8&sei=dwr1apDUBcbX1sQP7_fA2A4:1
+[   94681ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5199/img/token-usdc.webp:1
+[   94782ms] [ERROR] WebSocket connection to 'ws://localhost:5199/?token=cWspY_327X5k' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5199/@vite/client:745
+[   94842ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5199/img/token-usdc.webp:1
+[   94914ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5199/img/token-usdc.webp:1
+[   94921ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5199/img/token-usdc.webp:1
+[   94940ms] [ERROR] WebSocket connection to 'ws://localhost:5199/?token=cWspY_327X5k' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5199/@vite/client:755
+[   94951ms] [ERROR] [vite] failed to connect to websocket.
+your current setup:
+  (browser) localhost:5199/ <--[HTTP]--> localhost:5199/ (server)
+  (browser) localhost:5199/ <--[WebSocket (failing)]--> localhost:5199/ (server)
+Check out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr . @ http://localhost:5199/@vite/client:765
+[  173526ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5199/@vite/client:865
+[  244699ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5199/@vite/client:865
+[  416018ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5199/@vite/client:865

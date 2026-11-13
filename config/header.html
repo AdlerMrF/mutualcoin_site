@@ -1,0 +1,58 @@
+<header id="navbar-header" class="base-style-1 fixed left-0 right-0 z-50">
+    <div id="navbar-wrapper" class="base-style-2 flex items-stretch w-full">
+
+      <div id="navbar-left" class="base-style-3 flex-1 min-w-0"></div>
+
+      <div id="navbar-center" class="base-style-4 shrink-0 w-full border border-transparent">
+        <div id="navbar-inner" class="base-style-5 flex justify-between xl:grid xl:grid-cols-[1fr_auto_1fr] items-center">
+
+          <a href="{{home}}" id="navbar-logo" class="flex items-center gap-2.5 shrink-0 justify-self-start" data-i18n-aria-label="brand.home">
+            <img src="./src/assets/img/iconeMutual.svg" class="h-9 w-auto object-contain shrink-0" alt="" width="64" height="64">
+            <span class="text-[18px] sm:text-[20px] font-semibold text-[#EEF1F9] tracking-[-0.02em] whitespace-nowrap brand-wordmark"><span data-i18n="brand"></span></span>
+          </a>
+{{desktop-nav}}
+
+          <div class="navbar-actions flex items-center justify-end gap-3 justify-self-end"><button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" data-i18n-aria-label="theme.dark"><span aria-hidden="true">◐</span><span class="sr-only" data-i18n="theme.dark"></span></button><div class="language-control"><label data-i18n="language.label" for="language-select" class="sr-only"></label>
+<select id="language-select">
+<option value="pt-BR" data-i18n="language.pt-BR"></option>
+<option value="en" data-i18n="language.en"></option>
+<option value="es" data-i18n="language.es"></option>
+<option data-i18n="language.de" value="de">
+</option>
+<option data-i18n="language.it" value="it">
+</option>
+<option data-i18n="language.ja" value="ja">
+</option>
+<option data-i18n="language.ar" value="ar">
+</option>
+</select></div>
+            <div class="header-account-actions"><a href="{{app}}" data-i18n="shield.access.login"></a><a class="account-signup" href="{{contact}}" data-i18n="shield.access.signup"></a></div>
+            <a href="{{contact}}" class="hidden xl:inline-flex items-center gap-2 whitespace-nowrap bg-[#FCB71B] text-[#030b1e] px-5 py-3 rounded-[10px] text-[14px] font-semibold hover:bg-[#e5a618] transition-colors duration-200 shadow-[0_4px_14px_rgba(252,183,27,0.32)] hover:shadow-[0_6px_20px_rgba(252,183,27,0.42)]" data-i18n="cta.contact"></a>
+<button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="xl:hidden p-2 rounded-full text-[#EEF1F9] hover:bg-[#152038] transition-colors" data-i18n-aria-label="menu.open">
+              <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+              <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="navbar-right" class="base-style-6 flex-1 min-w-0"></div>
+    </div>
+
+
+    <div id="mobile-menu" class="hidden absolute left-0 right-0 top-full px-4 pb-2">
+      <div class="rounded-2xl border border-[#1B2A46] bg-[#0B1222] backdrop-blur-md shadow-2xl overflow-hidden">
+<div class="mobile-theme-control"><button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" data-i18n-aria-label="theme.dark"><span aria-hidden="true">◐</span><span class="sr-only" data-i18n="theme.dark"></span></button></div>
+<div class="mobile-language-control"><label for="mobile-language-select" data-i18n="language.label"></label><select id="mobile-language-select" data-language-select><option value="pt-BR" data-i18n="language.pt-BR"></option><option value="en" data-i18n="language.en"></option><option value="es" data-i18n="language.es"></option><option value="de" data-i18n="language.de"></option><option value="it" data-i18n="language.it"></option><option value="ja" data-i18n="language.ja"></option><option value="ar" data-i18n="language.ar"></option></select><a href="{{app}}" class="mobile-menu-link" data-i18n="shield.access.login"></a><a href="{{contact}}" class="mobile-menu-link" data-i18n="shield.access.signup"></a></div>
+{{mobile-nav}}
+      </div>
+    </div>
+</header>

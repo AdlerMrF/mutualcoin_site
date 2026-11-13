@@ -1,0 +1,404 @@
+/* Passada 3 · Site B: uma escala de espaço e uma hierarquia de leitura. */
+.mutucoin-site {
+  --b-bg:#0a1020;
+  --b-surface:#121b2d;
+  --b-line:#33415a;
+  --b-text:#eef1f9;
+  --b-muted:#bac5d9;
+  --b-accent:#FCB71B;
+  --b-radius:16px;
+  --b-space-1:8px;
+  --b-space-2:16px;
+  --b-space-3:24px;
+  --b-space-4:32px;
+  --b-space-5:48px;
+  --b-space-6:64px;
+  --b-space-section:112px;
+  background:var(--b-bg);
+  color:var(--b-text);
+  font-family:Inter,system-ui,sans-serif;
+  font-weight:400;
+}
+.mutucoin-site .site-container { width:min(1248px,100%); padding-inline:var(--b-space-4); }
+.mutucoin-site :is(.hero-copy,.b-grid > *, .editorial-layout > *, .chain-layout > *, .footer-layout > *) { min-width:0; }
+.mutucoin-site :is(h1,h2,h3,p,summary,a) { overflow-wrap:anywhere; }
+.mutucoin-site :is(.hero-sub,.section-heading p,.content-card p,.deployment-note,.supporting-note) { max-width:68ch; }
+.mutucoin-site .b-section { padding-block:var(--b-space-section); }
+.mutucoin-site .section-heading { max-width:760px; margin:0 auto var(--b-space-6); }
+.mutucoin-site .section-heading h2 { font-size:clamp(28px,3vw,40px); line-height:1.25; font-weight:400; letter-spacing:-.03em; margin:0 0 var(--b-space-3); }
+.mutucoin-site .section-heading p { margin-inline:auto; font-size:16px; line-height:1.85; color:var(--b-muted); }
+.mutucoin-site .sec-eyebrow { padding:0; border:0; border-radius:0; background:none; color:var(--b-muted); font-size:12px; font-weight:400; letter-spacing:.1em; }
+.mutucoin-site .status-badge { padding:0; border:0; border-radius:0; background:none; color:var(--b-muted); font-size:12px; line-height:1.7; font-weight:400; margin-top:var(--b-space-3); }
+
+/* Navegação compacta, com destaque discreto para a página atual. */
+.mutucoin-site #navbar-inner { display:flex; justify-content:space-between; }
+.mutucoin-site #navbar-logo { text-decoration:none; }
+.mutucoin-site #navbar-center { max-width:min(1248px,100%) !important; box-shadow:none !important; overflow:visible; }
+.mutucoin-site .desktop-navigation { display:none; align-items:center; justify-content:center; flex-wrap:wrap; }
+.mutucoin-site #mobile-menu-button { display:inline-flex; min-width:44px; min-height:44px; align-items:center; justify-content:center; }
+.mutucoin-site #navbar-inner .nav-link { display:inline-flex; align-items:center; min-height:44px; padding:8px; font-size:12px; color:var(--b-muted); border-radius:8px; }
+.mutucoin-site a[aria-current='page'] { color:var(--b-text) !important; text-decoration:underline; text-underline-offset:6px; }
+.mutucoin-site .mobile-menu-link { display:block; padding:12px 16px; border-radius:8px; color:var(--b-text); font-size:14px; }
+.mutucoin-site .mobile-menu-link:hover,.mutucoin-site #navbar-inner .nav-link:hover { background:#24314b; }
+.mutucoin-site #mobile-menu { padding-top:8px; }
+.mutucoin-site .language-control select { min-height:44px; }
+.mutucoin-site #navbar-inner > .desktop-navigation { flex-wrap:nowrap; }
+.mutucoin-site #navbar-inner :is(.nav-link,.platform-navigation summary) { white-space:nowrap; overflow-wrap:normal; }
+.mutucoin-site .platform-navigation { position:relative; }
+.mutucoin-site .platform-navigation summary { cursor:pointer; padding:8px; min-height:44px; color:var(--b-muted); font-size:12px; line-height:28px; border-radius:8px; }
+.mutucoin-site .platform-navigation summary:hover { background:#24314b; }
+.mutucoin-site .platform-links { position:absolute; inset-block-start:calc(100% + 8px); inset-inline-start:0; width:240px; max-height:60dvh; overflow:auto; padding:8px; border:1px solid var(--b-line); border-radius:12px; background:var(--b-surface); box-shadow:0 12px 32px #0006; }
+.mutucoin-site #navbar-inner .platform-links .nav-link { display:flex; }
+
+/* Checklist local, com o mesmo texto do Site A. */
+.mutucoin-site .needs-section { background:var(--b-surface); }
+.mutucoin-site .needs-layout { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:48px 64px; }
+.mutucoin-site .needs-intro .section-heading { margin:0; text-align:start; }
+.mutucoin-site .needs-intro .section-heading p { margin-inline:0; }
+.mutucoin-site .needs-section fieldset,.mutucoin-site .needs-copy { min-width:0; }
+.mutucoin-site .needs-list { list-style:none; padding:0; margin:0; }
+.mutucoin-site .needs-item { display:grid; grid-template-columns:24px minmax(0,1fr); gap:20px; padding-block:24px; border-bottom:1px solid var(--b-line); }
+.mutucoin-site .needs-item:first-child { padding-top:0; }
+.mutucoin-site .needs-item input { width:24px; height:24px; margin-top:4px; accent-color:var(--b-accent); cursor:pointer; }
+.mutucoin-site .needs-item input:focus-visible { outline:2px solid var(--b-accent); outline-offset:5px; }
+.mutucoin-site .needs-copy label { display:flex; align-items:center; min-height:44px; cursor:pointer; font-size:17px; line-height:1.6; overflow-wrap:anywhere; }
+.mutucoin-site .needs-copy p { margin-top:8px; font-size:14px; line-height:1.85; color:var(--b-muted); }
+.mutucoin-site .needs-feedback { margin-top:24px; font-size:14px; line-height:1.85; }
+.mutucoin-site .needs-feedback output { display:block; }
+.mutucoin-site .needs-feedback p { margin-top:8px; color:var(--b-muted); }
+.mutucoin-site .needs-close { grid-column:1 / -1; max-width:68ch; }
+.mutucoin-site .needs-close > p { font-size:17px; line-height:1.85; color:var(--b-muted); }
+.mutucoin-site .needs-cta { display:block; width:fit-content; margin-top:32px; padding:20px 24px; border-radius:8px; background:var(--b-accent); color:#161d33; font-size:15px; font-weight:500; line-height:1.8; }
+.mutucoin-site .needs-cta:hover { background:#ffd16b; }
+@media(max-width:900px) {
+  .mutucoin-site .needs-layout { grid-template-columns:minmax(0,1fr); gap:40px; }
+}
+
+/* O hero fica legível desde o primeiro quadro; a decoração reage à rolagem. */
+.mutucoin-site .site-hero { position:relative; padding-block:192px 96px; background:var(--b-bg); }
+.mutucoin-site .hero-layout { position:relative; z-index:1; grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr); gap:var(--b-space-6); }
+.mutucoin-site .hero-copy h1 { font-size:clamp(36px,4.1vw,56px); line-height:1.2; font-weight:300; margin:var(--b-space-3) 0 var(--b-space-4); }
+.mutucoin-site .hero-copy .hero-line:last-child { font-size:1em; color:var(--b-accent); -webkit-text-fill-color:var(--b-accent); }
+.mutucoin-site .hero-copy .hero-sub { font-size:16px; line-height:1.85; color:var(--b-muted); margin-block:var(--b-space-4); }
+.mutucoin-site :is(.hero-badge,.hero-line,.hero-sub,.hero-ctas,.hero-auth,.hero-earth) { visibility:visible; }
+.mutucoin-site .hero-earth-wrap { position:absolute; inset:0; pointer-events:none; opacity:.06; overflow:hidden; }
+.mutucoin-site .hero-earth { position:absolute; width:110%; max-width:none; bottom:-40%; }
+.mutucoin-site .hero-squares { position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 75% 42%,#fcb71b12,transparent 58%); mask-image:none; -webkit-mask-image:none; }
+.mutucoin-site .hero-layer { position:relative; z-index:1; text-align:end; margin:var(--b-space-5) 0 0; padding-inline:var(--b-space-4); font-size:12px; letter-spacing:.08em; color:var(--b-muted); }
+.mutucoin-site .hero-chips { display:flex; gap:8px 24px; flex-wrap:wrap; }
+.mutucoin-site .hero-chip { display:inline; border:0; padding:0; color:var(--b-muted); font-size:12px; line-height:1.8; }
+.mutucoin-site .hero-chip i { display:none; }
+.mutucoin-site .hero-ctas { display:flex; flex-wrap:wrap; gap:var(--b-space-2); margin-block:var(--b-space-4); }
+.mutucoin-site .hero-ctas a,.mutucoin-site #next-step a { min-height:48px; display:inline-flex; align-items:center; justify-content:center; padding:16px 24px; border-radius:8px; font-size:14px; line-height:1.6; text-align:center; }
+.mutucoin-site .shiny-cta { background:var(--b-accent); border:1px solid var(--b-accent); box-shadow:none; }
+.mutucoin-site .shiny-cta::after,.mutucoin-site .ghost-cta::before,.mutucoin-site .ghost-cta::after { content:none; animation:none; }
+.mutucoin-site :is(.shiny-cta,.ghost-cta):is(:hover,:focus-visible) { transform:none; box-shadow:none; }
+.mutucoin-site .shiny-cta:hover { background:#ffd16b; border-color:#ffd16b; }
+.mutucoin-site .ghost-cta { background:transparent; color:var(--b-text); border:1px solid #71829e; box-shadow:none; }
+.mutucoin-site .ghost-cta .ghost-text { color:inherit; background:none; -webkit-text-fill-color:currentColor; }
+.mutucoin-site .ghost-cta:hover { background:#1c2940; }
+.mutucoin-site .hero-auth { margin:var(--b-space-3) 0 0; }
+.mutucoin-site .page-hero { padding-bottom:var(--b-space-6); }
+.mutucoin-site .page-hero .hero-copy { max-width:840px; }
+.mutucoin-site .page-hero h1 { font-size:clamp(32px,4vw,48px); color:var(--b-text) !important; -webkit-text-fill-color:var(--b-text) !important; }
+
+.mutucoin-site .b2b-band { background:var(--b-surface); border:0; padding-block:var(--b-space-5); }
+.mutucoin-site .b2b-band .site-container { display:grid; grid-template-columns:1fr 1.3fr; align-items:center; gap:var(--b-space-6); }
+.mutucoin-site .b2b-band h2 { font-size:24px; line-height:1.5; font-weight:400; }
+.mutucoin-site .b2b-band p { max-width:68ch; font-size:16px; line-height:1.85; color:var(--b-muted); }
+.mutucoin-site .ecosystem-intro { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:var(--b-space-6); max-width:800px; margin:0 auto var(--b-space-6); }
+.mutucoin-site .ecosystem-intro p { margin-top:var(--b-space-3); color:var(--b-muted); font-size:16px; line-height:1.85; }
+.mutucoin-site .network-groups { border-block:1px solid var(--b-line); }
+.mutucoin-site .network-group + .network-group { border-top:1px solid var(--b-line); }
+.mutucoin-site .network-group summary { cursor:pointer; padding:var(--b-space-4) 0; color:var(--b-text); }
+.mutucoin-site .network-group summary::marker { color:var(--b-muted); font-size:14px; }
+.mutucoin-site .network-group summary h3 { display:inline; margin-inline-start:var(--b-space-2); font-size:20px; font-weight:400; line-height:1.5; }
+.mutucoin-site summary:focus-visible { outline:2px solid var(--b-accent); outline-offset:4px; }
+.mutucoin-site .network-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--b-space-3); padding-bottom:var(--b-space-4); }
+.mutucoin-site .network-node { background:var(--b-surface); border:0; color:var(--b-text); padding:var(--b-space-3); border-radius:var(--b-radius); min-width:0; display:flex; flex-direction:column; align-items:flex-start; transition:background .2s; }
+.mutucoin-site .network-node:hover { background:#1d2a40; transform:none; box-shadow:none; }
+.mutucoin-site .network-node h4 { color:var(--b-text); font-size:18px; line-height:1.5; font-weight:400; margin:0 0 var(--b-space-2); }
+.mutucoin-site .network-node p { color:var(--b-muted); font-size:12px; line-height:1.8; letter-spacing:.04em; }
+.mutucoin-site .network-node .status-badge { margin-top:var(--b-space-2); }
+.mutucoin-site .b-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--b-space-4); }
+.mutucoin-site .three-columns { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.mutucoin-site .s-card { background:var(--b-surface); border:0; border-radius:var(--b-radius); box-shadow:none; }
+.mutucoin-site .s-card:hover { box-shadow:none; }
+.mutucoin-site .content-card { padding:var(--b-space-4); }
+.mutucoin-site .content-card h3 { font-size:20px; line-height:1.5; font-weight:400; margin-bottom:var(--b-space-3); }
+.mutucoin-site .content-card p { color:var(--b-muted); font-size:16px; line-height:1.85; }
+.mutucoin-site #mission { background:var(--b-surface); }
+.mutucoin-site #mission .s-card { background:transparent; padding:0; }
+.mutucoin-site .mission-motto { font-weight:300; color:var(--b-text); font-size:clamp(24px,2.5vw,32px); line-height:1.5; text-align:center; margin-top:var(--b-space-6); }
+.mutucoin-site .contact-panel { text-align:center; border:0; border-radius:var(--b-radius); background:var(--b-surface); padding:var(--b-space-6); }
+.mutucoin-site .contact-panel .section-heading { margin-bottom:var(--b-space-3); }
+.mutucoin-site .contact-panel > p { color:var(--b-muted); font-size:14px; line-height:1.85; max-width:68ch; margin:var(--b-space-3) auto 0; }
+.mutucoin-site #downloads { padding-top:0; }
+.mutucoin-site .download-list { list-style:none; max-width:900px; margin:auto; }
+.mutucoin-site .download-list li { padding:var(--b-space-4) 0; border-bottom:1px solid var(--b-line); display:flex; align-items:center; justify-content:space-between; gap:var(--b-space-4); }
+.mutucoin-site .download-list h3 { font-size:16px; line-height:1.6; font-weight:400; }
+.mutucoin-site .download-list li > div { display:flex; flex-wrap:wrap; align-items:center; gap:8px 24px; font-size:12px; line-height:1.8; color:var(--b-muted); }
+.mutucoin-site .download-list .status-badge { margin-top:0; }
+.mutucoin-site #overview { padding-top:var(--b-space-5); padding-bottom:0; }
+.mutucoin-site .empty-state { padding:var(--b-space-4); border:0; border-inline-start:2px solid #71829e; border-radius:0; color:var(--b-muted); background:var(--b-surface); line-height:1.85; font-size:14px; margin-bottom:var(--b-space-5); }
+.mutucoin-site .deployment-note { color:var(--b-muted); text-align:start; font-size:16px; line-height:1.85; margin-bottom:var(--b-space-4); }
+.mutucoin-site .supporting-note { color:var(--b-muted); font-size:12px; line-height:1.85; }
+.mutucoin-site #mutual-cartorio { background:var(--b-surface); }
+.mutucoin-site #mutual-cartorio .deployment-note { margin:var(--b-space-4) auto 0; }
+.mutucoin-site .chain-layout { display:grid; grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr); align-items:center; gap:var(--b-space-6); }
+.mutucoin-site .chain-params { margin-block:var(--b-space-4); display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--b-space-4); }
+.mutucoin-site .chain-params > div { padding-bottom:var(--b-space-3); border-bottom:1px solid var(--b-line); min-width:0; }
+.mutucoin-site .chain-params dt { font-size:12px; color:var(--b-muted); line-height:1.8; margin-bottom:var(--b-space-1); }
+.mutucoin-site .chain-params dd { font-size:20px; font-weight:400; }
+.mutucoin-site .chain-params .contract { grid-column:1/-1; }
+.mutucoin-site .chain-params code { display:block; overflow-wrap:anywhere; font-size:14px; font-weight:400; }
+/* Evita o encontro de seções herdado da apresentação do Site A. */
+.mutucoin-site .corridor-section { margin:0; background:var(--b-surface); z-index:auto; }
+.mutucoin-site .editorial-layout { gap:var(--b-space-6); }
+.mutucoin-site .corridor-section .section-heading,.mutucoin-site #digital-networks .section-heading { text-align:start; }
+.mutucoin-site #digital-networks .network-groups { margin-top:var(--b-space-6); }
+.mutucoin-site .status-table-wrap { overflow:auto; }
+.mutucoin-site table { width:100%; border-collapse:collapse; font-size:14px; }
+.mutucoin-site caption { text-align:start; padding-block:var(--b-space-3); font-size:20px; }
+.mutucoin-site th,.mutucoin-site td { text-align:start; padding:24px 16px; border-bottom:1px solid var(--b-line); line-height:1.8; }
+.mutucoin-site th { font-weight:400; }
+.mutucoin-site td { color:var(--b-muted); }
+.mutucoin-site thead th { background:var(--b-surface); }
+.mutucoin-site .market-widget { padding:var(--b-space-2); margin-block:var(--b-space-4); background:var(--b-surface); border:0; border-radius:var(--b-radius); overflow:hidden; }
+.mutucoin-site #market { content-visibility:visible; }
+.mutucoin-site .widget-slot { min-height:80px; }
+.mutucoin-site [data-tradingview='market-overview'] { min-height:420px; }
+.mutucoin-site .market-widget figcaption { display:flex; justify-content:space-between; gap:var(--b-space-2); align-items:center; font-size:12px; padding-top:var(--b-space-2); flex-wrap:wrap; }
+.mutucoin-site .market-widget button { padding:12px; border:1px solid #7589a8; border-radius:8px; }
+.mutucoin-site .market-widget a { color:#cbd9ff; }
+.mutucoin-site #next-step { text-align:center; padding-top:0; }
+
+/* Passada 4: leitura contínua, sem cartões ou movimento adicional. */
+.mutucoin-site .chain-reading { max-width:760px; margin-inline:auto; }
+.mutucoin-site .chain-purpose .section-heading { text-align:start; }
+.mutucoin-site .chain-purpose .section-heading p { margin-inline:0; }
+.mutucoin-site .chain-purpose p { max-width:68ch; font-size:16px; line-height:1.85; color:var(--b-muted); }
+.mutucoin-site .purpose-blocks { display:grid; gap:var(--b-space-5); }
+.mutucoin-site .chain-purpose h3 { font-size:20px; line-height:1.5; font-weight:400; margin-bottom:var(--b-space-2); }
+.mutucoin-site .purpose-block:last-child p { font-size:clamp(20px,2.2vw,28px); line-height:1.6; color:var(--b-text); }
+.mutucoin-site #mutual-cartorio.purpose-notary { padding-block:var(--b-space-5); margin-top:var(--b-space-6); border-block:1px solid var(--b-line); background:none; }
+.mutucoin-site .purpose-notary .status-badge { display:block; margin:0 0 var(--b-space-3); }
+.mutucoin-site .purpose-notary .supporting-note { margin-top:var(--b-space-3); font-size:14px; }
+.mutucoin-site .purpose-contact { margin-top:var(--b-space-5); }
+.mutucoin-site .chain-purpose [id],.mutucoin-site .chain-purpose[id] { scroll-margin-top:144px; }
+
+/* Os três vídeos mantêm espaço próprio para imagem, controles e legenda. */
+.mutucoin-site .story-figure { max-width:100%; }
+.mutucoin-site .hero-story { width:min(100%,288px); }
+.mutucoin-site .story-frame { padding:8px; border:0; border-radius:var(--b-radius); background:var(--b-surface); box-shadow:none; }
+.mutucoin-site .story-video { display:block; width:100%; height:auto; aspect-ratio:9/16; object-fit:contain; border-radius:8px; background:var(--b-bg); }
+.mutucoin-site .story-controls { padding:8px 0 0; }
+.mutucoin-site .story-toggle { min-width:44px; min-height:44px; border-radius:8px; }
+.mutucoin-site .story-figure figcaption { font-size:12px; line-height:1.8; color:var(--b-muted); margin-top:var(--b-space-3); }
+.mutucoin-site .story-disclaimer { font-size:12px; line-height:1.8; color:var(--b-muted); margin-top:var(--b-space-1); }
+.mutucoin-site .story-toggle:hover { border-color:#bac5d9; color:var(--b-text); }
+.mutucoin-site .legal-identity { font-style:normal; overflow-wrap:anywhere; }
+.mutucoin-site .legal-identity p { margin-top:var(--b-space-2); font-size:14px; line-height:1.85; color:var(--b-muted); }
+.mutucoin-site .contact-panel .legal-identity { max-width:68ch; margin:var(--b-space-4) auto; }
+.mutucoin-site .legal-positioning { background:var(--b-surface); }
+.mutucoin-site .legal-positioning .b-grid { grid-template-columns:1fr; gap:var(--b-space-6); }
+.mutucoin-site .legal-positioning .s-card { background:none; padding:0; display:grid; grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr); gap:var(--b-space-5); }
+.mutucoin-site .legal-positioning .manifesto-number { display:none; }
+.mutucoin-site .legal-positioning h3 { margin:0; }
+.mutucoin-site footer { background:#101728; border-top:1px solid var(--b-line); }
+.mutucoin-site .footer-layout { grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) minmax(0,1fr); gap:var(--b-space-5); padding-block:var(--b-space-6); }
+.mutucoin-site .footer-layout p,.mutucoin-site .footer-nav a { font-size:14px; line-height:1.85; color:var(--b-muted); }
+.mutucoin-site .footer-brand p + p { margin-top:var(--b-space-3); }
+.mutucoin-site .footer-nav { display:block; }
+.mutucoin-site .footer-nav nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); justify-content:start; gap:8px 24px; }
+.mutucoin-site .footer-nav a { display:flex; align-items:center; min-height:44px; }
+.mutucoin-site .footer-nav a:hover { color:var(--b-text); }
+.mutucoin-site .footer-bottom { padding-block:var(--b-space-4); font-size:12px; color:var(--b-muted); }
+
+/* Governança: documentos em linhas, com estado e ação separados da leitura. */
+.mutucoin-site .governance-teaser .hero-ctas { justify-content:center; }
+.mutucoin-site .governance-documents { padding-top:0; }
+.mutucoin-site .governance-list { list-style:none; margin:0; padding:0; }
+.mutucoin-site .governance-list > li { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:var(--b-space-4); padding-block:var(--b-space-4); border-bottom:1px solid var(--b-line); }
+.mutucoin-site .document-copy { min-width:0; }
+.mutucoin-site .document-copy h2 { margin:0 0 var(--b-space-2); font-size:18px; font-weight:400; line-height:1.6; }
+.mutucoin-site .document-version { white-space:nowrap; color:var(--b-muted); }
+.mutucoin-site .document-status { display:inline-block; padding:4px 12px; border:1px solid var(--b-line); border-radius:8px; font-size:12px; line-height:1.8; color:var(--b-muted); }
+.mutucoin-site .document-note { margin-top:var(--b-space-2); max-width:68ch; color:var(--b-muted); font-size:14px; line-height:1.85; }
+.mutucoin-site .document-controls { display:flex; flex-wrap:wrap; align-items:center; gap:var(--b-space-3); }
+.mutucoin-site .document-format { font-size:12px; color:var(--b-muted); }
+.mutucoin-site .document-action { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 20px; border:1px solid var(--b-line); border-radius:8px; font-size:14px; line-height:1.6; color:var(--b-text); background:var(--b-surface); }
+.mutucoin-site .document-action:disabled { cursor:not-allowed; color:var(--b-muted); }
+.mutucoin-site a.document-action:hover { border-color:var(--b-accent); }
+
+@media(max-width:767px) {
+  .mutucoin-site .governance-list > li { grid-template-columns:minmax(0,1fr); gap:var(--b-space-3); }
+  .mutucoin-site .governance-teaser .hero-ctas { justify-content:flex-start; }
+}
+
+@media(min-width:1024px) {
+  .mutucoin-site #navbar-inner > .desktop-navigation { display:flex; }
+  .mutucoin-site #mobile-menu-button { display:none; }
+}
+@media(max-width:1023px) {
+  .mutucoin-site { --b-space-section:96px; }
+  .mutucoin-site .network-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .mutucoin-site .hero-layout { gap:var(--b-space-4); grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); }
+  .mutucoin-site .three-columns { grid-template-columns:1fr; gap:var(--b-space-5); }
+  .mutucoin-site :is(#mission,.legal-positioning) .content-card p { max-width:68ch; }
+  .mutucoin-site .chain-layout { grid-template-columns:1fr; }
+  .mutucoin-site .footer-layout { grid-template-columns:1fr; }
+}
+@media(max-width:767px) {
+  .mutucoin-site { --b-space-section:64px; }
+  .mutucoin-site .site-container { padding-inline:var(--b-space-3); }
+  .mutucoin-site .site-hero { padding-block:152px 64px; }
+  .mutucoin-site .hero-layout,.mutucoin-site .ecosystem-intro { grid-template-columns:1fr; gap:var(--b-space-5); }
+  .mutucoin-site .hero-copy { text-align:start; }
+  .mutucoin-site .hero-copy h1 { font-size:clamp(32px,7vw,44px); }
+  .mutucoin-site .hero-chips { justify-content:flex-start; gap:8px 16px; }
+  .mutucoin-site .hero-copy .hero-ctas { flex-direction:column; }
+  .mutucoin-site .hero-copy .hero-auth { max-width:68ch; margin-inline:0; }
+  .mutucoin-site .hero-story { width:240px; }
+  .mutucoin-site .hero-layer { text-align:start; padding-inline:var(--b-space-3); }
+  .mutucoin-site .section-heading { text-align:start; margin-bottom:var(--b-space-5); }
+  .mutucoin-site .section-heading p { margin-inline:0; }
+  .mutucoin-site .b2b-band .site-container { grid-template-columns:1fr; gap:var(--b-space-3); }
+  .mutucoin-site .network-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--b-space-2); }
+  .mutucoin-site .network-node { padding:var(--b-space-2); }
+  .mutucoin-site .network-node h4 { font-size:16px; }
+  .mutucoin-site .b-grid,.mutucoin-site .three-columns,.mutucoin-site .chain-params { grid-template-columns:1fr; }
+  .mutucoin-site .ecosystem-intro { text-align:start; }
+  .mutucoin-site .content-card,.mutucoin-site .contact-panel { padding:var(--b-space-3); }
+  .mutucoin-site .contact-panel .section-heading { text-align:center; }
+  .mutucoin-site .contact-panel .section-heading p { margin-inline:auto; }
+  .mutucoin-site .download-list li { display:block; }
+  .mutucoin-site .download-list li > div { margin-top:var(--b-space-2); }
+  .mutucoin-site .page-hero .hero-sub { margin-inline:0; }
+  .mutucoin-site th,.mutucoin-site td { padding:16px 8px; font-size:12px; }
+  .mutucoin-site .footer-nav nav { gap:8px 16px; }
+  .mutucoin-site .legal-positioning .s-card { grid-template-columns:1fr; gap:var(--b-space-3); }
+}
+
+/* Passada B5: serviços e painel compartilham a tipografia, a paleta e os espaços da base. */
+.mutucoin-site .services-teaser .section-heading { margin-bottom:0; text-align:start; }
+.mutucoin-site .services-teaser .hero-ctas { margin-bottom:0; }
+.mutucoin-site .services-section { padding-top:var(--b-space-5); }
+.mutucoin-site .service-card { display:flex; flex-direction:column; align-items:flex-start; }
+.mutucoin-site .service-card a { text-decoration:underline; text-underline-offset:5px; }
+.mutucoin-site .service-card .supporting-note { font-size:12px; margin-top:var(--b-space-3); }
+.mutucoin-site .platform-status { display:inline-block; padding:4px 12px; border:1px solid var(--b-line); border-radius:8px; }
+.mutucoin-site .app-shell { padding-block:176px var(--b-space-6); }
+.mutucoin-site .app-network-strip,.mutucoin-site .app-network-facts { color:var(--b-muted); font-size:12px; line-height:1.85; padding-block:var(--b-space-3); }
+.mutucoin-site .app-network-strip { border-bottom:1px solid var(--b-line); margin-bottom:var(--b-space-4); }
+.mutucoin-site .app-network-facts { border-top:1px solid var(--b-line); margin-top:var(--b-space-5); }
+.mutucoin-site .app-layout { display:grid; grid-template-columns:minmax(0,260px) minmax(0,1fr); gap:var(--b-space-5); align-items:start; }
+.mutucoin-site .app-navigation { min-width:0; max-height:70vh; overflow:auto; background:var(--b-surface); padding:var(--b-space-2); border-radius:var(--b-radius); overscroll-behavior:contain; }
+.mutucoin-site .app-menu-group h2 { color:var(--b-muted); font-size:12px; font-weight:400; line-height:1.8; margin:var(--b-space-4) var(--b-space-2) var(--b-space-2); }
+.mutucoin-site .app-navigation ul,.mutucoin-site .app-directory ul { list-style:none; margin:0; padding:0; }
+.mutucoin-site .app-menu-link { display:block; min-height:44px; padding:12px 8px; font-size:14px; line-height:1.7; border-radius:8px; }
+.mutucoin-site .app-menu-link:hover,.mutucoin-site .app-menu-link[aria-current='page'] { background:#24314b; }
+.mutucoin-site .app-content { min-width:0; }
+.mutucoin-site :is(.module-screen,.app-overview) h1 { font-size:clamp(28px,3.2vw,40px); font-weight:300; line-height:1.3; margin:var(--b-space-3) 0 var(--b-space-4); }
+.mutucoin-site .module-description { color:var(--b-muted); font-size:16px; line-height:1.85; max-width:68ch; }
+.mutucoin-site .module-screen .supporting-note { margin-top:var(--b-space-4); }
+.mutucoin-site .operation-disabled,.mutucoin-site .testnet-notice { margin-top:var(--b-space-4); padding:var(--b-space-3); border-inline-start:2px solid var(--b-accent); background:var(--b-surface); font-size:14px; line-height:1.85; }
+.mutucoin-site .app-directory { display:grid; gap:var(--b-space-4); margin-top:var(--b-space-5); }
+.mutucoin-site .app-directory h2 { font-weight:400; font-size:20px; margin-bottom:var(--b-space-3); }
+.mutucoin-site .app-directory ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 24px; }
+.mutucoin-site .app-directory a { display:block; padding-block:12px; font-size:14px; line-height:1.7; text-decoration:underline; text-underline-offset:5px; }
+/* A navegação maior continua acessível em alturas curtas e sem cobrir a leitura. */
+.mutucoin-site #mobile-menu > div { max-height:70dvh; overflow:auto; }
+@media(min-width:1024px) {
+  .mutucoin-site #navbar-inner > .desktop-navigation { flex:1; min-width:0; margin-inline:16px; }
+}
+@media(max-width:767px) {
+  .mutucoin-site .app-shell { padding-top:144px; }
+  .mutucoin-site .app-layout { grid-template-columns:minmax(0,1fr); gap:var(--b-space-4); }
+  .mutucoin-site .app-navigation { max-height:240px; }
+  .mutucoin-site .app-directory ul { grid-template-columns:minmax(0,1fr); }
+}
+
+/* B6: consultas públicas acrescentadas às telas existentes. */
+.public-reading { margin-block-start: 2rem; padding-block-start: 1.5rem; border-block-start: 1px solid #526176; }
+.public-reading h2 { font-size: 1.25rem; margin-block-end: 1rem; }
+.public-reading-data, .public-reading-data li, [data-reading-result] { min-width: 0; overflow-wrap: anywhere; }
+.public-reading-data ul { padding-inline-start: 1.25rem; }
+.public-reading-data li { margin-block: 1rem; }
+.public-reading-data p { margin-block: .5rem; }
+.public-hash-query { display: grid; gap: .75rem; margin-block: 1.5rem; }
+.public-hash-query input { width: 100%; min-width: 0; padding: .75rem; color: #f8fafc; background: #152238; border: 1px solid #94a3b8; border-radius: .25rem; }
+.public-reading button { padding: .75rem 1rem; border: 1px solid #94a3b8; border-radius: .25rem; color: #f8fafc; background: #152238; }
+.public-reading button:disabled { cursor: not-allowed; opacity: .6; }
+.public-reading input:focus-visible, .public-reading button:focus-visible { outline: 2px solid #ffde00; outline-offset: 3px; }
+
+/* Passada de movimento: dados ausentes continuam ausentes. */
+.mutucoin-site .network-movement { border-bottom:1px solid var(--b-line); }
+.mutucoin-site .network-counters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; }
+.mutucoin-site .network-counter { min-width:0; padding-inline-start:24px; border-inline-start:1px solid var(--b-line); }
+.mutucoin-site .network-counter dt { font-size:14px; color:var(--b-muted); line-height:1.8; }
+.mutucoin-site .network-counter dd { margin:16px 0 0; }
+.mutucoin-site .network-counter strong { display:block; min-height:1.4em; font-size:clamp(36px,4vw,56px); font-weight:300; line-height:1.4; overflow-wrap:anywhere; font-variant-numeric:tabular-nums; }
+.mutucoin-site .network-counter dd p { color:var(--b-muted); font-size:12px; line-height:1.8; margin-top:8px; }
+.mutucoin-site .market-bento { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; overflow:clip; padding:8px; margin:-8px; }
+.mutucoin-site .market-card { position:relative; display:grid; grid-template-columns:minmax(0,1fr); gap:24px; min-width:0; padding:32px; border:1px solid var(--b-line); border-radius:24px; background:var(--b-surface); text-align:start; isolation:isolate; transition:border-color .25s,box-shadow .25s; }
+.mutucoin-site .market-card-pair { grid-row:span 2; align-content:center; }
+.mutucoin-site .market-card-copy { min-width:0; }
+.mutucoin-site .market-card h3 { font-size:clamp(24px,2.5vw,32px); font-weight:400; line-height:1.4; margin-bottom:16px; }
+.mutucoin-site .market-card p { font-size:15px; line-height:1.85; color:var(--b-muted); }
+.mutucoin-site .market-card .supporting-note { font-size:12px; margin-top:8px; }
+.mutucoin-site .market-link { display:inline-block; color:var(--b-accent); margin-top:24px; font-size:14px; text-decoration:underline; text-underline-offset:5px; }
+.mutucoin-site .market-card:is(:hover,:focus-visible) { border-color:var(--b-accent); box-shadow:inset 0 0 36px #fcb71b0a; }
+.mutucoin-site .market-card:focus-visible { outline-offset:-4px; }
+.mutucoin-site .market-art { position:relative; display:grid; place-items:center; height:140px; max-width:100%; perspective:600px; pointer-events:none; }
+.mutucoin-site .market-card-pair .market-art { height:240px; }
+.mutucoin-site .market-art i { position:absolute; width:100px; height:100px; border:1px solid #fcb71b80; border-radius:24px; background:linear-gradient(135deg,#34415b,#121b2d); box-shadow:12px 16px 32px #0005,inset 1px 1px 0 #ffffff20; transform:rotateX(54deg) rotateZ(-32deg); transition:transform .4s; }
+.mutucoin-site .market-art i:nth-child(1) { margin-top:-40px; }
+.mutucoin-site .market-art i:nth-child(2) { margin-top:0; border-color:#71829e; }
+.mutucoin-site .market-art i:nth-child(3) { margin-top:40px; }
+.mutucoin-site .market-art span { position:relative; z-index:1; padding:8px 16px; border-radius:12px; color:var(--b-accent); background:#0a1020eb; font-size:14px; direction:ltr; }
+.mutucoin-site .art-pair i { border-radius:50%; width:144px; height:144px; transform:rotateY(-25deg) rotateZ(-24deg); }
+.mutucoin-site .art-multi i { width:76px; height:76px; transform:rotateX(38deg) rotateZ(45deg); }
+.mutucoin-site .art-multi i:nth-child(1) { margin-inline-end:100px; }
+.mutucoin-site .art-multi i:nth-child(3) { margin-inline-start:100px; }
+.mutucoin-site .asset-section-heading { max-width:760px; margin-block:64px 32px; }
+.mutucoin-site .asset-section-heading h3 { font-size:24px; font-weight:400; line-height:1.5; margin-bottom:16px; }
+.mutucoin-site .asset-section-heading p { color:var(--b-muted); font-size:15px; line-height:1.85; }
+.mutucoin-site .asset-motion-toggle { min-height:44px; margin-top:16px; padding:12px 16px; border:1px solid var(--b-line); border-radius:8px; font-size:14px; background:var(--b-surface); }
+.mutucoin-site .asset-columns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.mutucoin-site .asset-window { min-width:0; height:460px; overflow:hidden; border-block:1px solid var(--b-line); mask-image:linear-gradient(transparent,#000 6%,#000 94%,transparent); }
+.mutucoin-site .asset-track { animation:mutual-assets-up 56s linear infinite; animation-play-state:paused; }
+.mutucoin-site [data-direction='down'] .asset-track { animation-name:mutual-assets-down; animation-duration:64s; }
+.mutucoin-site .asset-columns.is-running .asset-track { animation-play-state:running; }
+.mutucoin-site .asset-columns:is(:hover,:focus-within) .asset-track { animation-play-state:paused; }
+.mutucoin-site .asset-list { list-style:none; padding:0; margin:0; display:grid; gap:16px; padding-block-end:16px; }
+.mutucoin-site .asset-card { display:grid; grid-template-columns:44px minmax(0,1fr) minmax(0,1fr); gap:16px; align-items:center; min-width:0; padding:24px; border:1px solid var(--b-line); border-radius:16px; background:var(--b-surface); }
+.mutucoin-site .asset-card > * { min-width:0; }
+.mutucoin-site .asset-monogram { display:grid; place-items:center; width:44px; height:44px; border:1px solid #fcb71b60; color:var(--b-accent); border-radius:50%; }
+.mutucoin-site .asset-card h3 { font-size:16px; font-weight:400; line-height:1.6; }
+.mutucoin-site .asset-card p,.mutucoin-site .asset-card .status-badge { font-size:12px; line-height:1.8; color:var(--b-muted); margin:0; }
+.mutucoin-site .asset-reading { text-align:end; overflow-wrap:anywhere; }
+.mutucoin-site .asset-reading > span { display:block; font-size:14px; line-height:1.8; font-variant-numeric:tabular-nums; }
+.mutucoin-site .asset-reading > span:first-child { unicode-bidi:isolate; }
+@keyframes mutual-assets-up { from { transform:translateY(0); } to { transform:translateY(-50%); } }
+@keyframes mutual-assets-down { from { transform:translateY(-50%); } to { transform:translateY(0); } }
+@media(min-width:768px) and (prefers-reduced-motion:no-preference) {
+  .mutucoin-site .market-card:is(:hover,:focus-visible) .market-art i { transform:rotateX(42deg) rotateZ(-24deg) translateY(-6px); }
+}
+@media(max-width:767px) {
+  .mutucoin-site .network-counters,.mutucoin-site .market-bento { grid-template-columns:minmax(0,1fr); }
+  .mutucoin-site .network-counter { padding-block:16px; }
+  .mutucoin-site .market-card { padding:24px; grid-row:auto; }
+  .mutucoin-site .market-card-pair .market-art { height:180px; }
+  .mutucoin-site .asset-columns { gap:12px; }
+  .mutucoin-site .asset-card { grid-template-columns:minmax(0,1fr); gap:8px; padding:16px; }
+  .mutucoin-site .asset-reading { text-align:start; }
+  .mutucoin-site .asset-card h3 { font-size:14px; }
+  .mutucoin-site .asset-window { height:520px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .mutucoin-site .market-card { opacity:1 !important; visibility:visible !important; transform:none !important; }
+  .mutucoin-site .asset-window { height:auto; overflow:visible; mask-image:none; }
+  .mutucoin-site .asset-track { animation:none; transform:none; }
+  .mutucoin-site .asset-copy { display:none; }
+}

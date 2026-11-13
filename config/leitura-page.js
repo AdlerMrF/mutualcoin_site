@@ -1,0 +1,5 @@
+const text = (key, tag = 'p', attrs = '') => `<${tag} ${attrs} data-i18n="reading.${key}"></${tag}>`;
+export function renderPublicReadings(item) {
+  if (!item.leitura_publica) return '';
+  return text('notice') + item.leitura_publica.map(forma => `<section class="public-reading" data-reading-kind="${forma}">${text(forma, 'h2')}${forma === 'contratos' ? text('contractsScope') : ''}${forma === 'registros' ? text('notaryScope') : ''}<p class="public-reading-status" role="status" aria-live="polite" data-reading-status data-i18n="reading.loading"></p><p data-reading-attempt></p><div class="public-reading-data" data-reading-data></div>${forma === 'registros' ? `<div class="public-hash-query"><label for="public-notary-hash" data-i18n="reading.search"></label><input id="public-notary-hash" type="search" maxlength="66" autocomplete="off" spellcheck="false" disabled><button type="button" id="public-notary-query" disabled data-i18n="reading.searchButton"></button><div data-reading-result role="status" aria-live="polite"></div></div>` : ''}${forma === 'faucet' ? text('request', 'button', 'type="button" disabled') : ''}</section>`).join('');
+}

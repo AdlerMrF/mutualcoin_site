@@ -1,0 +1,10 @@
+[     293ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:9270/favicon.ico:1
+[    4432ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9282/assets/animations-Ch1Jst2C.js:1
+[    6303ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9283/assets/animations-jwXBlnYz.js:1
+[    7838ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9284/assets/animations-Ch1Jst2C.js:1
+[    9681ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9285/assets/animations-jwXBlnYz.js:1
+[   11083ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9286/assets/animations-Ch1Jst2C.js:1
+[   12702ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9287/assets/animations-jwXBlnYz.js:1
+[   40241ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9283/assets/animations-jwXBlnYz.js:1
+[   42093ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9285/assets/animations-jwXBlnYz.js:1
+[   43866ms] [WARNING] GSAP target .reveal not found. https://gsap.com @ http://127.0.0.1:9287/assets/animations-jwXBlnYz.js:1

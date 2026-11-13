@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "lp-app/index.html"
+        ],
+        "createdAt": "2026-11-10T17:01:43.476Z",
+        "reason": "Project design system (CLAUDE.md: Shine Text, gradient + background-clip text on key words) mandates this Mutual pattern"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "lp-app/index.html"
+        ],
+        "createdAt": "2026-11-10T17:01:44.039Z",
+        "reason": "Project design system (CLAUDE.md: Badge/Eyebrow pill with gold dot, .hero-badge) mandates this Mutual pattern"
+      }
+    ]
+  }
+}

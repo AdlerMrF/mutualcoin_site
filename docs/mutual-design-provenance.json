@@ -1,0 +1,28 @@
+{
+  "identity": "org",
+  "destination": "/lp-app/",
+  "reference": "Site A Mutual/depois",
+  "assets": [
+    {
+      "source": "C:/Users/vivig/OneDrive/Desktop/Adler/front/referencias/design-system/mutual.css",
+      "copy": "src/lp-app/mutual-tokens.css",
+      "sourceSha256": "f00d41dfaceed2b861fc9fb76b5a1212b2e03b00bdaf9865923344b17057c8b3",
+      "copySha256": "f00d41dfaceed2b861fc9fb76b5a1212b2e03b00bdaf9865923344b17057c8b3",
+      "identical": true
+    },
+    {
+      "source": "C:/Users/vivig/OneDrive/Desktop/Adler/front/projetos/site-a-mutual/depois/public/fonts/montserrat-latin.woff2",
+      "copy": "public/fonts/montserrat-latin.woff2",
+      "sourceSha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "copySha256": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
+      "identical": true
+    },
+    {
+      "source": "C:/Users/vivig/OneDrive/Desktop/Adler/front/projetos/site-a-mutual/depois/public/fonts/montserrat-latin-ext.woff2",
+      "copy": "public/fonts/montserrat-latin-ext.woff2",
+      "sourceSha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "copySha256": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
+      "identical": true
+    }
+  ]
+}
